@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Mail } from 'lucide-react';
+import { ArrowRight, Mail, MessageSquare } from 'lucide-react';
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -29,6 +29,12 @@ export default function FinalCTA() {
 
     // Show success state
     setIsSubmitted(true);
+  };
+
+  const handleWhatsApp = () => {
+    const text = encodeURIComponent(`Hola Denis! Mi nombre es ${formData.name || 'un cliente'}. Me interesa un proyecto de ${formData.projectType}. \n\nMensaje: ${formData.message || 'Me gustaría contactar contigo.'}`);
+    const whatsappUrl = `https://wa.me/${content.global.whatsapp.replace(/\+/g, '').replace(/\s/g, '')}?text=${text}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   if (isSubmitted) {
@@ -102,6 +108,23 @@ export default function FinalCTA() {
                   <div className="text-lg">{content.global.email}</div>
                 </div>
               </a>
+
+              {content.global.whatsapp && (
+                <a 
+                  href={`https://wa.me/${content.global.whatsapp.replace(/\+/g, '').replace(/\s/g, '')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 text-white/60 hover:text-white transition-colors group"
+                >
+                  <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-white/30 transition-all">
+                    <MessageSquare size={20} />
+                  </div>
+                  <div>
+                    <div className="text-[10px] font-mono uppercase tracking-widest opacity-50">WhatsApp</div>
+                    <div className="text-lg">{content.global.whatsapp}</div>
+                  </div>
+                </a>
+              )}
             </div>
           </motion.div>
 
@@ -160,10 +183,20 @@ export default function FinalCTA() {
                 className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-premium-blue/50 transition-colors resize-none" 
               />
             </div>
-            <button type="submit" className="w-full bg-white text-black py-5 rounded-2xl font-bold uppercase tracking-wider hover:bg-white/90 transition-all flex items-center justify-center gap-3 group">
-              {content.ui.sendMessage}
-              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-            </button>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <button type="submit" className="w-full bg-white text-black py-5 rounded-2xl font-bold uppercase tracking-wider hover:bg-white/90 transition-all flex items-center justify-center gap-3 group">
+                {content.ui.sendMessage}
+                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+              </button>
+              <button 
+                type="button"
+                onClick={handleWhatsApp}
+                className="w-full bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/20 py-5 rounded-2xl font-bold uppercase tracking-wider hover:bg-[#25D366]/20 transition-all flex items-center justify-center gap-3 group"
+              >
+                WhatsApp Directo
+                <MessageSquare size={20} className="group-hover:scale-110 transition-transform" />
+              </button>
+            </div>
           </motion.form>
         </div>
       </div>
