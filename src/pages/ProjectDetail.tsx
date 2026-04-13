@@ -134,7 +134,7 @@ export default function ProjectDetail() {
         </div>
 
         {/* Gallery Section */}
-        {project.gallery && project.gallery.length > 1 && (
+        {project.gallery && project.gallery.length > 0 && (
           <div className="space-y-12">
             <div className="flex items-center justify-between mb-12">
               <h2 className="text-3xl md:text-5xl font-display font-bold tracking-tighter">{content.ui.galleryShowcase} <span className="text-white/20">{content.ui.showcase}</span></h2>
