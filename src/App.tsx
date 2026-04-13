@@ -12,6 +12,7 @@ import TermsOfService from './pages/TermsOfService';
 import Archive from './pages/Archive';
 import ProjectDetail from './pages/ProjectDetail';
 import ScrollToTop from './components/ScrollToTop';
+import BackToTop from './components/BackToTop';
 import { LanguageProvider } from './context/LanguageContext';
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
     <LanguageProvider>
       <BrowserRouter basename={basename}>
         <ScrollToTop />
+        <BackToTop />
         <main className="min-h-screen bg-black selection:bg-premium-blue/30">
           <Navbar />
           <Routes>
