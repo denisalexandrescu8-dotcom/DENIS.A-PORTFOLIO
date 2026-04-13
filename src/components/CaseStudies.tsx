@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { CASE_STUDIES } from '../constants';
 import { ArrowUpRight } from 'lucide-react';
 
