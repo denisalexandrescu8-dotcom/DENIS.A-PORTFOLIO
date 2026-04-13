@@ -5,6 +5,7 @@ import { useLanguage } from '../context/LanguageContext';
 
 export default function FinalCTA() {
   const { content } = useLanguage();
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -18,10 +19,57 @@ export default function FinalCTA() {
     const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nProject Type: ${formData.projectType}\n\nMessage:\n${formData.message}`);
     const mailtoUrl = `mailto:${content.global.email}?subject=${subject}&body=${body}`;
     
-    // Using window.open instead of window.location.href for better cross-browser compatibility
-    // and to prevent the current page from being replaced or blocked by some browsers
-    window.open(mailtoUrl, '_self');
+    // Create a temporary anchor element to trigger the mailto link
+    const tempLink = document.createElement('a');
+    tempLink.href = mailtoUrl;
+    tempLink.style.display = 'none';
+    document.body.appendChild(tempLink);
+    tempLink.click();
+    document.body.removeChild(tempLink);
+
+    // Show success state
+    setIsSubmitted(true);
   };
+
+  if (isSubmitted) {
+    return (
+      <section id="contact" className="section-padding relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-premium-blue/10 rounded-full blur-[120px] -z-10" />
+        <div className="max-w-3xl mx-auto glass p-12 md:p-20 rounded-[3rem] border-white/10 text-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="space-y-8"
+          >
+            <div className="w-20 h-20 bg-premium-blue/20 rounded-full flex items-center justify-center mx-auto text-premium-blue">
+              <Mail size={40} />
+            </div>
+            <h2 className="text-4xl font-display font-bold">¡Gracias!</h2>
+            <p className="text-xl text-white/60 font-light">
+              Si tu gestor de correo no se abrió automáticamente, puedes hacer clic en el botón de abajo o escribirme directamente a:
+            </p>
+            <div className="py-4 px-8 bg-white/5 rounded-2xl inline-block font-mono text-premium-blue">
+              {content.global.email}
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+              <a 
+                href={`mailto:${content.global.email}?subject=New Inquiry&body=Hello!`}
+                className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-white/90 transition-all"
+              >
+                Abrir correo de nuevo
+              </a>
+              <button 
+                onClick={() => setIsSubmitted(false)}
+                className="border border-white/10 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition-all"
+              >
+                Volver al formulario
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="contact" className="section-padding relative overflow-hidden">
