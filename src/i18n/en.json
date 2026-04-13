@@ -72,11 +72,11 @@
       },
       {
         "id": "luxe-wear-launch",
-        "title": "Cinematic Product Launch",
+        "title": "Digital Content Creation",
         "client": "Fernando Hernandez CEO",
-        "category": "Video Editing",
-        "image": "https://picsum.photos/seed/luxe/1200/800",
-        "impact": "2M+ Organic Views"
+        "category": "Social Content, Video Editing",
+        "image": "https://drive.google.com/file/d/1_iMyeeN3FNL64r4N36Y6zRtPSP5Lud1p/preview",
+        "impact": "High-Performance Social Presence"
       }
     ]
   },
@@ -116,14 +116,27 @@
       },
       { 
         "id": "luxe-wear-launch",
-        "year": "2023", 
+        "year": "2024", 
         "client": "Fernando Hernandez CEO", 
-        "project": "Cinematic Launch", 
-        "category": "Video",
-        "image": "https://picsum.photos/seed/luxe/1920/1080",
-        "description": "A cinematic product launch video that generated over 2M organic views across social platforms.",
-        "role": "Video Editor",
-        "deliverables": ["Video Editing", "Color Grading", "Sound Design"]
+        "project": "Digital Content Creation", 
+        "category": "Social Content, Video Editing",
+        "image": "https://drive.google.com/file/d/1_iMyeeN3FNL64r4N36Y6zRtPSP5Lud1p/preview",
+        "gallery": [
+          "https://drive.google.com/file/d/1_iMyeeN3FNL64r4N36Y6zRtPSP5Lud1p/preview",
+          "https://drive.google.com/file/d/10IGm4vgLK56gW5_SzofoBNF4FNqZtE3p/preview",
+          "https://lh3.googleusercontent.com/d/1NucomZBrJstuEhhc8c3-ARmsnzQKqmmo",
+          "https://lh3.googleusercontent.com/d/1gwvjIyV1_2G8vgtN0JiXPhJGqji017sK",
+          "https://lh3.googleusercontent.com/d/1MReN9Drxtf4k3Imw--cU62PiqZiRsvgz",
+          "https://lh3.googleusercontent.com/d/1N_3MCsNO4f5Ef6iiiSzI4afgSRfASRt4",
+          "https://lh3.googleusercontent.com/d/1rqeRGoAzq8FympaH3RxDcEuloeueWhJ1",
+          "https://lh3.googleusercontent.com/d/1BLYUCN5gP5Qyt2-MHtQgCJ0scuEs53Sd",
+          "https://lh3.googleusercontent.com/d/1oomSfVsjPM7zJ-kY9n30FkrNrcXumRU2",
+          "https://lh3.googleusercontent.com/d/1P07Jw1Wle6MN6dlq4Uex_9fbY6L_1CcB",
+          "https://lh3.googleusercontent.com/d/1KJTb3BO5hsmOJZBR_rkN55WjzjFs8iui"
+        ],
+        "description": "Content created for Fernando Hernandez CEO's social media platforms.",
+        "role": "Creative Director, Video Editor, Graphic Designer",
+        "deliverables": ["Sound Design", "Video Editing", "Color Grading & Correction", "Graphic Design"]
       },
       { 
         "id": "techflow-web",
@@ -138,14 +151,18 @@
       },
       { 
         "id": "vanguard-campaign",
-        "year": "2022", 
+        "year": "2026", 
         "client": "L'HEURE D'OR", 
-        "project": "Ad Campaign", 
-        "category": "Video",
-        "image": "https://picsum.photos/seed/vanguard/1920/1080",
-        "description": "A high-energy video ad campaign for a new fitness apparel line, optimized for TikTok and Instagram Reels.",
-        "role": "Director & Editor",
-        "deliverables": ["Storyboarding", "Video Editing", "VFX"]
+        "project": "Complete Brand Identity Design", 
+        "category": "Branding",
+        "image": "https://lh3.googleusercontent.com/d/19lBy4n4pXjCuMNupI1wtuRexg_XD8d4_",
+        "gallery": [
+          "https://lh3.googleusercontent.com/d/19lBy4n4pXjCuMNupI1wtuRexg_XD8d4_",
+          "https://lh3.googleusercontent.com/d/1FLc0fzakTTp9lgWhjmhsvOf-aLg7rHgU"
+        ],
+        "description": "Complete brand identity kit design for L'HEURE D'OR.",
+        "role": "Creative Director",
+        "deliverables": ["Brand Identity Guidelines", "Logo", "Color Palette"]
       }
     ]
   },

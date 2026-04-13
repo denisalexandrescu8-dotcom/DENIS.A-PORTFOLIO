@@ -39,51 +39,87 @@ export default function ProjectDetail() {
             </p>
           </div>
 
-          <div className="aspect-video w-full rounded-3xl overflow-hidden border border-white/10 mb-16 bg-dark-surface flex items-center justify-center">
-            <img 
-              src={project.image} 
-              alt={project.project}
-              className="max-w-full max-h-full object-contain"
-              referrerPolicy="no-referrer"
-            />
+          <div className="aspect-video w-full rounded-3xl overflow-hidden border border-white/10 mb-16 bg-dark-surface flex items-center justify-center shadow-2xl">
+            {project.image.includes('/preview') ? (
+              <iframe
+                src={project.image}
+                className="w-full h-full border-0"
+                allow="autoplay; fullscreen"
+                allowFullScreen
+              />
+            ) : (
+              <img 
+                src={project.image} 
+                alt={project.project}
+                className="max-w-full max-h-full object-contain"
+                referrerPolicy="no-referrer"
+              />
+            )}
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 mb-24">
+            <div className="lg:col-span-2">
+              <h2 className="text-[10px] font-mono uppercase tracking-widest text-premium-blue mb-6">Overview</h2>
+              <p className="text-xl md:text-2xl text-white/80 font-light leading-relaxed">
+                {project.description}
+              </p>
+            </div>
+            <div className="space-y-10 border-l border-white/5 pl-8 md:pl-12">
+              <div>
+                <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mb-3">{content.ui.client}</div>
+                <div className="text-xl font-medium">{project.client}</div>
+              </div>
+              <div>
+                <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mb-3">{content.ui.role}</div>
+                <div className="text-xl font-medium">{project.role}</div>
+              </div>
+              <div>
+                <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mb-3">{content.ui.deliverables}</div>
+                <ul className="space-y-2">
+                  {project.deliverables.map((item, i) => (
+                    <li key={i} className="text-lg font-medium text-white/80 flex items-center gap-2">
+                      <span className="w-1 h-1 rounded-full bg-premium-blue" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
 
           {project.gallery && project.gallery.length > 1 && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-              {project.gallery.slice(1).map((imgSrc, index) => (
-                <div 
-                  key={index} 
-                  className="w-full aspect-square rounded-3xl overflow-hidden border border-white/10 bg-dark-surface flex items-center justify-center p-4"
-                >
-                  <img 
-                    src={imgSrc} 
-                    alt={`${project.project} gallery image ${index + 2}`}
-                    className="max-w-full max-h-full object-contain"
-                    referrerPolicy="no-referrer"
-                  />
-                </div>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+              {project.gallery.slice(1).map((imgSrc, index) => {
+                const isVideo = imgSrc.includes('/preview');
+                return (
+                  <motion.div 
+                    key={index} 
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className={`w-full ${isVideo ? 'md:col-span-2 aspect-video' : 'aspect-square'} rounded-3xl overflow-hidden border border-white/10 bg-dark-surface flex items-center justify-center p-4 group hover:border-white/20 transition-colors`}
+                  >
+                    {isVideo ? (
+                      <iframe
+                        src={imgSrc}
+                        className="w-full h-full border-0 rounded-2xl"
+                        allow="autoplay; fullscreen"
+                        allowFullScreen
+                      />
+                    ) : (
+                      <img 
+                        src={imgSrc} 
+                        alt={`${project.project} gallery image ${index + 2}`}
+                        className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-700"
+                        referrerPolicy="no-referrer"
+                      />
+                    )}
+                  </motion.div>
+                );
+              })}
             </div>
           )}
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-white/10 pt-12">
-            <div>
-              <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mb-2">{content.ui.client}</div>
-              <div className="text-lg font-medium">{project.client}</div>
-            </div>
-            <div>
-              <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mb-2">{content.ui.role}</div>
-              <div className="text-lg font-medium">{project.role}</div>
-            </div>
-            <div>
-              <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mb-2">{content.ui.deliverables}</div>
-              <ul className="space-y-1">
-                {project.deliverables.map((item, i) => (
-                  <li key={i} className="text-lg font-medium text-white/80">{item}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
         </motion.div>
       </div>
     </section>

@@ -42,11 +42,6 @@ export default function CaseStudies() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
                 
-                {/* Impact Badge */}
-                <div className="absolute top-6 right-6 glass px-4 py-2 rounded-full text-xs font-bold tracking-wider text-premium-gold">
-                  {project.impact}
-                </div>
-
                 {/* Content Overlay */}
                 <div className="absolute bottom-8 left-8 right-8 flex justify-between items-end">
                   <div>
