@@ -47,13 +47,27 @@
     "subheadline": "Especializado en diseño gráfico de alta conversión, edición de video cinematográfica y estrategia creativa para marcas y creadores premium."
   },
   "trustBrands": [
-    "CONEF 2025", "Anna Language Coaching", "Fernando Hernandez CEO", "BBT Otra", "L'HEURE D'OR", "Templum Real State", "ShangoClub"
+    "CONEF 2025", "Anna Language Coaching", "Fernando Hernandez CEO", "BBT Otra", "L'HEURE D'OR", "Templum Real State", "ShangoClub", "Puerta Madriz"
   ],
   "caseStudies": {
     "sectionTitle": "Proyectos",
     "sectionTitleHighlight": "Destacados",
     "sectionSubtitle": "Una colección de trabajos enfocados en el impacto medible, la narrativa visual y la elevación de la marca.",
     "projects": [
+      {
+        "id": "luxe-wear-launch",
+        "title": "Creación de Contenido Digital",
+        "client": "Fernando Hernandez CEO",
+        "category": "Contenido Social, Edición de Video",
+        "image": "https://drive.google.com/file/d/1_iMyeeN3FNL64r4N36Y6zRtPSP5Lud1p/preview?usp=sharing",
+        "thumbnailGallery": [
+          "https://lh3.googleusercontent.com/d/1NucomZBrJstuEhhc8c3-ARmsnzQKqmmo",
+          "https://lh3.googleusercontent.com/d/1gwvjIyV1_2G8vgtN0JiXPhJGqji017sK",
+          "https://lh3.googleusercontent.com/d/1MReN9Drxtf4k3Imw--cU62PiqZiRsvgz",
+          "https://lh3.googleusercontent.com/d/1N_3MCsNO4f5Ef6iiiSzI4afgSRfASRt4"
+        ],
+        "impact": "Presencia Social de Alto Rendimiento"
+      },
       {
         "id": "arcade-shangoclub",
         "title": "Identidad Visual ARCADE",
@@ -69,20 +83,6 @@
         "category": "Branding",
         "image": "https://lh3.googleusercontent.com/d/16qy54PX4EgqGN862uoqHTO20QGNYDzHc",
         "impact": "+45% Interacción de Usuario"
-      },
-      {
-        "id": "luxe-wear-launch",
-        "title": "Creación de Contenido Digital",
-        "client": "Fernando Hernandez CEO",
-        "category": "Contenido Social, Edición de Video",
-        "image": "https://drive.google.com/file/d/1_iMyeeN3FNL64r4N36Y6zRtPSP5Lud1p/preview?usp=sharing",
-        "thumbnailGallery": [
-          "https://lh3.googleusercontent.com/d/1NucomZBrJstuEhhc8c3-ARmsnzQKqmmo",
-          "https://lh3.googleusercontent.com/d/1gwvjIyV1_2G8vgtN0JiXPhJGqji017sK",
-          "https://lh3.googleusercontent.com/d/1MReN9Drxtf4k3Imw--cU62PiqZiRsvgz",
-          "https://lh3.googleusercontent.com/d/1N_3MCsNO4f5Ef6iiiSzI4afgSRfASRt4"
-        ],
-        "impact": "Presencia Social de Alto Rendimiento"
       }
     ]
   },
