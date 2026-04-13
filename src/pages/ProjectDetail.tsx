@@ -39,23 +39,26 @@ export default function ProjectDetail() {
             </p>
           </div>
 
-          <div className="aspect-video w-full rounded-3xl overflow-hidden border border-white/10 mb-16 bg-dark-surface">
+          <div className="aspect-video w-full rounded-3xl overflow-hidden border border-white/10 mb-16 bg-dark-surface flex items-center justify-center">
             <img 
               src={project.image} 
               alt={project.project}
-              className="w-full h-full object-cover"
+              className="max-w-full max-h-full object-contain"
               referrerPolicy="no-referrer"
             />
           </div>
 
-          {project.gallery && project.gallery.length > 0 && (
+          {project.gallery && project.gallery.length > 1 && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-              {project.gallery.map((imgSrc, index) => (
-                <div key={index} className="w-full rounded-3xl overflow-hidden border border-white/10 bg-dark-surface">
+              {project.gallery.slice(1).map((imgSrc, index) => (
+                <div 
+                  key={index} 
+                  className="w-full aspect-square rounded-3xl overflow-hidden border border-white/10 bg-dark-surface flex items-center justify-center p-4"
+                >
                   <img 
                     src={imgSrc} 
-                    alt={`${project.project} gallery image ${index + 1}`}
-                    className="w-full h-auto object-cover"
+                    alt={`${project.project} gallery image ${index + 2}`}
+                    className="max-w-full max-h-full object-contain"
                     referrerPolicy="no-referrer"
                   />
                 </div>

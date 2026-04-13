@@ -59,7 +59,7 @@
         "title": "Identidad de Marca Completa",
         "client": "CONEF 2025",
         "category": "Branding",
-        "image": "/conef4.jpg",
+        "image": "https://lh3.googleusercontent.com/d/16qy54PX4EgqGN862uoqHTO20QGNYDzHc",
         "impact": "+45% Interacción de Usuario"
       },
       {
@@ -91,13 +91,13 @@
         "client": "CONEF 2025", 
         "project": "Identidad de Marca Completa", 
         "category": "Branding",
-        "image": "/conef4.jpg",
+        "image": "https://lh3.googleusercontent.com/d/16qy54PX4EgqGN862uoqHTO20QGNYDzHc",
         "gallery": [
-          "/conef1.png",
-          "/conef2.png",
-          "/conef3.jpg",
-          "/conef4.jpg",
-          "/conef5.jpg"
+          "https://lh3.googleusercontent.com/d/16qy54PX4EgqGN862uoqHTO20QGNYDzHc",
+          "https://lh3.googleusercontent.com/d/16En-iikj4kdhhB-8jAKfKWhInA7_XjJ6",
+          "https://lh3.googleusercontent.com/d/1NCQhLh8QSdwaGapt9rajL_SgtRINkTe0",
+          "https://lh3.googleusercontent.com/d/1KDAxgqJ3HbS0s-h3Pht1kdQNWgaJLKGo",
+          "https://lh3.googleusercontent.com/d/1I_Etgevx_DYOQekooGKkSfTKc1XT5dXK"
         ],
         "description": "Creación de la identidad de marca completa de CONEF 2025 desde cero.",
         "role": "Director Creativo",
