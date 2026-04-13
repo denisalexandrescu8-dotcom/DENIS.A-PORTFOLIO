@@ -166,12 +166,12 @@ export default function ProjectDetail() {
               <h2 className="text-3xl md:text-5xl font-display font-bold tracking-tighter">{content.ui.galleryShowcase} <span className="text-white/20">{content.ui.showcase}</span></h2>
               <div className="h-px flex-1 bg-white/5 mx-8 hidden md:block" />
               <div className="text-[10px] font-mono uppercase tracking-widest text-white/40">
-                {project.gallery.length - 1} {project.gallery.length - 1 === 1 ? content.ui.asset : content.ui.assets}
+                {project.gallery.length} {project.gallery.length === 1 ? content.ui.asset : content.ui.assets}
               </div>
             </div>
             
             <div className="columns-1 md:columns-2 gap-8 space-y-8">
-              {project.gallery.slice(1).map((imgSrc, index) => {
+              {project.gallery.map((imgSrc, index) => {
                 const isVideo = imgSrc.includes('/preview');
                 return (
                   <motion.div 

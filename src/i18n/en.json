@@ -224,7 +224,7 @@
         "year": "2025", 
         "client": "Templum Real State", 
         "project": "Real Estate Social Content", 
-        "category": "Social content",
+        "category": "Social Content",
         "image": "https://drive.google.com/file/d/1lt1fRkssoemrNHs4Lu-H_OkqysnO7jP1/preview",
         "gallery": [
           "https://drive.google.com/file/d/1lt1fRkssoemrNHs4Lu-H_OkqysnO7jP1/preview",
@@ -234,6 +234,25 @@
         "description": "Content creation for Templum Real State, including assembly, editing, subtitles, script, and voiceover.",
         "role": "Video Editor & Content Creator",
         "deliverables": ["Short-form video editing"]
+      },
+      { 
+        "id": "puerta-madriz",
+        "year": "2025", 
+        "client": "Puerta Madriz", 
+        "project": "Nightclub Content Design", 
+        "category": "Social Content",
+        "image": "https://lh3.googleusercontent.com/d/1Ju2UBEYEM9dr4m1US5_WbHaLIxth4Sfx",
+        "gallery": [
+          "https://lh3.googleusercontent.com/d/1Ju2UBEYEM9dr4m1US5_WbHaLIxth4Sfx",
+          "https://drive.google.com/file/d/1qt1tvB6KtmYkWFObXR_j7VTr-KgJnwQ3/preview",
+          "https://lh3.googleusercontent.com/d/1c_1004wxLKOnda4YoQsR8KMJ-P24YpUy",
+          "https://lh3.googleusercontent.com/d/1o9Wf3orMrASwoHlMPJYnZGQocR_RoKE0",
+          "https://lh3.googleusercontent.com/d/1neB2_u12QV0sMtfiJJE7r1B0OfsZuDPD",
+          "https://lh3.googleusercontent.com/d/1jMwGEYlRJvYJEaQJOhyUtcArdyKh0fy-"
+        ],
+        "description": "Creation of dynamic and engaging social media posts for Puerta Madriz nightclub, focused on capturing the energy of nightlife.",
+        "role": "Graphic Designer & Content Creator",
+        "deliverables": ["Post Design", "Visual Strategy", "Instagram Content"]
       }
     ]
   },
