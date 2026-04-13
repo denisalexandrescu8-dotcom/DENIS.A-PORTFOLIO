@@ -84,32 +84,6 @@ export default function ProjectDetail() {
           </motion.div>
         </div>
 
-        {/* Main Feature Image/Video */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3 }}
-          className="relative aspect-[16/9] w-full rounded-[2.5rem] overflow-hidden border border-white/10 mb-24 bg-dark-surface shadow-[0_0_100px_rgba(0,0,0,0.5)] group"
-        >
-          {project.image.includes('/preview') ? (
-            <iframe
-              src={project.image}
-              className="absolute inset-0 w-full h-full border-0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowFullScreen
-              title={project.project}
-            />
-          ) : (
-            <img 
-              src={project.image} 
-              alt={project.project}
-              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-              referrerPolicy="no-referrer"
-            />
-          )}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-        </motion.div>
-
         {/* Project Details Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 mb-32">
           <div className="lg:col-span-8">
