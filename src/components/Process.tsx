@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
-import content from '../content.json';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Process() {
+  const { content } = useLanguage();
+
   return (
     <section id="process" className="section-padding bg-dark-surface/50">
       <div className="max-w-7xl mx-auto">

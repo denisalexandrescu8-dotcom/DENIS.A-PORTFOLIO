@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
-import content from '../content.json';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function TrustBar() {
+  const { content } = useLanguage();
+
   return (
     <section className="py-12 border-y border-white/5 bg-dark-surface/50 overflow-hidden">
       <div className="flex whitespace-nowrap">

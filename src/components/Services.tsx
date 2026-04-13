@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { CheckCircle2, Palette, Video, Share2, Target } from 'lucide-react';
-import content from '../content.json';
+import { useLanguage } from '../context/LanguageContext';
 
 const iconMap: Record<string, any> = {
   Palette,
@@ -10,6 +10,8 @@ const iconMap: Record<string, any> = {
 };
 
 export default function Services() {
+  const { content } = useLanguage();
+
   return (
     <section id="services" className="section-padding bg-dark-surface/30">
       <div className="max-w-7xl mx-auto">

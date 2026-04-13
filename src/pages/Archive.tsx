@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import content from '../content.json';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Archive() {
+  const { content } = useLanguage();
+
   return (
     <section className="pt-32 pb-20 px-6 md:px-12 lg:px-24 min-h-screen">
       <div className="max-w-5xl mx-auto">
@@ -23,10 +25,10 @@ export default function Archive() {
         <div className="border-t border-white/10">
           {/* Table Header */}
           <div className="hidden md:grid grid-cols-4 gap-4 py-4 px-4 text-xs font-mono uppercase tracking-widest text-white/40 border-b border-white/10">
-            <div>Year</div>
-            <div>Project</div>
-            <div>Client</div>
-            <div>Category</div>
+            <div>{content.ui.year}</div>
+            <div>{content.ui.project}</div>
+            <div>{content.ui.client}</div>
+            <div>{content.ui.category}</div>
           </div>
 
           {/* Table Body */}

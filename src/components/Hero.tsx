@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import content from '../content.json';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Hero() {
+  const { content } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex flex-col justify-center items-center text-center pt-32 pb-20 overflow-hidden">
       {/* Background Atmosphere */}
@@ -49,14 +51,14 @@ export default function Hero() {
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             className="group relative bg-white text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider overflow-hidden transition-all hover:pr-12"
           >
-            <span className="relative z-10">Work With Me</span>
+            <span className="relative z-10">{content.ui.workWithMe}</span>
             <ArrowRight className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all" size={20} />
           </button>
           <button 
             onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}
             className="px-8 py-4 rounded-full border border-white/10 hover:bg-white/5 transition-all text-white/80 font-medium"
           >
-            View Selected Projects
+            {content.ui.viewArchive}
           </button>
         </motion.div>
       </div>

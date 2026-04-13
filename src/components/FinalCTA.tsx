@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Mail } from 'lucide-react';
 import React, { useState } from 'react';
-import content from '../content.json';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function FinalCTA() {
+  const { content } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -45,7 +46,7 @@ export default function FinalCTA() {
                   <Mail size={20} />
                 </div>
                 <div>
-                  <div className="text-[10px] font-mono uppercase tracking-widest opacity-50">Email Me</div>
+                  <div className="text-[10px] font-mono uppercase tracking-widest opacity-50">{content.ui.emailMe}</div>
                   <div className="text-lg">{content.global.email}</div>
                 </div>
               </a>
@@ -62,7 +63,7 @@ export default function FinalCTA() {
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label className="text-[10px] font-mono uppercase tracking-widest text-white/40 ml-4">Name</label>
+                <label className="text-[10px] font-mono uppercase tracking-widest text-white/40 ml-4">{content.ui.name}</label>
                 <input 
                   type="text" 
                   required
@@ -73,7 +74,7 @@ export default function FinalCTA() {
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-[10px] font-mono uppercase tracking-widest text-white/40 ml-4">Email</label>
+                <label className="text-[10px] font-mono uppercase tracking-widest text-white/40 ml-4">{content.ui.email}</label>
                 <input 
                   type="email" 
                   required
@@ -85,31 +86,31 @@ export default function FinalCTA() {
               </div>
             </div>
             <div className="space-y-2">
-              <label className="text-[10px] font-mono uppercase tracking-widest text-white/40 ml-4">Project Type</label>
+              <label className="text-[10px] font-mono uppercase tracking-widest text-white/40 ml-4">{content.ui.projectType}</label>
               <select 
                 value={formData.projectType}
                 onChange={(e) => setFormData({...formData, projectType: e.target.value})}
                 className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-premium-blue/50 transition-colors appearance-none text-white/60"
               >
-                <option className="bg-black">Branding & Identity</option>
-                <option className="bg-black">Video Editing</option>
-                <option className="bg-black">Social Content</option>
-                <option className="bg-black">Full Creative Strategy</option>
+                <option className="bg-black" value="Branding & Identity">{content.ui.brandingAndIdentity}</option>
+                <option className="bg-black" value="Video Editing">{content.ui.videoEditing}</option>
+                <option className="bg-black" value="Social Content">{content.ui.socialContent}</option>
+                <option className="bg-black" value="Full Creative Strategy">{content.ui.fullCreativeStrategy}</option>
               </select>
             </div>
             <div className="space-y-2">
-              <label className="text-[10px] font-mono uppercase tracking-widest text-white/40 ml-4">Message</label>
+              <label className="text-[10px] font-mono uppercase tracking-widest text-white/40 ml-4">{content.ui.message}</label>
               <textarea 
                 rows={4} 
                 required
                 value={formData.message}
                 onChange={(e) => setFormData({...formData, message: e.target.value})}
-                placeholder="Tell me about your project..." 
+                placeholder="..." 
                 className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-premium-blue/50 transition-colors resize-none" 
               />
             </div>
             <button type="submit" className="w-full bg-white text-black py-5 rounded-2xl font-bold uppercase tracking-wider hover:bg-white/90 transition-all flex items-center justify-center gap-3 group">
-              Send Message
+              {content.ui.sendMessage}
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </button>
           </motion.form>

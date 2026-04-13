@@ -1,13 +1,14 @@
 import { motion } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import content from '../content.json';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const { content, language, toggleLanguage } = useLanguage();
 
   const handleScroll = (id: string) => {
     setIsOpen(false);
@@ -20,6 +21,13 @@ export default function Navbar() {
       document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const navItems = [
+    { id: 'work', label: content.ui.work },
+    { id: 'services', label: content.ui.services },
+    { id: 'about', label: content.ui.about },
+    { id: 'process', label: content.process.sectionTitleHighlight }
+  ];
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 px-6 py-6">
@@ -36,29 +44,48 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-white/70">
-          {['Work', 'Services', 'About', 'Process'].map((item) => (
+          {navItems.map((item) => (
             <button 
-              key={item} 
-              onClick={() => handleScroll(item.toLowerCase())}
+              key={item.id} 
+              onClick={() => handleScroll(item.id)}
               className="hover:text-white transition-colors cursor-pointer"
             >
-              {item}
+              {item.label}
             </button>
           ))}
+          
+          <button 
+            onClick={toggleLanguage}
+            className="flex items-center gap-2 hover:text-white transition-colors cursor-pointer"
+            title="Toggle Language"
+          >
+            <Globe size={16} />
+            <span>{content.ui.languageToggle}</span>
+          </button>
+
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => handleScroll('contact')}
             className="bg-white text-black px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider"
           >
-            Start a Project
+            {content.ui.contact}
           </motion.button>
         </div>
 
         {/* Mobile Toggle */}
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="flex items-center gap-4 md:hidden">
+          <button 
+            onClick={toggleLanguage}
+            className="flex items-center gap-2 text-white/70 hover:text-white transition-colors"
+          >
+            <Globe size={20} />
+            <span className="text-sm font-medium">{content.ui.languageToggle}</span>
+          </button>
+          <button onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -68,20 +95,20 @@ export default function Navbar() {
           animate={{ opacity: 1, y: 0 }}
           className="absolute top-24 left-6 right-6 glass rounded-3xl p-8 md:hidden flex flex-col gap-6 text-center"
         >
-          {['Work', 'Services', 'About', 'Process'].map((item) => (
+          {navItems.map((item) => (
             <button 
-              key={item} 
+              key={item.id} 
               className="text-2xl font-display font-medium"
-              onClick={() => handleScroll(item.toLowerCase())}
+              onClick={() => handleScroll(item.id)}
             >
-              {item}
+              {item.label}
             </button>
           ))}
           <button 
             onClick={() => handleScroll('contact')}
             className="bg-white text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider mt-4"
           >
-            Start a Project
+            {content.ui.contact}
           </button>
         </motion.div>
       )}

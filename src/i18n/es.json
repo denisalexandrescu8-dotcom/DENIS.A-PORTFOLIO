@@ -1,0 +1,290 @@
+{
+  "global": {
+    "name": "DENIS.A",
+    "email": "denisalexandrescu8@gmail.com",
+    "location": "Basado en Europa — Trabajando a nivel mundial",
+    "socials": {
+      "instagram": "https://instagram.com",
+      "linkedin": "https://linkedin.com",
+      "twitter": "https://twitter.com",
+      "youtube": "https://youtube.com"
+    }
+  },
+  "ui": {
+    "work": "Trabajo",
+    "services": "Servicios",
+    "about": "Sobre mí",
+    "contact": "Contacto",
+    "viewArchive": "Ver Archivo",
+    "backToArchive": "Volver al Archivo",
+    "role": "Rol",
+    "deliverables": "Entregables",
+    "sendMessage": "Enviar Mensaje",
+    "allRightsReserved": "Todos los derechos reservados",
+    "backToTop": "Volver arriba",
+    "languageToggle": "EN",
+    "privacyPolicy": "Política de Privacidad",
+    "termsOfService": "Términos de Servicio",
+    "year": "Año",
+    "project": "Proyecto",
+    "client": "Cliente",
+    "category": "Categoría",
+    "name": "Nombre",
+    "email": "Correo Electrónico",
+    "projectType": "Tipo de Proyecto",
+    "message": "Mensaje",
+    "brandingAndIdentity": "Branding e Identidad",
+    "videoEditing": "Edición de Video",
+    "socialContent": "Contenido Social",
+    "workWithMe": "Trabaja Conmigo",
+    "theStory": "Mi Historia",
+    "emailMe": "Mándame un email"
+  },
+  "hero": {
+    "availabilityBadge": "Disponible para proyectos freelance",
+    "headlineStart": "Ayudo a las marcas a convertir ideas en",
+    "headlineHighlight": "visuales que impulsan el crecimiento.",
+    "subheadline": "Especializado en diseño gráfico de alta conversión, edición de video cinematográfica y estrategia creativa para marcas y creadores premium."
+  },
+  "trustBrands": [
+    "CONEF 2025", "Anna Language Coaching", "Fernando Hernandez CEO", "BBT Otra", "L'HEURE D'OR", "Templum Real State", "ShangoClub"
+  ],
+  "caseStudies": {
+    "sectionTitle": "Proyectos",
+    "sectionTitleHighlight": "Destacados",
+    "sectionSubtitle": "Una colección de trabajos enfocados en el impacto medible, la narrativa visual y la elevación de la marca.",
+    "projects": [
+      {
+        "id": "conef-2025",
+        "title": "Identidad de Marca Completa",
+        "client": "CONEF 2025",
+        "category": "Branding",
+        "image": "/conef4.jpg",
+        "impact": "+45% Interacción de Usuario"
+      },
+      {
+        "id": "creator-pro-assets",
+        "title": "Recursos de YouTube de Alta Conversión",
+        "client": "Anna Language Coaching",
+        "category": "Contenido Social",
+        "image": "https://picsum.photos/seed/youtube/1200/800",
+        "impact": "+22% Aumento de CTR"
+      },
+      {
+        "id": "luxe-wear-launch",
+        "title": "Lanzamiento de Producto Cinematográfico",
+        "client": "Fernando Hernandez CEO",
+        "category": "Edición de Video",
+        "image": "https://picsum.photos/seed/luxe/1200/800",
+        "impact": "2M+ Vistas Orgánicas"
+      }
+    ]
+  },
+  "archive": {
+    "title": "Archivo de",
+    "titleHighlight": "Proyectos",
+    "subtitle": "Una lista completa de proyectos pasados, experimentos y trabajos para clientes.",
+    "projects": [
+      { 
+        "id": "conef-2025",
+        "year": "2025", 
+        "client": "CONEF 2025", 
+        "project": "Identidad de Marca Completa", 
+        "category": "Branding",
+        "image": "/conef4.jpg",
+        "gallery": [
+          "/conef1.png",
+          "/conef2.png",
+          "/conef3.jpg",
+          "/conef4.jpg",
+          "/conef5.jpg"
+        ],
+        "description": "Creación de la identidad de marca completa de CONEF 2025 desde cero.",
+        "role": "Director Creativo",
+        "deliverables": ["Guía Completa de Identidad de Marca"]
+      },
+      { 
+        "id": "creator-pro-assets",
+        "year": "2023", 
+        "client": "Anna Language Coaching", 
+        "project": "Recursos de YouTube", 
+        "category": "Social",
+        "image": "https://picsum.photos/seed/youtube/1920/1080",
+        "description": "Sistema de miniaturas de alta conversión y arte del canal para un creador de primer nivel, resultando en un aumento del 22% en la Tasa de Clics.",
+        "role": "Director Creativo",
+        "deliverables": ["Sistema de Miniaturas", "Arte del Canal", "Motion Graphics"]
+      },
+      { 
+        "id": "luxe-wear-launch",
+        "year": "2023", 
+        "client": "Fernando Hernandez CEO", 
+        "project": "Lanzamiento Cinematográfico", 
+        "category": "Video",
+        "image": "https://picsum.photos/seed/luxe/1920/1080",
+        "description": "Un video cinematográfico de lanzamiento de producto que generó más de 2 millones de vistas orgánicas en plataformas sociales.",
+        "role": "Editor de Video",
+        "deliverables": ["Edición de Video", "Corrección de Color", "Diseño de Sonido"]
+      },
+      { 
+        "id": "techflow-web",
+        "year": "2022", 
+        "client": "BBT Otra", 
+        "project": "Rediseño de Sitio Web", 
+        "category": "Diseño Web",
+        "image": "https://picsum.photos/seed/techflow/1920/1080",
+        "description": "Modernización de la presencia digital de una empresa SaaS B2B para aumentar las tasas de conversión y mejorar la experiencia del usuario.",
+        "role": "Diseñador UI/UX",
+        "deliverables": ["Wireframing", "Diseño UI", "Prototipado"]
+      },
+      { 
+        "id": "vanguard-campaign",
+        "year": "2022", 
+        "client": "L'HEURE D'OR", 
+        "project": "Campaña Publicitaria", 
+        "category": "Video",
+        "image": "https://picsum.photos/seed/vanguard/1920/1080",
+        "description": "Una campaña publicitaria en video de alta energía para una nueva línea de ropa deportiva, optimizada para TikTok e Instagram Reels.",
+        "role": "Director y Editor",
+        "deliverables": ["Storyboarding", "Edición de Video", "Efectos Visuales (VFX)"]
+      }
+    ]
+  },
+  "services": {
+    "sectionTitle": "Soluciones",
+    "sectionTitleHighlight": "Creativas",
+    "sectionSubtitle": "No solo diseño; construyo sistemas visuales que resuelven problemas de negocio y atraen la atención.",
+    "list": [
+      {
+        "id": "brand",
+        "title": "Diseño de Marca",
+        "description": "Identidades visuales estratégicas que posicionan a tu marca como líder.",
+        "icon": "Palette",
+        "deliverables": ["Sistemas de Logotipos", "Guías de Marca", "Lenguaje Visual"]
+      },
+      {
+        "id": "video",
+        "title": "Edición de Video",
+        "description": "Narrativa cinematográfica que mantiene a los espectadores enganchados de principio a fin.",
+        "icon": "Video",
+        "deliverables": ["Contenido de Formato Corto", "Comerciales", "Motion Graphics"]
+      },
+      {
+        "id": "social",
+        "title": "Contenido Social",
+        "description": "Visuales nativos para plataformas diseñados para máxima atención y crecimiento.",
+        "icon": "Share2",
+        "deliverables": ["Miniaturas de YouTube", "Creatividades de Anuncios", "Sistemas Sociales"]
+      },
+      {
+        "id": "strategy",
+        "title": "Estrategia Creativa",
+        "description": "Consultoría que alinea tu producción visual con los objetivos de negocio.",
+        "icon": "Target",
+        "deliverables": ["Dirección de Campañas", "Auditorías de Contenido", "Planificación de Crecimiento"]
+      }
+    ]
+  },
+  "about": {
+    "image": "https://picsum.photos/seed/denis/800/1000",
+    "badge": "Estratega Creativa",
+    "headlineStart": "Obsesionado con la",
+    "headlineHighlight1": "Calidad",
+    "headlineMiddle": ", Impulsado por los",
+    "headlineHighlight2": "Resultados.",
+    "paragraphs": [
+      "Soy Denis Alexandrescu, graduado en Comunicación Audiovisual con una profunda pasión por la narrativa visual. Mi viaje comenzó con una cámara y una obsesión por cómo la luz y el movimiento pueden cambiar la perspectiva de una persona.",
+      "Hoy, cierro la brecha entre la creatividad pura y la estrategia de negocio. No solo hago que las cosas se vean \"bonitas\", hago que funcionen. Ya sea una identidad de marca para una startup o miniaturas de alta conversión para un creador, mi enfoque siempre está en el resultado.",
+      "He pasado años refinando mi gusto y habilidades técnicas para ayudar a las marcas a destacar en un panorama digital saturado. Creo que cada píxel y cada fotograma deben tener un propósito."
+    ],
+    "stats": [
+      { "value": "5+", "label": "Años de Experiencia" },
+      { "value": "150+", "label": "Proyectos Entregados" }
+    ]
+  },
+  "process": {
+    "sectionTitle": "El",
+    "sectionTitleHighlight": "Proceso",
+    "sectionSubtitle": "Un enfoque estructurado hacia la creatividad que garantiza consistencia, calidad y resultados en todo momento.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Descubrimiento",
+        "description": "Profundizamos en tu marca, objetivos y audiencia objetivo para encontrar el ángulo único."
+      },
+      {
+        "number": "02",
+        "title": "Estrategia",
+        "description": "Desarrollamos una hoja de ruta visual que alinea la creatividad con tus objetivos de negocio."
+      },
+      {
+        "number": "03",
+        "title": "Creación",
+        "description": "Ocurre la magia. Diseño y edición de alta fidelidad con una atención obsesiva al detalle."
+      },
+      {
+        "number": "04",
+        "title": "Optimización",
+        "description": "Refinamos y probamos para asegurar que el resultado final ofrezca el máximo impacto."
+      }
+    ]
+  },
+  "contact": {
+    "headlineStart": "Tu marca merece visuales que",
+    "headlineHighlight": "la gente recuerde.",
+    "subheadline": "¿Listo para elevar tu presencia visual? Construyamos algo que impulse el crecimiento real de tu negocio."
+  },
+  "privacyPolicyContent": {
+    "lastUpdated": "Última actualización",
+    "sections": [
+      {
+        "title": "1. Información que Recopilamos",
+        "content": "Recopilamos la información que nos proporciona directamente cuando completa un formulario de contacto, solicita una cotización o se comunica con nosotros por correo electrónico. Esto puede incluir su nombre, dirección de correo electrónico, nombre de la empresa y detalles del proyecto."
+      },
+      {
+        "title": "2. Cómo Usamos Su Información",
+        "content": "Usamos la información que recopilamos para responder a sus consultas, proporcionar los servicios que solicita, enviarle avisos técnicos y mensajes de soporte, y comunicarnos con usted sobre productos, servicios y eventos."
+      },
+      {
+        "title": "3. Intercambio de Información",
+        "content": "No compartimos, vendemos ni alquilamos su información personal a terceros con fines de marketing. Podemos compartir información con proveedores, consultores y otros proveedores de servicios que necesiten acceso a dicha información para llevar a cabo el trabajo en nuestro nombre."
+      },
+      {
+        "title": "4. Seguridad de los Datos",
+        "content": "Tomamos medidas razonables para ayudar a proteger su información contra pérdida, robo, uso indebido, acceso no autorizado, divulgación, alteración y destrucción."
+      },
+      {
+        "title": "5. Contáctenos",
+        "content": "Si tiene alguna pregunta sobre esta Política de Privacidad, contáctenos en:"
+      }
+    ]
+  },
+  "termsOfServiceContent": {
+    "lastUpdated": "Última actualización",
+    "sections": [
+      {
+        "title": "1. Aceptación de los Términos",
+        "content": "Al acceder y utilizar este sitio web, usted acepta y acuerda estar sujeto a los términos y disposiciones de este acuerdo."
+      },
+      {
+        "title": "2. Servicios Prestados",
+        "content": "{name} proporciona servicios creativos que incluyen, entre otros, diseño de marca, edición de video, creación de contenido social y estrategia creativa. Los entregables y plazos específicos se detallarán en propuestas o contratos de proyectos individuales."
+      },
+      {
+        "title": "3. Propiedad Intelectual",
+        "content": "A menos que se acuerde lo contrario por escrito, todos los materiales producidos, incluidos, entre otros, diseños, videos y estrategias, siguen siendo propiedad intelectual de {name} hasta que se reciba el pago completo. Una vez realizado el pago completo, los derechos de uso se transfieren según lo especificado en el acuerdo del proyecto."
+      },
+      {
+        "title": "4. Responsabilidades del Usuario",
+        "content": "Los clientes son responsables de proporcionar los materiales, comentarios y aprobaciones necesarios de manera oportuna para garantizar que se cumplan los plazos del proyecto. Los retrasos en la comunicación del cliente pueden resultar en plazos de proyecto ajustados."
+      },
+      {
+        "title": "5. Limitación de Responsabilidad",
+        "content": "En ningún caso {name} será responsable de ningún daño indirecto, incidental, especial, consecuente o punitivo, que incluye, entre otros, pérdida de ganancias, datos, uso, fondo de comercio u otras pérdidas intangibles, que resulten de su acceso, uso o incapacidad para acceder o utilizar los servicios."
+      },
+      {
+        "title": "6. Contacto",
+        "content": "Para cualquier pregunta sobre estos términos, por favor contáctenos en:"
+      }
+    ]
+  }
+}

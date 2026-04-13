@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
 import { Link, useParams, Navigate } from 'react-router-dom';
-import content from '../content.json';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function ProjectDetail() {
   const { id } = useParams();
+  const { content } = useLanguage();
   const project = content.archive.projects.find((p) => p.id === id);
 
   if (!project) {
@@ -16,7 +17,7 @@ export default function ProjectDetail() {
       <div className="max-w-5xl mx-auto">
         <Link to="/archive" className="inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors text-sm font-mono uppercase tracking-widest mb-12">
           <ArrowLeft size={16} />
-          Back to Archive
+          {content.ui.backToArchive}
         </Link>
 
         <motion.div
@@ -64,15 +65,15 @@ export default function ProjectDetail() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-white/10 pt-12">
             <div>
-              <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mb-2">Client</div>
+              <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mb-2">{content.ui.client}</div>
               <div className="text-lg font-medium">{project.client}</div>
             </div>
             <div>
-              <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mb-2">Role</div>
+              <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mb-2">{content.ui.role}</div>
               <div className="text-lg font-medium">{project.role}</div>
             </div>
             <div>
-              <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mb-2">Deliverables</div>
+              <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mb-2">{content.ui.deliverables}</div>
               <ul className="space-y-1">
                 {project.deliverables.map((item, i) => (
                   <li key={i} className="text-lg font-medium text-white/80">{item}</li>

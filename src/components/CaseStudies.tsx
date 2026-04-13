@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import content from '../content.json';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function CaseStudies() {
+  const { content } = useLanguage();
+
   return (
     <section id="work" className="section-padding">
       <div className="max-w-7xl mx-auto">
@@ -17,7 +19,7 @@ export default function CaseStudies() {
             </p>
           </div>
           <Link to="/archive" className="text-sm font-mono uppercase tracking-widest border-b border-white/20 pb-1 hover:border-white transition-all">
-            View Archive ({content.archive.projects.length}+)
+            {content.ui.viewArchive} ({content.archive.projects.length}+)
           </Link>
         </div>
 
@@ -31,7 +33,7 @@ export default function CaseStudies() {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className={`group relative ${index === 0 ? 'lg:col-span-2' : ''}`}
             >
-              <div className="relative aspect-[16/9] overflow-hidden rounded-3xl bg-dark-surface border border-white/5">
+              <Link to={`/project/${project.id}`} className="block relative aspect-[16/9] overflow-hidden rounded-3xl bg-dark-surface border border-white/5">
                 <img 
                   src={project.image} 
                   alt={project.title}
@@ -59,7 +61,7 @@ export default function CaseStudies() {
                     <ArrowUpRight size={24} />
                   </div>
                 </div>
-              </div>
+              </Link>
             </motion.div>
           ))}
         </div>
