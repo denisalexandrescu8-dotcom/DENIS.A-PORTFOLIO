@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { CASE_STUDIES } from '../constants';
 import { ArrowUpRight } from 'lucide-react';
+import content from '../content.json';
 
 export default function CaseStudies() {
   return (
@@ -9,10 +9,10 @@ export default function CaseStudies() {
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-xl">
             <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
-              Selected <span className="text-white/40 italic">Projects</span>
+              {content.caseStudies.sectionTitle} <span className="text-white/40 italic">{content.caseStudies.sectionTitleHighlight}</span>
             </h2>
             <p className="text-white/60 text-lg font-light">
-              A collection of work focused on measurable impact, visual storytelling, and brand elevation.
+              {content.caseStudies.sectionSubtitle}
             </p>
           </div>
           <button className="text-sm font-mono uppercase tracking-widest border-b border-white/20 pb-1 hover:border-white transition-all">
@@ -21,7 +21,7 @@ export default function CaseStudies() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {CASE_STUDIES.map((project, index) => (
+          {content.caseStudies.projects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 40 }}

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Mail, Calendar } from 'lucide-react';
+import content from '../content.json';
 
 export default function FinalCTA() {
   return (
@@ -17,20 +18,20 @@ export default function FinalCTA() {
             className="text-left"
           >
             <h2 className="text-4xl md:text-6xl font-display font-bold mb-8 leading-[0.9] tracking-tighter">
-              Your brand deserves visuals <span className="text-white/40">people remember.</span>
+              {content.contact.headlineStart} <span className="text-white/40">{content.contact.headlineHighlight}</span>
             </h2>
             <p className="text-lg text-white/60 mb-12 font-light leading-relaxed">
-              Ready to elevate your visual presence? Let's build something that drives real business growth.
+              {content.contact.subheadline}
             </p>
 
             <div className="space-y-6">
-              <a href="mailto:hello@denis.a" className="flex items-center gap-4 text-white/60 hover:text-white transition-colors group">
+              <a href={`mailto:${content.global.email}`} className="flex items-center gap-4 text-white/60 hover:text-white transition-colors group">
                 <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-white/30 transition-all">
                   <Mail size={20} />
                 </div>
                 <div>
                   <div className="text-[10px] font-mono uppercase tracking-widest opacity-50">Email Me</div>
-                  <div className="text-lg">hello@denis.a</div>
+                  <div className="text-lg">{content.global.email}</div>
                 </div>
               </a>
               <div className="flex items-center gap-4 text-white/60 group cursor-pointer">

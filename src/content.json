@@ -1,0 +1,137 @@
+{
+  "global": {
+    "name": "DENIS.A",
+    "email": "hello@denis.a",
+    "location": "Based in Europe — Working Worldwide",
+    "socials": {
+      "instagram": "https://instagram.com",
+      "linkedin": "https://linkedin.com",
+      "twitter": "https://twitter.com",
+      "youtube": "https://youtube.com"
+    }
+  },
+  "hero": {
+    "availabilityBadge": "Available for Freelance Projects",
+    "headlineStart": "I help brands turn ideas into",
+    "headlineHighlight": "visuals that drive growth.",
+    "subheadline": "Specialized in high-conversion graphic design, cinematic video editing, and creative strategy for premium brands and creators."
+  },
+  "trustBrands": [
+    "TechFlow", "Vanguard", "Lumina", "Peak Performance", "Global Creative", "Nexus AI", "Luxe Wear"
+  ],
+  "caseStudies": {
+    "sectionTitle": "Selected",
+    "sectionTitleHighlight": "Projects",
+    "sectionSubtitle": "A collection of work focused on measurable impact, visual storytelling, and brand elevation.",
+    "projects": [
+      {
+        "id": "1",
+        "title": "Brand Evolution for Tech Startup",
+        "client": "Nexus AI",
+        "category": "Branding & Identity",
+        "image": "https://picsum.photos/seed/nexus/1200/800",
+        "impact": "+45% User Engagement"
+      },
+      {
+        "id": "2",
+        "title": "High-Conversion YouTube Assets",
+        "client": "Creator Pro",
+        "category": "Social Content",
+        "image": "https://picsum.photos/seed/youtube/1200/800",
+        "impact": "+22% CTR Increase"
+      },
+      {
+        "id": "3",
+        "title": "Cinematic Product Launch",
+        "client": "Luxe Wear",
+        "category": "Video Editing",
+        "image": "https://picsum.photos/seed/luxe/1200/800",
+        "impact": "2M+ Organic Views"
+      }
+    ]
+  },
+  "services": {
+    "sectionTitle": "Creative",
+    "sectionTitleHighlight": "Solutions",
+    "sectionSubtitle": "I don't just design; I build visual systems that solve business problems and drive attention.",
+    "list": [
+      {
+        "id": "brand",
+        "title": "Brand Design",
+        "description": "Strategic visual identities that position your brand as a leader.",
+        "icon": "Palette",
+        "deliverables": ["Logo Systems", "Brand Guidelines", "Visual Language"]
+      },
+      {
+        "id": "video",
+        "title": "Video Editing",
+        "description": "Cinematic storytelling that keeps viewers hooked from start to finish.",
+        "icon": "Video",
+        "deliverables": ["Short-form Content", "Commercials", "Motion Graphics"]
+      },
+      {
+        "id": "social",
+        "title": "Social Content",
+        "description": "Platform-native visuals designed for maximum attention and growth.",
+        "icon": "Share2",
+        "deliverables": ["YouTube Thumbnails", "Ad Creatives", "Social Systems"]
+      },
+      {
+        "id": "strategy",
+        "title": "Creative Strategy",
+        "description": "Consulting that aligns your visual output with business goals.",
+        "icon": "Target",
+        "deliverables": ["Campaign Direction", "Content Audits", "Growth Planning"]
+      }
+    ]
+  },
+  "about": {
+    "image": "https://picsum.photos/seed/denis/800/1000",
+    "badge": "Creative Strategist",
+    "headlineStart": "Obsessed with",
+    "headlineHighlight1": "Quality",
+    "headlineMiddle": ", Driven by",
+    "headlineHighlight2": "Results.",
+    "paragraphs": [
+      "I'm Denis Alexandrescu, an Audiovisual Communication graduate with a deep passion for visual storytelling. My journey started with a camera and an obsession with how light and motion can change a person's perspective.",
+      "Today, I bridge the gap between pure creativity and business strategy. I don't just make things look \"pretty\"—I make them work. Whether it's a brand identity for a startup or high-conversion thumbnails for a creator, my focus is always on the outcome.",
+      "I've spent years refining my taste and technical skills to help brands stand out in a crowded digital landscape. I believe every pixel and every frame should serve a purpose."
+    ],
+    "stats": [
+      { "value": "5+", "label": "Years Experience" },
+      { "value": "150+", "label": "Projects Delivered" }
+    ]
+  },
+  "process": {
+    "sectionTitle": "The",
+    "sectionTitleHighlight": "Process",
+    "sectionSubtitle": "A structured approach to creativity that ensures consistency, quality, and results every single time.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Discovery",
+        "description": "We dive deep into your brand, goals, and target audience to find the unique angle."
+      },
+      {
+        "number": "02",
+        "title": "Strategy",
+        "description": "Developing a visual roadmap that aligns creativity with your business objectives."
+      },
+      {
+        "number": "03",
+        "title": "Creation",
+        "description": "The magic happens. High-fidelity design and editing with obsessive attention to detail."
+      },
+      {
+        "number": "04",
+        "title": "Optimization",
+        "description": "Refining and testing to ensure the final output delivers maximum impact."
+      }
+    ]
+  },
+  "contact": {
+    "headlineStart": "Your brand deserves visuals",
+    "headlineHighlight": "people remember.",
+    "subheadline": "Ready to elevate your visual presence? Let's build something that drives real business growth."
+  }
+}

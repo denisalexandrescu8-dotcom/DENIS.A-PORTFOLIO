@@ -1,27 +1,45 @@
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import content from '../content.json';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleScroll = (id: string) => {
+    setIsOpen(false);
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 px-6 py-6">
       <div className="max-w-7xl mx-auto flex justify-between items-center glass rounded-full px-6 py-3">
-        <motion.div 
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          className="text-xl font-display font-bold tracking-tighter"
-        >
-          DENIS<span className="text-white/50">.A</span>
-        </motion.div>
+        <Link to="/">
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="text-xl font-display font-bold tracking-tighter"
+          >
+            {content.global.name.split('.')[0]}<span className="text-white/50">.{content.global.name.split('.')[1] || ''}</span>
+          </motion.div>
+        </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-white/70">
           {['Work', 'Services', 'About', 'Process'].map((item) => (
             <button 
               key={item} 
-              onClick={() => document.getElementById(item.toLowerCase())?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => handleScroll(item.toLowerCase())}
               className="hover:text-white transition-colors cursor-pointer"
             >
               {item}
@@ -30,7 +48,7 @@ export default function Navbar() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => handleScroll('contact')}
             className="bg-white text-black px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider"
           >
             Start a Project
@@ -54,19 +72,13 @@ export default function Navbar() {
             <button 
               key={item} 
               className="text-2xl font-display font-medium"
-              onClick={() => {
-                setIsOpen(false);
-                document.getElementById(item.toLowerCase())?.scrollIntoView({ behavior: 'smooth' });
-              }}
+              onClick={() => handleScroll(item.toLowerCase())}
             >
               {item}
             </button>
           ))}
           <button 
-            onClick={() => {
-              setIsOpen(false);
-              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-            }}
+            onClick={() => handleScroll('contact')}
             className="bg-white text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider mt-4"
           >
             Start a Project

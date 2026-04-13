@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { TRUST_BRANDS } from '../constants';
+import content from '../content.json';
 
 export default function TrustBar() {
   return (
@@ -14,7 +14,7 @@ export default function TrustBar() {
           }}
           className="flex items-center gap-16 pr-16"
         >
-          {[...TRUST_BRANDS, ...TRUST_BRANDS].map((brand, i) => (
+          {[...content.trustBrands, ...content.trustBrands].map((brand, i) => (
             <span 
               key={i} 
               className="text-2xl md:text-3xl font-display font-bold text-white/20 hover:text-white/40 transition-colors cursor-default"

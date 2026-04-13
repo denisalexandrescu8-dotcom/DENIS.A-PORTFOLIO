@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import content from '../content.json';
 
 export default function Hero() {
   return (
@@ -17,7 +18,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs font-mono uppercase tracking-[0.2em] mb-8"
         >
-          Available for Freelance Projects
+          {content.hero.availabilityBadge}
         </motion.div>
 
         <motion.h1
@@ -26,7 +27,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-5xl md:text-7xl lg:text-8xl font-display font-extrabold leading-[0.9] tracking-tighter mb-8"
         >
-          I help brands turn ideas into <span className="text-gradient">visuals that drive growth.</span>
+          {content.hero.headlineStart} <span className="text-gradient">{content.hero.headlineHighlight}</span>
         </motion.h1>
 
         <motion.p
@@ -35,7 +36,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-12 font-light leading-relaxed"
         >
-          Specialized in high-conversion graphic design, cinematic video editing, and creative strategy for premium brands and creators.
+          {content.hero.subheadline}
         </motion.p>
 
         <motion.div
