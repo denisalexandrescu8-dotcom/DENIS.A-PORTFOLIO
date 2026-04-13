@@ -1,6 +1,10 @@
 {
-  "name": "Denis Alexandrescu | Premium Creative Portfolio",
+  "name": "Denis Alexandrescu Portfolio",
   "description": "High-converting portfolio for Denis Alexandrescu, specialized in graphic design, video editing, and creative strategy.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["Portfolio", "Lead Generation", "Creative Services"]
+  "majorCapabilities": [
+    "Portfolio",
+    "Lead Generation",
+    "Creative Services"
+  ]
 }
