@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import content from '../content.json';
 
@@ -31,18 +31,22 @@ export default function Archive() {
 
           {/* Table Body */}
           {content.archive.projects.map((item, i) => (
-            <motion.div 
-              key={i}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: i * 0.05 }}
-              className="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-4 py-6 px-4 border-b border-white/10 hover:bg-white/5 transition-colors items-center group"
-            >
-              <div className="text-white/40 font-mono text-sm">{item.year}</div>
-              <div className="font-bold text-lg md:text-xl group-hover:text-premium-blue transition-colors">{item.project}</div>
-              <div className="text-white/60">{item.client}</div>
-              <div className="text-premium-blue/70 text-sm">{item.category}</div>
-            </motion.div>
+            <Link to={`/project/${item.id}`} key={item.id || i}>
+              <motion.div 
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: i * 0.05 }}
+                className="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-4 py-6 px-4 border-b border-white/10 hover:bg-white/5 transition-colors items-center group cursor-pointer"
+              >
+                <div className="text-white/40 font-mono text-sm">{item.year}</div>
+                <div className="font-bold text-lg md:text-xl group-hover:text-premium-blue transition-colors flex items-center gap-3">
+                  {item.project}
+                  <ArrowUpRight size={16} className="opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all" />
+                </div>
+                <div className="text-white/60">{item.client}</div>
+                <div className="text-premium-blue/70 text-sm">{item.category}</div>
+              </motion.div>
+            </Link>
           ))}
         </div>
       </div>

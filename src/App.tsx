@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import Archive from './pages/Archive';
+import ProjectDetail from './pages/ProjectDetail';
 import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
           <Route path="/archive" element={<Archive />} />
+          <Route path="/project/:id" element={<ProjectDetail />} />
         </Routes>
         <Footer />
       </main>

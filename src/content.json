@@ -17,7 +17,7 @@
     "subheadline": "Specialized in high-conversion graphic design, cinematic video editing, and creative strategy for premium brands and creators."
   },
   "trustBrands": [
-    "TechFlow", "Vanguard", "Lumina", "Peak Performance", "Global Creative", "Nexus AI", "Luxe Wear"
+    "CONEF 2025", "Anna Language Coaching", "Fernando Hernandez CEO", "BBT Otra", "L'HEURE D'OR"
   ],
   "caseStudies": {
     "sectionTitle": "Selected",
@@ -25,17 +25,17 @@
     "sectionSubtitle": "A collection of work focused on measurable impact, visual storytelling, and brand elevation.",
     "projects": [
       {
-        "id": "1",
-        "title": "Brand Evolution for Tech Startup",
-        "client": "Nexus AI",
-        "category": "Branding & Identity",
-        "image": "https://picsum.photos/seed/nexus/1200/800",
+        "id": "conef-2025",
+        "title": "Complete Brand Identity",
+        "client": "CONEF 2025",
+        "category": "Branding",
+        "image": "/conef4.jpg",
         "impact": "+45% User Engagement"
       },
       {
         "id": "2",
         "title": "High-Conversion YouTube Assets",
-        "client": "Creator Pro",
+        "client": "Anna Language Coaching",
         "category": "Social Content",
         "image": "https://picsum.photos/seed/youtube/1200/800",
         "impact": "+22% CTR Increase"
@@ -43,7 +43,7 @@
       {
         "id": "3",
         "title": "Cinematic Product Launch",
-        "client": "Luxe Wear",
+        "client": "Fernando Hernandez CEO",
         "category": "Video Editing",
         "image": "https://picsum.photos/seed/luxe/1200/800",
         "impact": "2M+ Organic Views"
@@ -55,12 +55,68 @@
     "titleHighlight": "Archive",
     "subtitle": "A comprehensive list of past projects, experiments, and client work.",
     "projects": [
-      { "year": "2023", "client": "Nexus AI", "project": "Brand Evolution", "category": "Branding" },
-      { "year": "2023", "client": "Creator Pro", "project": "YouTube Assets", "category": "Social" },
-      { "year": "2023", "client": "Luxe Wear", "project": "Cinematic Launch", "category": "Video" },
-      { "year": "2022", "client": "TechFlow", "project": "Website Redesign", "category": "Web Design" },
-      { "year": "2022", "client": "Vanguard", "project": "Ad Campaign", "category": "Video" },
-      { "year": "2021", "client": "Peak Performance", "project": "Social Media Kit", "category": "Social" }
+      { 
+        "id": "conef-2025",
+        "year": "2025", 
+        "client": "CONEF 2025", 
+        "project": "Complete Brand Identity", 
+        "category": "Branding",
+        "image": "/conef4.jpg",
+        "gallery": [
+          "/conef1.png",
+          "/conef2.png",
+          "/conef3.jpg",
+          "/conef4.jpg",
+          "/conef5.jpg"
+        ],
+        "description": "Creation of the complete CONEF 2025 brand identity from scratch.",
+        "role": "Creative director",
+        "deliverables": ["Complete Brand Identity Guide"]
+      },
+      { 
+        "id": "creator-pro-assets",
+        "year": "2023", 
+        "client": "Anna Language Coaching", 
+        "project": "YouTube Assets", 
+        "category": "Social",
+        "image": "https://picsum.photos/seed/youtube/1920/1080",
+        "description": "High-conversion thumbnail system and channel art for a top-tier creator, resulting in a 22% increase in Click-Through Rate.",
+        "role": "Creative Director",
+        "deliverables": ["Thumbnail System", "Channel Art", "Motion Graphics"]
+      },
+      { 
+        "id": "luxe-wear-launch",
+        "year": "2023", 
+        "client": "Fernando Hernandez CEO", 
+        "project": "Cinematic Launch", 
+        "category": "Video",
+        "image": "https://picsum.photos/seed/luxe/1920/1080",
+        "description": "A cinematic product launch video that generated over 2M organic views across social platforms.",
+        "role": "Video Editor",
+        "deliverables": ["Video Editing", "Color Grading", "Sound Design"]
+      },
+      { 
+        "id": "techflow-web",
+        "year": "2022", 
+        "client": "BBT Otra", 
+        "project": "Website Redesign", 
+        "category": "Web Design",
+        "image": "https://picsum.photos/seed/techflow/1920/1080",
+        "description": "Modernizing the digital presence of a B2B SaaS company to increase conversion rates and improve user experience.",
+        "role": "UI/UX Designer",
+        "deliverables": ["Wireframing", "UI Design", "Prototyping"]
+      },
+      { 
+        "id": "vanguard-campaign",
+        "year": "2022", 
+        "client": "L'HEURE D'OR", 
+        "project": "Ad Campaign", 
+        "category": "Video",
+        "image": "https://picsum.photos/seed/vanguard/1920/1080",
+        "description": "A high-energy video ad campaign for a new fitness apparel line, optimized for TikTok and Instagram Reels.",
+        "role": "Director & Editor",
+        "deliverables": ["Storyboarding", "Video Editing", "VFX"]
+      }
     ]
   },
   "services": {
