@@ -34,12 +34,26 @@ export default function CaseStudies() {
               className={`group relative ${index === 0 ? 'lg:col-span-2' : ''}`}
             >
               <Link to={`/project/${project.id}`} className="block relative aspect-[16/9] overflow-hidden rounded-3xl bg-dark-surface border border-white/5">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
-                  referrerPolicy="no-referrer"
-                />
+                {project.thumbnailGallery ? (
+                  <div className="grid grid-cols-2 grid-rows-2 w-full h-full gap-1 p-1 bg-white/5">
+                    {project.thumbnailGallery.slice(0, 4).map((img, i) => (
+                      <img 
+                        key={i}
+                        src={img} 
+                        alt={`${project.title} ${i + 1}`}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
+                        referrerPolicy="no-referrer"
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
+                    referrerPolicy="no-referrer"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
                 
                 {/* Content Overlay */}

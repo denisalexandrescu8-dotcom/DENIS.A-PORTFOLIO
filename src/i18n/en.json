@@ -76,6 +76,12 @@
         "client": "Fernando Hernandez CEO",
         "category": "Social Content, Video Editing",
         "image": "https://drive.google.com/file/d/1_iMyeeN3FNL64r4N36Y6zRtPSP5Lud1p/preview?usp=sharing",
+        "thumbnailGallery": [
+          "https://lh3.googleusercontent.com/d/1NucomZBrJstuEhhc8c3-ARmsnzQKqmmo",
+          "https://lh3.googleusercontent.com/d/1gwvjIyV1_2G8vgtN0JiXPhJGqji017sK",
+          "https://lh3.googleusercontent.com/d/1MReN9Drxtf4k3Imw--cU62PiqZiRsvgz",
+          "https://lh3.googleusercontent.com/d/1N_3MCsNO4f5Ef6iiiSzI4afgSRfASRt4"
+        ],
         "impact": "High-Performance Social Presence"
       }
     ]
