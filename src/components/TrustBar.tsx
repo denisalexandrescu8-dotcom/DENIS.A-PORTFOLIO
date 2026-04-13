@@ -1,0 +1,29 @@
+import { motion } from 'motion/react';
+import { TRUST_BRANDS } from '../constants';
+
+export default function TrustBar() {
+  return (
+    <section className="py-12 border-y border-white/5 bg-dark-surface/50 overflow-hidden">
+      <div className="flex whitespace-nowrap">
+        <motion.div 
+          animate={{ x: [0, -1000] }}
+          transition={{ 
+            duration: 20, 
+            repeat: Infinity, 
+            ease: "linear" 
+          }}
+          className="flex items-center gap-16 pr-16"
+        >
+          {[...TRUST_BRANDS, ...TRUST_BRANDS].map((brand, i) => (
+            <span 
+              key={i} 
+              className="text-2xl md:text-3xl font-display font-bold text-white/20 hover:text-white/40 transition-colors cursor-default"
+            >
+              {brand}
+            </span>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+}
