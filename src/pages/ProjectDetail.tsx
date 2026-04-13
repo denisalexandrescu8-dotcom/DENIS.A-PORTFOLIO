@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Calendar, Tag, User, Briefcase, CheckCircle2 } from 'lucide-react';
 import { Link, useParams, Navigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -13,116 +13,212 @@ export default function ProjectDetail() {
   }
 
   return (
-    <section className="pt-32 pb-20 px-6 md:px-12 lg:px-24 min-h-screen">
-      <div className="max-w-5xl mx-auto">
-        <Link to="/archive" className="inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors text-sm font-mono uppercase tracking-widest mb-12">
-          <ArrowLeft size={16} />
-          {content.ui.backToArchive}
-        </Link>
-
+    <section className="pt-32 pb-32 px-6 md:px-12 lg:px-24 min-h-screen bg-black">
+      <div className="max-w-7xl mx-auto">
+        {/* Navigation */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="mb-16"
         >
-          <div className="mb-12">
-            <div className="flex items-center gap-4 text-sm font-mono uppercase tracking-widest text-premium-blue mb-6">
-              <span>{project.year}</span>
-              <span className="w-1 h-1 rounded-full bg-white/20" />
-              <span>{project.category}</span>
+          <Link to="/archive" className="inline-flex items-center gap-3 text-white/40 hover:text-premium-blue transition-all group text-sm font-mono uppercase tracking-widest">
+            <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-premium-blue/30 group-hover:bg-premium-blue/5 transition-all">
+              <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight">
+            {content.ui.backToArchive}
+          </Link>
+        </motion.div>
+
+        {/* Header Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="lg:col-span-8"
+          >
+            <div className="flex flex-wrap items-center gap-6 text-[10px] font-mono uppercase tracking-[0.2em] text-premium-blue mb-8">
+              <div className="flex items-center gap-2 px-3 py-1 rounded-full border border-premium-blue/20 bg-premium-blue/5">
+                <Calendar size={12} />
+                <span>{project.year}</span>
+              </div>
+              <div className="flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/60">
+                <Tag size={12} />
+                <span>{project.category}</span>
+              </div>
+            </div>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-8 leading-[0.9] tracking-tighter">
               {project.project}
             </h1>
-            <p className="text-xl text-white/60 font-light max-w-2xl">
+            <p className="text-xl md:text-2xl text-white/60 font-light leading-relaxed max-w-3xl">
               {project.description}
             </p>
-          </div>
+          </motion.div>
 
-          <div className="aspect-video w-full rounded-3xl overflow-hidden border border-white/10 mb-16 bg-dark-surface flex items-center justify-center shadow-2xl relative">
-            {project.image.includes('/preview') ? (
-              <iframe
-                src={project.image}
-                className="absolute inset-0 w-full h-full border-0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
-                title={project.project}
-              />
-            ) : (
-              <img 
-                src={project.image} 
-                alt={project.project}
-                className="max-w-full max-h-full object-contain"
-                referrerPolicy="no-referrer"
-              />
-            )}
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 mb-24">
-            <div className="lg:col-span-2">
-              <h2 className="text-[10px] font-mono uppercase tracking-widest text-premium-blue mb-6">Overview</h2>
-              <p className="text-xl md:text-2xl text-white/80 font-light leading-relaxed">
-                {project.description}
-              </p>
-            </div>
-            <div className="space-y-10 border-l border-white/5 pl-8 md:pl-12">
-              <div>
-                <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mb-3">{content.ui.client}</div>
-                <div className="text-xl font-medium">{project.client}</div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="lg:col-span-4 flex flex-col justify-end"
+          >
+            <div className="glass p-8 rounded-3xl border-white/5 space-y-8">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0 border border-white/10">
+                  <User size={18} className="text-premium-blue" />
+                </div>
+                <div>
+                  <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mb-1">{content.ui.client}</div>
+                  <div className="text-lg font-medium">{project.client}</div>
+                </div>
               </div>
-              <div>
-                <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mb-3">{content.ui.role}</div>
-                <div className="text-xl font-medium">{project.role}</div>
-              </div>
-              <div>
-                <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mb-3">{content.ui.deliverables}</div>
-                <ul className="space-y-2">
-                  {project.deliverables.map((item, i) => (
-                    <li key={i} className="text-lg font-medium text-white/80 flex items-center gap-2">
-                      <span className="w-1 h-1 rounded-full bg-premium-blue" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0 border border-white/10">
+                  <Briefcase size={18} className="text-premium-blue" />
+                </div>
+                <div>
+                  <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mb-1">{content.ui.role}</div>
+                  <div className="text-lg font-medium">{project.role}</div>
+                </div>
               </div>
             </div>
-          </div>
+          </motion.div>
+        </div>
 
-          {project.gallery && project.gallery.length > 1 && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+        {/* Main Feature Image/Video */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="relative aspect-[16/9] w-full rounded-[2.5rem] overflow-hidden border border-white/10 mb-24 bg-dark-surface shadow-[0_0_100px_rgba(0,0,0,0.5)] group"
+        >
+          {project.image.includes('/preview') ? (
+            <iframe
+              src={project.image}
+              className="absolute inset-0 w-full h-full border-0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              title={project.project}
+            />
+          ) : (
+            <img 
+              src={project.image} 
+              alt={project.project}
+              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              referrerPolicy="no-referrer"
+            />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        </motion.div>
+
+        {/* Project Details Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 mb-32">
+          <div className="lg:col-span-8">
+            <div className="inline-block px-4 py-1 rounded-full border border-premium-blue/20 bg-premium-blue/5 text-[10px] font-mono uppercase tracking-widest text-premium-blue mb-8">
+              {content.ui.projectOverview}
+            </div>
+            <p className="text-2xl md:text-3xl text-white/90 font-light leading-snug mb-12">
+              {project.description}
+            </p>
+            <div className="h-px w-full bg-gradient-to-r from-white/10 to-transparent mb-12" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <div>
+                <h3 className="text-sm font-mono uppercase tracking-[0.2em] text-white/40 mb-6">{content.ui.theChallenge}</h3>
+                <p className="text-white/60 leading-relaxed">
+                  {content.ui.theChallengeDescription}
+                </p>
+              </div>
+              <div>
+                <h3 className="text-sm font-mono uppercase tracking-[0.2em] text-white/40 mb-6">{content.ui.theSolution}</h3>
+                <p className="text-white/60 leading-relaxed">
+                  {content.ui.theSolutionDescription}
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="lg:col-span-4">
+            <div className="glass p-10 rounded-[2rem] border-white/5 sticky top-32">
+              <h3 className="text-sm font-mono uppercase tracking-[0.2em] text-white/40 mb-8">{content.ui.deliverables}</h3>
+              <ul className="space-y-6">
+                {project.deliverables.map((item, i) => (
+                  <motion.li 
+                    key={i}
+                    initial={{ opacity: 0, x: 10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.1 }}
+                    className="flex items-center gap-4 text-lg font-medium text-white/80"
+                  >
+                    <div className="w-6 h-6 rounded-full bg-premium-blue/10 flex items-center justify-center shrink-0">
+                      <CheckCircle2 size={14} className="text-premium-blue" />
+                    </div>
+                    {item}
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Gallery Section */}
+        {project.gallery && project.gallery.length > 1 && (
+          <div className="space-y-12">
+            <div className="flex items-center justify-between mb-12">
+              <h2 className="text-3xl md:text-5xl font-display font-bold tracking-tighter">{content.ui.galleryShowcase} <span className="text-white/20">{content.ui.showcase}</span></h2>
+              <div className="h-px flex-1 bg-white/5 mx-8 hidden md:block" />
+              <div className="text-[10px] font-mono uppercase tracking-widest text-white/40">
+                {project.gallery.length - 1} {project.gallery.length - 1 === 1 ? content.ui.asset : content.ui.assets}
+              </div>
+            </div>
+            
+            <div className="columns-1 md:columns-2 gap-8 space-y-8">
               {project.gallery.slice(1).map((imgSrc, index) => {
                 const isVideo = imgSrc.includes('/preview');
                 return (
                   <motion.div 
                     key={index} 
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className={`w-full ${isVideo ? 'md:col-span-2 aspect-video' : 'aspect-square'} rounded-3xl overflow-hidden border border-white/10 bg-dark-surface flex items-center justify-center p-4 group hover:border-white/20 transition-colors relative`}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6, delay: index * 0.05 }}
+                    className={`relative break-inside-avoid w-full rounded-3xl overflow-hidden border border-white/10 bg-dark-surface flex items-center justify-center group hover:border-premium-blue/30 transition-all duration-500 shadow-xl ${isVideo ? 'aspect-video' : ''}`}
                   >
                     {isVideo ? (
-                      <iframe
-                        src={imgSrc}
-                        className="absolute inset-0 w-full h-full border-0 rounded-2xl"
-                        allow="autoplay; fullscreen; picture-in-picture"
-                        allowFullScreen
-                        title={`${project.project} gallery video ${index + 1}`}
-                      />
+                      <div className="w-full h-full aspect-video">
+                        <iframe
+                          src={imgSrc}
+                          className="w-full h-full border-0"
+                          allow="autoplay; fullscreen; picture-in-picture"
+                          allowFullScreen
+                          title={`${project.project} gallery video ${index + 1}`}
+                        />
+                      </div>
                     ) : (
                       <img 
                         src={imgSrc} 
                         alt={`${project.project} gallery image ${index + 2}`}
-                        className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-700"
+                        className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
                         referrerPolicy="no-referrer"
                       />
                     )}
+                    <div className="absolute inset-0 bg-premium-blue/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
                   </motion.div>
                 );
               })}
             </div>
-          )}
-        </motion.div>
+          </div>
+        )}
+
+        {/* Footer Navigation */}
+        <div className="mt-40 pt-20 border-t border-white/5 flex flex-col items-center text-center">
+          <h3 className="text-xl text-white/40 mb-8 font-light italic">{content.ui.interested}</h3>
+          <Link 
+            to="/archive" 
+            className="group relative px-12 py-5 bg-white text-black rounded-full font-bold uppercase tracking-widest overflow-hidden transition-all hover:pr-16"
+          >
+            <span className="relative z-10">{content.ui.exploreMore}</span>
+            <ArrowLeft size={20} className="absolute right-8 top-1/2 -translate-y-1/2 rotate-180 opacity-0 group-hover:opacity-100 transition-all" />
+          </Link>
+        </div>
       </div>
     </section>
   );

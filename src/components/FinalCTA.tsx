@@ -50,9 +50,9 @@ export default function FinalCTA() {
             <div className="w-20 h-20 bg-premium-blue/20 rounded-full flex items-center justify-center mx-auto text-premium-blue">
               <Mail size={40} />
             </div>
-            <h2 className="text-4xl font-display font-bold">¡Gracias!</h2>
+            <h2 className="text-4xl font-display font-bold">{content.ui.thanks}</h2>
             <p className="text-xl text-white/60 font-light">
-              Si tu gestor de correo no se abrió automáticamente, puedes hacer clic en el botón de abajo o escribirme directamente a:
+              {content.ui.messageSent}
             </p>
             <div className="py-4 px-8 bg-white/5 rounded-2xl inline-block font-mono text-premium-blue">
               {content.global.email}
@@ -62,13 +62,13 @@ export default function FinalCTA() {
                 href={`mailto:${content.global.email}?subject=New Inquiry&body=Hello!`}
                 className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-white/90 transition-all"
               >
-                Abrir correo de nuevo
+                {content.ui.openMailAgain}
               </a>
               <button 
                 onClick={() => setIsSubmitted(false)}
                 className="border border-white/10 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition-all"
               >
-                Volver al formulario
+                {content.ui.backToForm}
               </button>
             </div>
           </motion.div>
@@ -121,7 +121,7 @@ export default function FinalCTA() {
                   </div>
                   <div>
                     <div className="text-[10px] font-mono uppercase tracking-widest opacity-50">WhatsApp</div>
-                    <div className="text-lg">{content.global.whatsapp}</div>
+                    <div className="text-lg">{content.ui.whatsappAction}</div>
                   </div>
                 </a>
               )}
@@ -186,15 +186,15 @@ export default function FinalCTA() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <button type="submit" className="w-full bg-white text-black py-5 rounded-2xl font-bold uppercase tracking-wider hover:bg-white/90 transition-all flex items-center justify-center gap-3 group">
                 {content.ui.sendMessage}
-                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform -mr-1" />
               </button>
               <button 
                 type="button"
                 onClick={handleWhatsApp}
                 className="w-full bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/20 py-5 rounded-2xl font-bold uppercase tracking-wider hover:bg-[#25D366]/20 transition-all flex items-center justify-center gap-3 group"
               >
-                WhatsApp Directo
-                <MessageSquare size={20} className="group-hover:scale-110 transition-transform" />
+                {content.ui.whatsapp}
+                <MessageSquare size={20} className="group-hover:scale-110 transition-transform -ml-1" />
               </button>
             </div>
           </motion.form>
