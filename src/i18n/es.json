@@ -134,14 +134,14 @@
       },
       { 
         "id": "creator-pro-assets",
-        "year": "2023", 
+        "year": "2025", 
         "client": "Anna Language Coaching", 
-        "project": "Recursos de YouTube", 
-        "category": "Social",
-        "image": "https://picsum.photos/seed/youtube/1920/1080",
-        "description": "Sistema de miniaturas de alta conversión y arte del canal para un creador de primer nivel, resultando en un aumento del 22% en la Tasa de Clics.",
-        "role": "Director Creativo",
-        "deliverables": ["Sistema de Miniaturas", "Arte del Canal", "Motion Graphics"]
+        "project": "Diseño de Logo", 
+        "category": "Branding",
+        "image": "https://lh3.googleusercontent.com/d/1eI7g7zPatJG8SCswgX_6F_fmHvNqPK0T",
+        "description": "Diseño de logo creado para Anna Language Coaching.",
+        "role": "Diseñador Gráfico",
+        "deliverables": ["Diseño Gráfico"]
       },
       { 
         "id": "luxe-wear-launch",
@@ -169,14 +169,22 @@
       },
       { 
         "id": "techflow-web",
-        "year": "2022", 
+        "year": "2025", 
         "client": "BBT Otra", 
-        "project": "Rediseño de Sitio Web", 
-        "category": "Diseño Web",
-        "image": "https://picsum.photos/seed/techflow/1920/1080",
-        "description": "Modernización de la presencia digital de una empresa SaaS B2B para aumentar las tasas de conversión y mejorar la experiencia del usuario.",
-        "role": "Diseñador UI/UX",
-        "deliverables": ["Wireframing", "Diseño UI", "Prototipado"]
+        "project": "Branding de Restaurante", 
+        "category": "Branding",
+        "image": "https://lh3.googleusercontent.com/d/1DFliI-IoIKv7vnZCDKimOCRV1_YxBwPj",
+        "gallery": [
+          "https://lh3.googleusercontent.com/d/1DFliI-IoIKv7vnZCDKimOCRV1_YxBwPj",
+          "https://lh3.googleusercontent.com/d/14OEfkEEv0Bg5md0VuATwfGKzpaGFlUVi",
+          "https://lh3.googleusercontent.com/d/1_99q-0OEueuxlJIqg7F4DzK_sQkGYsWv",
+          "https://lh3.googleusercontent.com/d/1Vl9nuXm8kdB1NEedSv-J0V8_blaxw9DU",
+          "https://lh3.googleusercontent.com/d/1fImHese-ZE1azfYtisMP5GP026qsHKCN",
+          "https://drive.google.com/file/d/1BW2OJulV6bjg45dEM9YxeGWRLRWXGs5O/preview"
+        ],
+        "description": "Branding completo para el restaurante BBT Otra.",
+        "role": "Diseñador Gráfico",
+        "deliverables": ["Diseño Gráfico"]
       },
       { 
         "id": "vanguard-campaign",
@@ -192,6 +200,22 @@
         "description": "Diseño de kit de identidad de marca completo para L'HEURE D'OR.",
         "role": "Director Creativo",
         "deliverables": ["Guía de Identidad de Marca", "Logotipo", "Paleta de Colores"]
+      },
+      { 
+        "id": "templum-social",
+        "year": "2025", 
+        "client": "Templum Real State", 
+        "project": "Contenido de inmueble para redes sociales", 
+        "category": "Social content",
+        "image": "https://drive.google.com/file/d/1lt1fRkssoemrNHs4Lu-H_OkqysnO7jP1/preview",
+        "gallery": [
+          "https://drive.google.com/file/d/1lt1fRkssoemrNHs4Lu-H_OkqysnO7jP1/preview",
+          "https://drive.google.com/file/d/13R9CHfv7ie-NyZk17t7N7ATGBb7WNZst/preview",
+          "https://drive.google.com/file/d/1Vtsd2dZR-y9UpE25XjYz-1ivKFunMvK-/preview"
+        ],
+        "description": "Creación de contenidos para Templum Real State, desde el montaje, edición, subtítulos, guion y voz en off.",
+        "role": "Editor de Video y Creador de Contenido",
+        "deliverables": ["Edición de videos en formato corto"]
       }
     ]
   },

@@ -16,7 +16,11 @@ export default function FinalCTA() {
     e.preventDefault();
     const subject = encodeURIComponent(`New Inquiry from ${formData.name} - ${formData.projectType}`);
     const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nProject Type: ${formData.projectType}\n\nMessage:\n${formData.message}`);
-    window.location.href = `mailto:${content.global.email}?subject=${subject}&body=${body}`;
+    const mailtoUrl = `mailto:${content.global.email}?subject=${subject}&body=${body}`;
+    
+    // Using window.open instead of window.location.href for better cross-browser compatibility
+    // and to prevent the current page from being replaced or blocked by some browsers
+    window.open(mailtoUrl, '_self');
   };
 
   return (
