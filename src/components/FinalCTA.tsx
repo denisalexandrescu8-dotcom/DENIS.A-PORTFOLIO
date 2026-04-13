@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Mail, Calendar } from 'lucide-react';
+import { ArrowRight, Mail } from 'lucide-react';
 import React, { useState } from 'react';
 import content from '../content.json';
 
@@ -49,15 +49,6 @@ export default function FinalCTA() {
                   <div className="text-lg">{content.global.email}</div>
                 </div>
               </a>
-              <div className="flex items-center gap-4 text-white/60 group cursor-pointer">
-                <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-white/30 transition-all">
-                  <Calendar size={20} />
-                </div>
-                <div>
-                  <div className="text-[10px] font-mono uppercase tracking-widest opacity-50">Book a Call</div>
-                  <div className="text-lg">Schedule a Discovery Session</div>
-                </div>
-              </div>
             </div>
           </motion.div>
 

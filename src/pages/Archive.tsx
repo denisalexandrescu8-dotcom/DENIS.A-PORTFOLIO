@@ -1,0 +1,51 @@
+import { motion } from 'framer-motion';
+import { ArrowLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import content from '../content.json';
+
+export default function Archive() {
+  return (
+    <section className="pt-32 pb-20 px-6 md:px-12 lg:px-24 min-h-screen">
+      <div className="max-w-5xl mx-auto">
+        <div className="mb-16">
+          <Link to="/" className="inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors text-sm font-mono uppercase tracking-widest mb-8">
+            <ArrowLeft size={16} />
+            Back to Home
+          </Link>
+          <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">
+            {content.archive.title} <span className="text-white/40 italic">{content.archive.titleHighlight}</span>
+          </h1>
+          <p className="text-white/60 text-lg font-light max-w-xl">
+            {content.archive.subtitle}
+          </p>
+        </div>
+
+        <div className="border-t border-white/10">
+          {/* Table Header */}
+          <div className="hidden md:grid grid-cols-4 gap-4 py-4 px-4 text-xs font-mono uppercase tracking-widest text-white/40 border-b border-white/10">
+            <div>Year</div>
+            <div>Project</div>
+            <div>Client</div>
+            <div>Category</div>
+          </div>
+
+          {/* Table Body */}
+          {content.archive.projects.map((item, i) => (
+            <motion.div 
+              key={i}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: i * 0.05 }}
+              className="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-4 py-6 px-4 border-b border-white/10 hover:bg-white/5 transition-colors items-center group"
+            >
+              <div className="text-white/40 font-mono text-sm">{item.year}</div>
+              <div className="font-bold text-lg md:text-xl group-hover:text-premium-blue transition-colors">{item.project}</div>
+              <div className="text-white/60">{item.client}</div>
+              <div className="text-premium-blue/70 text-sm">{item.category}</div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

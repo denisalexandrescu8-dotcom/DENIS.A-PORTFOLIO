@@ -50,6 +50,19 @@
       }
     ]
   },
+  "archive": {
+    "title": "Project",
+    "titleHighlight": "Archive",
+    "subtitle": "A comprehensive list of past projects, experiments, and client work.",
+    "projects": [
+      { "year": "2023", "client": "Nexus AI", "project": "Brand Evolution", "category": "Branding" },
+      { "year": "2023", "client": "Creator Pro", "project": "YouTube Assets", "category": "Social" },
+      { "year": "2023", "client": "Luxe Wear", "project": "Cinematic Launch", "category": "Video" },
+      { "year": "2022", "client": "TechFlow", "project": "Website Redesign", "category": "Web Design" },
+      { "year": "2022", "client": "Vanguard", "project": "Ad Campaign", "category": "Video" },
+      { "year": "2021", "client": "Peak Performance", "project": "Social Media Kit", "category": "Social" }
+    ]
+  },
   "services": {
     "sectionTitle": "Creative",
     "sectionTitleHighlight": "Solutions",

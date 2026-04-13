@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import content from '../content.json';
 
 export default function CaseStudies() {
@@ -15,9 +16,9 @@ export default function CaseStudies() {
               {content.caseStudies.sectionSubtitle}
             </p>
           </div>
-          <button className="text-sm font-mono uppercase tracking-widest border-b border-white/20 pb-1 hover:border-white transition-all">
-            View Archive (24+)
-          </button>
+          <Link to="/archive" className="text-sm font-mono uppercase tracking-widest border-b border-white/20 pb-1 hover:border-white transition-all">
+            View Archive ({content.archive.projects.length}+)
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
