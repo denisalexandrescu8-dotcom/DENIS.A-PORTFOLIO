@@ -39,13 +39,14 @@ export default function ProjectDetail() {
             </p>
           </div>
 
-          <div className="aspect-video w-full rounded-3xl overflow-hidden border border-white/10 mb-16 bg-dark-surface flex items-center justify-center shadow-2xl">
+          <div className="aspect-video w-full rounded-3xl overflow-hidden border border-white/10 mb-16 bg-dark-surface flex items-center justify-center shadow-2xl relative">
             {project.image.includes('/preview') ? (
               <iframe
                 src={project.image}
-                className="w-full h-full border-0"
-                allow="autoplay; fullscreen"
+                className="absolute inset-0 w-full h-full border-0"
+                allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
+                title={project.project}
               />
             ) : (
               <img 
@@ -98,14 +99,15 @@ export default function ProjectDetail() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className={`w-full ${isVideo ? 'md:col-span-2 aspect-video' : 'aspect-square'} rounded-3xl overflow-hidden border border-white/10 bg-dark-surface flex items-center justify-center p-4 group hover:border-white/20 transition-colors`}
+                    className={`w-full ${isVideo ? 'md:col-span-2 aspect-video' : 'aspect-square'} rounded-3xl overflow-hidden border border-white/10 bg-dark-surface flex items-center justify-center p-4 group hover:border-white/20 transition-colors relative`}
                   >
                     {isVideo ? (
                       <iframe
                         src={imgSrc}
-                        className="w-full h-full border-0 rounded-2xl"
-                        allow="autoplay; fullscreen"
+                        className="absolute inset-0 w-full h-full border-0 rounded-2xl"
+                        allow="autoplay; fullscreen; picture-in-picture"
                         allowFullScreen
+                        title={`${project.project} gallery video ${index + 1}`}
                       />
                     ) : (
                       <img 

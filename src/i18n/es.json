@@ -55,6 +55,14 @@
     "sectionSubtitle": "Una colección de trabajos enfocados en el impacto medible, la narrativa visual y la elevación de la marca.",
     "projects": [
       {
+        "id": "arcade-shangoclub",
+        "title": "Identidad Visual ARCADE",
+        "client": "ShangoClub",
+        "category": "Social Content",
+        "image": "https://lh3.googleusercontent.com/d/1DSCIAqYgCFefe9PCAYw_8VscHFcAkxqh",
+        "impact": "Identidad de Marca de Alto Impacto"
+      },
+      {
         "id": "conef-2025",
         "title": "Identidad de Marca Completa",
         "client": "CONEF 2025",
@@ -63,19 +71,11 @@
         "impact": "+45% Interacción de Usuario"
       },
       {
-        "id": "creator-pro-assets",
-        "title": "Recursos de YouTube de Alta Conversión",
-        "client": "Anna Language Coaching",
-        "category": "Contenido Social",
-        "image": "https://picsum.photos/seed/youtube/1200/800",
-        "impact": "+22% Aumento de CTR"
-      },
-      {
         "id": "luxe-wear-launch",
         "title": "Creación de Contenido Digital",
         "client": "Fernando Hernandez CEO",
         "category": "Contenido Social, Edición de Video",
-        "image": "https://drive.google.com/file/d/1_iMyeeN3FNL64r4N36Y6zRtPSP5Lud1p/preview",
+        "image": "https://drive.google.com/file/d/1_iMyeeN3FNL64r4N36Y6zRtPSP5Lud1p/preview?usp=sharing",
         "impact": "Presencia Social de Alto Rendimiento"
       }
     ]
@@ -85,6 +85,29 @@
     "titleHighlight": "Proyectos",
     "subtitle": "Una lista completa de proyectos pasados, experimentos y trabajos para clientes.",
     "projects": [
+      { 
+        "id": "arcade-shangoclub",
+        "year": "2026", 
+        "client": "ShangoClub", 
+        "project": "Arcade", 
+        "category": "Social Content",
+        "image": "https://lh3.googleusercontent.com/d/1DSCIAqYgCFefe9PCAYw_8VscHFcAkxqh",
+        "gallery": [
+          "https://lh3.googleusercontent.com/d/1DSCIAqYgCFefe9PCAYw_8VscHFcAkxqh",
+          "https://lh3.googleusercontent.com/d/131ZnIEMmtSg1V7hP6qoRi1FU05Kk8ibD",
+          "https://lh3.googleusercontent.com/d/119PmjMkfGaPbEiOv7YSgbgEhJLl33xXo",
+          "https://drive.google.com/file/d/1tVVPqvs3AzpSa6F525-4vfuUzUWgZBdC/preview?usp=sharing",
+          "https://drive.google.com/file/d/1gx5tasdt0YrgmrweeSGZQy1xbqRraS3f/preview?usp=sharing",
+          "https://drive.google.com/file/d/1AV--vrimkrGk5pooBNqKhc-3pfRXiQK8/preview?usp=sharing",
+          "https://drive.google.com/file/d/1_mY09EjfbZxXJVQVZfX7--alLf7szUFG/preview?usp=sharing",
+          "https://drive.google.com/file/d/1PydEGPDnficrrTbQ3l8PjXC1M4Ns5jXn/preview?usp=sharing",
+          "https://drive.google.com/file/d/1N288yQ2m3DO8BfkDZ9ledLC1JyVNKtTK/preview?usp=sharing",
+          "https://drive.google.com/file/d/1TBhNpSJjgsuDHbMjoC1eY_qYjGjBuMTV/preview?usp=sharing"
+        ],
+        "description": "Creación de la identidad visual de ARCADE, una fiesta organizada por ShangoClub.",
+        "role": "Director Creativo",
+        "deliverables": ["Diseño Gráfico", "Motion Graphics"]
+      },
       { 
         "id": "conef-2025",
         "year": "2025", 
@@ -120,10 +143,10 @@
         "client": "Fernando Hernandez CEO", 
         "project": "Creación de Contenido Digital", 
         "category": "Contenido Social, Edición de Video",
-        "image": "https://drive.google.com/file/d/1_iMyeeN3FNL64r4N36Y6zRtPSP5Lud1p/preview",
+        "image": "https://drive.google.com/file/d/1_iMyeeN3FNL64r4N36Y6zRtPSP5Lud1p/preview?usp=sharing",
         "gallery": [
-          "https://drive.google.com/file/d/1_iMyeeN3FNL64r4N36Y6zRtPSP5Lud1p/preview",
-          "https://drive.google.com/file/d/10IGm4vgLK56gW5_SzofoBNF4FNqZtE3p/preview",
+          "https://drive.google.com/file/d/1_iMyeeN3FNL64r4N36Y6zRtPSP5Lud1p/preview?usp=sharing",
+          "https://drive.google.com/file/d/10IGm4vgLK56gW5_SzofoBNF4FNqZtE3p/preview?usp=sharing",
           "https://lh3.googleusercontent.com/d/1NucomZBrJstuEhhc8c3-ARmsnzQKqmmo",
           "https://lh3.googleusercontent.com/d/1gwvjIyV1_2G8vgtN0JiXPhJGqji017sK",
           "https://lh3.googleusercontent.com/d/1MReN9Drxtf4k3Imw--cU62PiqZiRsvgz",
