@@ -3,7 +3,6 @@ import { Menu, X, Globe } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
-import ThemeToggle from './ThemeToggle';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,8 +54,6 @@ export default function Navbar() {
             </button>
           ))}
           
-          <ThemeToggle />
-
           <button 
             onClick={toggleLanguage}
             className="flex items-center gap-2 hover:text-white dark:hover:text-white transition-colors cursor-pointer"
@@ -78,7 +75,6 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <div className="flex items-center gap-4 md:hidden">
-          <ThemeToggle />
           <button 
             onClick={toggleLanguage}
             className="flex items-center gap-2 text-white/70 dark:text-gray-300 hover:text-white dark:hover:text-white transition-colors"

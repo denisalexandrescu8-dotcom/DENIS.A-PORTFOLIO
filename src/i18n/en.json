@@ -56,7 +56,9 @@
     "theChallengeDescription": "Creating a visual language that resonates with the target audience while maintaining the core values of the client. The goal was to elevate the brand perception through high-end digital assets.",
     "theSolutionDescription": "A strategic approach that blends modern aesthetics with functional design, ensuring maximum impact across all digital touchpoints.",
     "asset": "Asset",
-    "assets": "Assets"
+    "assets": "Assets",
+    "copy": "Copy",
+    "copied": "Copied"
   },
   "hero": {
     "availabilityBadge": "Available for Freelance Projects",
