@@ -5,21 +5,21 @@ export default function TrustBar() {
   const { content } = useLanguage();
 
   return (
-    <section className="py-12 border-y border-gray-200 dark:border-white/5 bg-gray-100 dark:bg-gray-900/50 overflow-hidden transition-colors duration-300 w-full">
-      <div className="flex whitespace-nowrap w-full">
+    <section className="py-12 bg-transparent overflow-hidden transition-colors duration-300 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+      <div className="flex whitespace-nowrap">
         <motion.div 
-          animate={{ x: ["0%", "-50%"] }}
+          animate={{ x: [0, -2000] }}
           transition={{ 
-            duration: 20, 
+            duration: 60, 
             repeat: Infinity, 
             ease: "linear" 
           }}
-          className="flex items-center gap-16 pr-16 min-w-full"
+          className="flex items-center gap-16 pr-16"
         >
-          {[...content.trustBrands, ...content.trustBrands].map((brand, i) => (
+          {[...content.trustBrands, ...content.trustBrands, ...content.trustBrands, ...content.trustBrands].map((brand, i) => (
             <span 
               key={i} 
-              className="text-2xl md:text-3xl font-display font-bold text-gray-400 dark:text-white/20 hover:text-gray-900 dark:hover:text-white/40 transition-colors cursor-default shrink-0"
+              className="text-2xl md:text-3xl font-display font-bold text-gray-400 dark:text-white/20 hover:text-gray-900 dark:hover:text-white/40 transition-colors cursor-default"
             >
               {brand}
             </span>
