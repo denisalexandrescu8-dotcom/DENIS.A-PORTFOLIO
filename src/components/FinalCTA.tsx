@@ -189,7 +189,7 @@ export default function FinalCTA() {
               />
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <button type="submit" className="w-full bg-white text-black py-5 rounded-2xl font-bold uppercase tracking-wider hover:bg-white/90 transition-all flex items-center justify-center gap-3 group">
+              <button type="submit" className="w-full bg-white text-black py-5 rounded-2xl font-bold uppercase tracking-wider hover:bg-white/90 transition-all flex items-center justify-center gap-2 group">
                 {content.ui.sendMessage}
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform -mr-1" />
               </button>
