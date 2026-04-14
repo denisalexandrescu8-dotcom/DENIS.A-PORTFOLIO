@@ -3,6 +3,7 @@ import { Menu, X, Globe } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import ThemeToggle from './ThemeToggle';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,25 +39,27 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             className="text-xl font-display font-bold tracking-tighter"
           >
-            {content.global.name.split('.')[0]}<span className="text-white/50">.{content.global.name.split('.')[1] || ''}</span>
+            {content.global.name.split('.')[0]}<span className="text-white/50 dark:text-gray-400">.{content.global.name.split('.')[1] || ''}</span>
           </motion.div>
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-white/70">
+        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-white/70 dark:text-gray-300">
           {navItems.map((item) => (
             <button 
               key={item.id} 
               onClick={() => handleScroll(item.id)}
-              className="hover:text-white transition-colors cursor-pointer"
+              className="hover:text-white dark:hover:text-white transition-colors cursor-pointer"
             >
               {item.label}
             </button>
           ))}
           
+          <ThemeToggle />
+
           <button 
             onClick={toggleLanguage}
-            className="flex items-center gap-2 hover:text-white transition-colors cursor-pointer"
+            className="flex items-center gap-2 hover:text-white dark:hover:text-white transition-colors cursor-pointer"
             title="Toggle Language"
           >
             <Globe size={16} />
@@ -75,9 +78,10 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <div className="flex items-center gap-4 md:hidden">
+          <ThemeToggle />
           <button 
             onClick={toggleLanguage}
-            className="flex items-center gap-2 text-white/70 hover:text-white transition-colors"
+            className="flex items-center gap-2 text-white/70 dark:text-gray-300 hover:text-white dark:hover:text-white transition-colors"
           >
             <Globe size={20} />
             <span className="text-sm font-medium">{content.ui.languageToggle}</span>

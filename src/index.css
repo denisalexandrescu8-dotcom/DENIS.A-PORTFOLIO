@@ -14,11 +14,11 @@
 
 @layer base {
   body {
-    @apply bg-black text-white font-sans selection:bg-premium-blue/30 selection:text-white;
+    @apply bg-gray-50 text-gray-900 dark:bg-black dark:text-white font-sans selection:bg-premium-blue/30 selection:text-white;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-tight;
+    @apply font-display tracking-tight text-gray-900 dark:text-white;
   }
 }
 

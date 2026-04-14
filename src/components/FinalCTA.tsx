@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Mail, MessageSquare } from 'lucide-react';
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import CopyToClipboard from './CopyToClipboard';
 
 export default function FinalCTA() {
   const { content } = useLanguage();
@@ -54,8 +55,9 @@ export default function FinalCTA() {
             <p className="text-xl text-white/60 font-light">
               {content.ui.messageSent}
             </p>
-            <div className="py-4 px-8 bg-white/5 rounded-2xl inline-block font-mono text-premium-blue">
+            <div className="py-4 px-8 bg-white/5 rounded-2xl inline-flex items-center gap-4 font-mono text-premium-blue">
               {content.global.email}
+              <CopyToClipboard text={content.global.email} />
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <a 
@@ -99,15 +101,18 @@ export default function FinalCTA() {
             </p>
 
             <div className="space-y-6">
-              <a href={`mailto:${content.global.email}`} className="flex items-center gap-4 text-white/60 hover:text-white transition-colors group">
+              <div className="flex items-center gap-4 text-white/60 group">
                 <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-white/30 transition-all">
                   <Mail size={20} />
                 </div>
-                <div>
-                  <div className="text-[10px] font-mono uppercase tracking-widest opacity-50">{content.ui.emailMe}</div>
-                  <div className="text-lg">{content.global.email}</div>
+                <div className="flex flex-col gap-2">
+                  <div>
+                    <div className="text-[10px] font-mono uppercase tracking-widest opacity-50">{content.ui.emailMe}</div>
+                    <div className="text-lg">{content.global.email}</div>
+                  </div>
+                  <CopyToClipboard text={content.global.email} />
                 </div>
-              </a>
+              </div>
 
               {content.global.whatsapp && (
                 <a 
