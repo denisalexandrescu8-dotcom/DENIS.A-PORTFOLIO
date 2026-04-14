@@ -38,17 +38,17 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             className="text-xl font-display font-bold tracking-tighter"
           >
-            {content.global.name.split('.')[0]}<span className="text-white/50 dark:text-gray-400">.{content.global.name.split('.')[1] || ''}</span>
+            {content.global.name.split('.')[0]}<span className="text-gray-400">.{content.global.name.split('.')[1] || ''}</span>
           </motion.div>
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-white/70 dark:text-gray-300">
+        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
           {navItems.map((item) => (
             <button 
               key={item.id} 
               onClick={() => handleScroll(item.id)}
-              className="hover:text-white dark:hover:text-white transition-colors cursor-pointer"
+              className="hover:text-white transition-colors cursor-pointer"
             >
               {item.label}
             </button>
@@ -56,7 +56,7 @@ export default function Navbar() {
           
           <button 
             onClick={toggleLanguage}
-            className="flex items-center gap-2 hover:text-white dark:hover:text-white transition-colors cursor-pointer"
+            className="flex items-center gap-2 hover:text-white transition-colors cursor-pointer"
             title="Toggle Language"
           >
             <Globe size={16} />
@@ -77,7 +77,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4 md:hidden">
           <button 
             onClick={toggleLanguage}
-            className="flex items-center gap-2 text-white/70 dark:text-gray-300 hover:text-white dark:hover:text-white transition-colors"
+            className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
           >
             <Globe size={20} />
             <span className="text-sm font-medium">{content.ui.languageToggle}</span>

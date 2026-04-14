@@ -15,7 +15,7 @@ export default function CopyToClipboard({ text }: { text: string }) {
   return (
     <button
       onClick={handleCopy}
-      className="inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-gray-200 dark:bg-gray-800 text-xs hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors"
+      className="inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-gray-800 text-xs hover:bg-gray-700 transition-colors"
       title={content.ui.copy}
     >
       {copied ? <Check size={12} className="text-green-500" /> : <Copy size={12} />}

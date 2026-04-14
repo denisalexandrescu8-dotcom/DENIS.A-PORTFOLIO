@@ -12,12 +12,12 @@ export default function TermsOfService() {
         className="max-w-3xl mx-auto"
       >
         <h1 className="text-4xl md:text-5xl font-display font-bold mb-8">{content.ui.termsOfService}</h1>
-        <div className="text-gray-600 dark:text-white/70 space-y-6 font-light leading-relaxed">
+        <div className="text-white/70 space-y-6 font-light leading-relaxed">
           <p>{content.termsOfServiceContent.lastUpdated}: {new Date().toLocaleDateString()}</p>
           
           {content.termsOfServiceContent.sections.map((section, index) => (
             <div key={index}>
-              <h2 className="text-2xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-4">{section.title}</h2>
+              <h2 className="text-2xl font-display font-bold text-white mt-12 mb-4">{section.title}</h2>
               <p>
                 {section.content.replace('{name}', content.global.name)}
                 {index === content.termsOfServiceContent.sections.length - 1 && (

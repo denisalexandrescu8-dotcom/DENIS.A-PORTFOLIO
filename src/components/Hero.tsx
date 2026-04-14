@@ -37,7 +37,7 @@ export default function Hero() {
       >
         <motion.div
           variants={itemVariants}
-          className="inline-block px-4 py-1.5 rounded-full border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5 text-xs font-mono uppercase tracking-[0.2em] mb-8"
+          className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs font-mono uppercase tracking-[0.2em] mb-8"
         >
           {content.hero.availabilityBadge}
         </motion.div>
@@ -51,7 +51,7 @@ export default function Hero() {
 
         <motion.p
           variants={itemVariants}
-          className="text-lg md:text-xl text-gray-600 dark:text-white/60 max-w-2xl mx-auto mb-12 font-light leading-relaxed"
+          className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-12 font-light leading-relaxed"
         >
           {content.hero.subheadline}
         </motion.p>
@@ -62,14 +62,14 @@ export default function Hero() {
         >
           <button 
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="group relative bg-gray-900 dark:bg-white text-white dark:text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider overflow-hidden transition-all hover:pr-12"
+            className="group relative bg-white text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider overflow-hidden transition-all hover:pr-12"
           >
             <span className="relative z-10">{content.ui.workWithMe}</span>
             <ArrowRight className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all" size={20} />
           </button>
           <button 
             onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-8 py-4 rounded-full border border-gray-300 dark:border-white/10 hover:bg-gray-200 dark:hover:bg-white/5 transition-all text-gray-800 dark:text-white/80 font-medium"
+            className="px-8 py-4 rounded-full border border-white/10 hover:bg-white/5 transition-all text-white/80 font-medium"
           >
             {content.ui.viewArchive}
           </button>

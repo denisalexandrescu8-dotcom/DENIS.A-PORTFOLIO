@@ -19,7 +19,7 @@ export default function TrustBar() {
           {[...content.trustBrands, ...content.trustBrands, ...content.trustBrands, ...content.trustBrands].map((brand, i) => (
             <span 
               key={i} 
-              className="text-2xl md:text-3xl font-display font-bold text-gray-400 dark:text-white/20 hover:text-gray-900 dark:hover:text-white/40 transition-colors cursor-default"
+              className="text-2xl md:text-3xl font-display font-bold text-white/20 hover:text-white/40 transition-colors cursor-default"
             >
               {brand}
             </span>

@@ -9,7 +9,6 @@ import { lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { LanguageProvider } from './context/LanguageContext';
-import { ThemeProvider } from './context/ThemeContext';
 import ScrollToTop from './components/ScrollToTop';
 import BackToTop from './components/BackToTop';
 import BackButton from './components/BackButton';
@@ -51,20 +50,18 @@ export default function App() {
 
   return (
     <LanguageProvider>
-      <ThemeProvider>
-        <BrowserRouter basename={basename}>
-          <ScrollToTop />
-          <ConditionalBackButton />
-          <BackToTop />
-          <main className="min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 selection:bg-blue-500/30 transition-colors duration-300">
-            <Navbar />
-            <div className="max-w-7xl mx-auto px-4 md:px-8">
-              <AnimatedRoutes />
-            </div>
-            <Footer />
-          </main>
-        </BrowserRouter>
-      </ThemeProvider>
+      <BrowserRouter basename={basename}>
+        <ScrollToTop />
+        <ConditionalBackButton />
+        <BackToTop />
+        <main className="min-h-screen bg-black text-white selection:bg-blue-500/30 transition-colors duration-300">
+          <Navbar />
+          <div className="max-w-7xl mx-auto px-4 md:px-8">
+            <AnimatedRoutes />
+          </div>
+          <Footer />
+        </main>
+      </BrowserRouter>
     </LanguageProvider>
   );
 }
