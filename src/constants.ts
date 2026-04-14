@@ -41,7 +41,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     id: '2',
     title: 'High-Conversion YouTube Assets',
     client: 'Creator Pro',
-    category: 'Social Content',
+    category: 'Social Media Content',
     image: 'https://picsum.photos/seed/youtube/1200/800',
     impact: '+22% CTR Increase',
     description: 'Strategic thumbnail design and motion graphics for a top-tier educational channel.'
@@ -74,7 +74,7 @@ export const SERVICES: Service[] = [
   },
   {
     id: 'social',
-    title: 'Social Content',
+    title: 'Social Media Content',
     description: 'Platform-native visuals designed for maximum attention and growth.',
     icon: Share2,
     deliverables: ['YouTube Thumbnails', 'Ad Creatives', 'Social Systems']

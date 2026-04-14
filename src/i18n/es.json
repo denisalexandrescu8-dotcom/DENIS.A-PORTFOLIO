@@ -36,7 +36,7 @@
     "message": "Mensaje",
     "brandingAndIdentity": "Branding e Identidad",
     "videoEditing": "Edición de Video",
-    "socialContent": "Contenido Social",
+    "socialContent": "Contenido de Redes Sociales",
     "workWithMe": "Trabaja Conmigo",
     "theStory": "Mi Historia",
     "emailMe": "Mándame un email",
@@ -76,7 +76,7 @@
         "id": "luxe-wear-launch",
         "title": "Creación de Contenido Digital",
         "client": "Fernando Hernandez CEO",
-        "category": "Contenido Social, Edición de Video",
+        "category": "Contenido de Redes Sociales, Edición de Video",
         "image": "https://drive.google.com/file/d/1_iMyeeN3FNL64r4N36Y6zRtPSP5Lud1p/preview?usp=sharing",
         "thumbnailGallery": [
           "https://lh3.googleusercontent.com/d/1NucomZBrJstuEhhc8c3-ARmsnzQKqmmo",
@@ -90,7 +90,7 @@
         "id": "arcade-shangoclub",
         "title": "Identidad Visual ARCADE",
         "client": "ShangoClub",
-        "category": "Social Content",
+        "category": "Contenido de Redes Sociales",
         "image": "https://lh3.googleusercontent.com/d/1DSCIAqYgCFefe9PCAYw_8VscHFcAkxqh",
         "impact": "Identidad de Marca de Alto Impacto"
       },
@@ -114,7 +114,7 @@
         "year": "2026", 
         "client": "ShangoClub", 
         "project": "Arcade", 
-        "category": "Contenido Social",
+        "category": "Contenido de Redes Sociales",
         "image": "https://lh3.googleusercontent.com/d/1DSCIAqYgCFefe9PCAYw_8VscHFcAkxqh",
         "gallery": [
           "https://lh3.googleusercontent.com/d/1DSCIAqYgCFefe9PCAYw_8VscHFcAkxqh",
@@ -169,7 +169,7 @@
         "year": "2025", 
         "client": "Fernando Hernandez CEO", 
         "project": "Creación de Contenido Digital", 
-        "category": "Contenido Social, Edición de Video",
+        "category": "Contenido de Redes Sociales, Edición de Video",
         "image": "https://drive.google.com/file/d/1_iMyeeN3FNL64r4N36Y6zRtPSP5Lud1p/preview?usp=sharing",
         "gallery": [
           "https://drive.google.com/file/d/1_iMyeeN3FNL64r4N36Y6zRtPSP5Lud1p/preview?usp=sharing",
@@ -227,7 +227,7 @@
         "year": "2025", 
         "client": "Templum Real State", 
         "project": "Contenido de inmueble para redes sociales", 
-        "category": "Contenido Social",
+        "category": "Contenido de Redes Sociales",
         "image": "https://drive.google.com/file/d/1lt1fRkssoemrNHs4Lu-H_OkqysnO7jP1/preview",
         "gallery": [
           "https://drive.google.com/file/d/1lt1fRkssoemrNHs4Lu-H_OkqysnO7jP1/preview",
@@ -243,7 +243,7 @@
         "year": "2025", 
         "client": "Puerta Madriz", 
         "project": "Diseño de Contenido para Discoteca", 
-        "category": "Contenido Social",
+        "category": "Contenido de Redes Sociales",
         "image": "https://lh3.googleusercontent.com/d/1Ju2UBEYEM9dr4m1US5_WbHaLIxth4Sfx",
         "gallery": [
           "https://lh3.googleusercontent.com/d/1Ju2UBEYEM9dr4m1US5_WbHaLIxth4Sfx",
@@ -280,7 +280,7 @@
       },
       {
         "id": "social",
-        "title": "Contenido Social",
+        "title": "Contenido de Redes Sociales",
         "description": "Visuales nativos para plataformas diseñados para máxima atención y crecimiento.",
         "icon": "Share2",
         "deliverables": ["Miniaturas de YouTube", "Creatividades de Anuncios", "Sistemas Sociales"]
@@ -377,7 +377,7 @@
       },
       {
         "title": "2. Servicios Prestados",
-        "content": "{name} proporciona servicios creativos que incluyen, entre otros, diseño de marca, edición de video, creación de contenido social y estrategia creativa. Los entregables y plazos específicos se detallarán en propuestas o contratos de proyectos individuales."
+        "content": "{name} proporciona servicios creativos que incluyen, entre otros, diseño de marca, edición de video, creación de contenido de redes sociales y estrategia creativa. Los entregables y plazos específicos se detallarán en propuestas o contratos de proyectos individuales."
       },
       {
         "title": "3. Propiedad Intelectual",

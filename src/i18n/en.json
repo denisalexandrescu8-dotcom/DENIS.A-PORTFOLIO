@@ -36,7 +36,7 @@
     "message": "Message",
     "brandingAndIdentity": "Branding & Identity",
     "videoEditing": "Video Editing",
-    "socialContent": "Social Content",
+    "socialContent": "Social Media Content",
     "workWithMe": "Work With Me",
     "theStory": "The Story",
     "emailMe": "Email Me",
@@ -76,7 +76,7 @@
         "id": "luxe-wear-launch",
         "title": "Digital Content Creation",
         "client": "Fernando Hernandez CEO",
-        "category": "Social Content, Video Editing",
+        "category": "Social Media Content, Video Editing",
         "image": "https://drive.google.com/file/d/1_iMyeeN3FNL64r4N36Y6zRtPSP5Lud1p/preview?usp=sharing",
         "thumbnailGallery": [
           "https://lh3.googleusercontent.com/d/1NucomZBrJstuEhhc8c3-ARmsnzQKqmmo",
@@ -90,7 +90,7 @@
         "id": "arcade-shangoclub",
         "title": "ARCADE Visual Identity",
         "client": "ShangoClub",
-        "category": "Social Content",
+        "category": "Social Media Content",
         "image": "https://lh3.googleusercontent.com/d/1DSCIAqYgCFefe9PCAYw_8VscHFcAkxqh",
         "impact": "High-Impact Brand Identity"
       },
@@ -114,7 +114,7 @@
         "year": "2026", 
         "client": "ShangoClub", 
         "project": "Arcade", 
-        "category": "Social Content",
+        "category": "Social Media Content",
         "image": "https://lh3.googleusercontent.com/d/1DSCIAqYgCFefe9PCAYw_8VscHFcAkxqh",
         "gallery": [
           "https://lh3.googleusercontent.com/d/1DSCIAqYgCFefe9PCAYw_8VscHFcAkxqh",
@@ -169,7 +169,7 @@
         "year": "2025", 
         "client": "Fernando Hernandez CEO", 
         "project": "Digital Content Creation", 
-        "category": "Social Content, Video Editing",
+        "category": "Social Media Content, Video Editing",
         "image": "https://drive.google.com/file/d/1_iMyeeN3FNL64r4N36Y6zRtPSP5Lud1p/preview?usp=sharing",
         "gallery": [
           "https://drive.google.com/file/d/1_iMyeeN3FNL64r4N36Y6zRtPSP5Lud1p/preview?usp=sharing",
@@ -226,8 +226,8 @@
         "id": "templum-social",
         "year": "2025", 
         "client": "Templum Real State", 
-        "project": "Real Estate Social Content", 
-        "category": "Social Content",
+        "project": "Real Estate Social Media Content", 
+        "category": "Social Media Content",
         "image": "https://drive.google.com/file/d/1lt1fRkssoemrNHs4Lu-H_OkqysnO7jP1/preview",
         "gallery": [
           "https://drive.google.com/file/d/1lt1fRkssoemrNHs4Lu-H_OkqysnO7jP1/preview",
@@ -243,7 +243,7 @@
         "year": "2025", 
         "client": "Puerta Madriz", 
         "project": "Nightclub Content Design", 
-        "category": "Social Content",
+        "category": "Social Media Content",
         "image": "https://lh3.googleusercontent.com/d/1Ju2UBEYEM9dr4m1US5_WbHaLIxth4Sfx",
         "gallery": [
           "https://lh3.googleusercontent.com/d/1Ju2UBEYEM9dr4m1US5_WbHaLIxth4Sfx",
@@ -280,7 +280,7 @@
       },
       {
         "id": "social",
-        "title": "Social Content",
+        "title": "Social Media Content",
         "description": "Platform-native visuals designed for maximum attention and growth.",
         "icon": "Share2",
         "deliverables": ["YouTube Thumbnails", "Ad Creatives", "Social Systems"]
@@ -377,7 +377,7 @@
       },
       {
         "title": "2. Services Provided",
-        "content": "{name} provides creative services including but not limited to brand design, video editing, social content creation, and creative strategy. Specific deliverables and timelines will be outlined in individual project proposals or contracts."
+        "content": "{name} provides creative services including but not limited to brand design, video editing, social media content creation, and creative strategy. Specific deliverables and timelines will be outlined in individual project proposals or contracts."
       },
       {
         "title": "3. Intellectual Property",

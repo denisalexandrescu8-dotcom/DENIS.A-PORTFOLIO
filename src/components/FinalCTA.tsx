@@ -169,7 +169,7 @@ export default function FinalCTA() {
               >
                 <option className="bg-black" value="Branding & Identity">{content.ui.brandingAndIdentity}</option>
                 <option className="bg-black" value="Video Editing">{content.ui.videoEditing}</option>
-                <option className="bg-black" value="Social Content">{content.ui.socialContent}</option>
+                <option className="bg-black" value="Social Media Content">{content.ui.socialContent}</option>
               </select>
             </div>
             <div className="space-y-2">
