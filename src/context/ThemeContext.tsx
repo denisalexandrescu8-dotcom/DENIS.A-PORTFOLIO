@@ -26,8 +26,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     
     // Save to localStorage
     localStorage.setItem('theme', theme);
-    
-    console.log('Theme applied:', theme, 'Classes:', root.classList.value);
   }, [theme]);
 
   const toggleTheme = () => {

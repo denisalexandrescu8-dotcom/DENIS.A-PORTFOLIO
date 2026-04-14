@@ -13,7 +13,7 @@ export default function ProjectDetail() {
   }
 
   return (
-    <section className="pt-32 pb-32 px-6 md:px-12 lg:px-24 min-h-screen bg-black">
+    <section className="pt-32 pb-32 px-6 md:px-12 lg:px-24 min-h-screen">
       <div className="max-w-7xl mx-auto">
         {/* Navigation */}
         <motion.div
@@ -21,8 +21,8 @@ export default function ProjectDetail() {
           animate={{ opacity: 1, x: 0 }}
           className="mb-16"
         >
-          <Link to="/archive" className="inline-flex items-center gap-3 text-white/40 hover:text-premium-blue transition-all group text-sm font-mono uppercase tracking-widest">
-            <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-premium-blue/30 group-hover:bg-premium-blue/5 transition-all">
+          <Link to="/archive" className="inline-flex items-center gap-3 text-gray-500 dark:text-white/40 hover:text-premium-blue transition-all group text-sm font-mono uppercase tracking-widest">
+            <div className="w-10 h-10 rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center group-hover:border-premium-blue/30 group-hover:bg-premium-blue/5 transition-all">
               <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
             </div>
             {content.ui.backToArchive}
@@ -42,7 +42,7 @@ export default function ProjectDetail() {
                 <Calendar size={12} />
                 <span>{project.year}</span>
               </div>
-              <div className="flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/60">
+              <div className="flex items-center gap-2 px-3 py-1 rounded-full border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-white/60">
                 <Tag size={12} />
                 <span>{project.category}</span>
               </div>
@@ -50,7 +50,7 @@ export default function ProjectDetail() {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-8 leading-[0.9] tracking-tighter">
               {project.project}
             </h1>
-            <p className="text-xl md:text-2xl text-white/60 font-light leading-relaxed max-w-3xl">
+            <p className="text-xl md:text-2xl text-gray-600 dark:text-white/60 font-light leading-relaxed max-w-3xl">
               {project.description}
             </p>
           </motion.div>
@@ -61,22 +61,22 @@ export default function ProjectDetail() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="lg:col-span-4 flex flex-col justify-end"
           >
-            <div className="glass p-8 rounded-3xl border-white/5 space-y-8">
+            <div className="glass p-8 rounded-3xl border-gray-200 dark:border-white/5 space-y-8">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0 border border-white/10">
+                <div className="w-10 h-10 rounded-xl bg-gray-100 dark:bg-white/5 flex items-center justify-center shrink-0 border border-gray-200 dark:border-white/10">
                   <User size={18} className="text-premium-blue" />
                 </div>
                 <div>
-                  <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mb-1">{content.ui.client}</div>
+                  <div className="text-[10px] font-mono uppercase tracking-widest text-gray-500 dark:text-white/40 mb-1">{content.ui.client}</div>
                   <div className="text-lg font-medium">{project.client}</div>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0 border border-white/10">
+                <div className="w-10 h-10 rounded-xl bg-gray-100 dark:bg-white/5 flex items-center justify-center shrink-0 border border-gray-200 dark:border-white/10">
                   <Briefcase size={18} className="text-premium-blue" />
                 </div>
                 <div>
-                  <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mb-1">{content.ui.role}</div>
+                  <div className="text-[10px] font-mono uppercase tracking-widest text-gray-500 dark:text-white/40 mb-1">{content.ui.role}</div>
                   <div className="text-lg font-medium">{project.role}</div>
                 </div>
               </div>
@@ -90,20 +90,20 @@ export default function ProjectDetail() {
             <div className="inline-block px-4 py-1 rounded-full border border-premium-blue/20 bg-premium-blue/5 text-[10px] font-mono uppercase tracking-widest text-premium-blue mb-8">
               {content.ui.projectOverview}
             </div>
-            <p className="text-2xl md:text-3xl text-white/90 font-light leading-snug mb-12">
+            <p className="text-2xl md:text-3xl text-gray-800 dark:text-white/90 font-light leading-snug mb-12">
               {project.description}
             </p>
-            <div className="h-px w-full bg-gradient-to-r from-white/10 to-transparent mb-12" />
+            <div className="h-px w-full bg-gradient-to-r from-gray-200 dark:from-white/10 to-transparent mb-12" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div>
-                <h3 className="text-sm font-mono uppercase tracking-[0.2em] text-white/40 mb-6">{content.ui.theChallenge}</h3>
-                <p className="text-white/60 leading-relaxed">
+                <h3 className="text-sm font-mono uppercase tracking-[0.2em] text-gray-500 dark:text-white/40 mb-6">{content.ui.theChallenge}</h3>
+                <p className="text-gray-600 dark:text-white/60 leading-relaxed">
                   {content.ui.theChallengeDescription}
                 </p>
               </div>
               <div>
-                <h3 className="text-sm font-mono uppercase tracking-[0.2em] text-white/40 mb-6">{content.ui.theSolution}</h3>
-                <p className="text-white/60 leading-relaxed">
+                <h3 className="text-sm font-mono uppercase tracking-[0.2em] text-gray-500 dark:text-white/40 mb-6">{content.ui.theSolution}</h3>
+                <p className="text-gray-600 dark:text-white/60 leading-relaxed">
                   {content.ui.theSolutionDescription}
                 </p>
               </div>
@@ -111,8 +111,8 @@ export default function ProjectDetail() {
           </div>
           
           <div className="lg:col-span-4">
-            <div className="glass p-10 rounded-[2rem] border-white/5 sticky top-32">
-              <h3 className="text-sm font-mono uppercase tracking-[0.2em] text-white/40 mb-8">{content.ui.deliverables}</h3>
+            <div className="glass p-10 rounded-[2rem] border-gray-200 dark:border-white/5 sticky top-32">
+              <h3 className="text-sm font-mono uppercase tracking-[0.2em] text-gray-500 dark:text-white/40 mb-8">{content.ui.deliverables}</h3>
               <ul className="space-y-6">
                 {project.deliverables.map((item, i) => (
                   <motion.li 
@@ -120,7 +120,7 @@ export default function ProjectDetail() {
                     initial={{ opacity: 0, x: 10 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.1 }}
-                    className="flex items-center gap-4 text-lg font-medium text-white/80"
+                    className="flex items-center gap-4 text-lg font-medium text-gray-800 dark:text-white/80"
                   >
                     <div className="w-6 h-6 rounded-full bg-premium-blue/10 flex items-center justify-center shrink-0">
                       <CheckCircle2 size={14} className="text-premium-blue" />
@@ -137,9 +137,9 @@ export default function ProjectDetail() {
         {project.gallery && project.gallery.length > 0 && (
           <div className="space-y-12">
             <div className="flex items-center justify-between mb-12">
-              <h2 className="text-3xl md:text-5xl font-display font-bold tracking-tighter">{content.ui.galleryShowcase} <span className="text-white/20">{content.ui.showcase}</span></h2>
-              <div className="h-px flex-1 bg-white/5 mx-8 hidden md:block" />
-              <div className="text-[10px] font-mono uppercase tracking-widest text-white/40">
+              <h2 className="text-3xl md:text-5xl font-display font-bold tracking-tighter">{content.ui.galleryShowcase} <span className="text-gray-400 dark:text-white/20">{content.ui.showcase}</span></h2>
+              <div className="h-px flex-1 bg-gray-200 dark:bg-white/5 mx-8 hidden md:block" />
+              <div className="text-[10px] font-mono uppercase tracking-widest text-gray-500 dark:text-white/40">
                 {project.gallery.length} {project.gallery.length === 1 ? content.ui.asset : content.ui.assets}
               </div>
             </div>
@@ -154,7 +154,7 @@ export default function ProjectDetail() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.6, delay: index * 0.05 }}
-                    className={`relative break-inside-avoid w-full rounded-3xl overflow-hidden border border-white/10 bg-dark-surface flex items-center justify-center group hover:border-premium-blue/30 transition-all duration-500 shadow-xl ${isVideo ? 'aspect-video' : ''}`}
+                    className={`relative break-inside-avoid w-full rounded-3xl overflow-hidden border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-dark-surface flex items-center justify-center group hover:border-premium-blue/30 transition-all duration-500 shadow-xl ${isVideo ? 'aspect-video' : ''}`}
                   >
                     {isVideo ? (
                       <div className="w-full h-full aspect-video">
@@ -183,11 +183,11 @@ export default function ProjectDetail() {
         )}
 
         {/* Footer Navigation */}
-        <div className="mt-40 pt-20 border-t border-white/5 flex flex-col items-center text-center">
-          <h3 className="text-xl text-white/40 mb-8 font-light italic">{content.ui.interested}</h3>
+        <div className="mt-40 pt-20 border-t border-gray-200 dark:border-white/5 flex flex-col items-center text-center">
+          <h3 className="text-xl text-gray-500 dark:text-white/40 mb-8 font-light italic">{content.ui.interested}</h3>
           <Link 
             to="/archive" 
-            className="group relative px-12 py-5 bg-white text-black rounded-full font-bold uppercase tracking-widest overflow-hidden transition-all hover:pr-16"
+            className="group relative px-12 py-5 bg-gray-900 dark:bg-white text-white dark:text-black rounded-full font-bold uppercase tracking-widest overflow-hidden transition-all hover:pr-16"
           >
             <span className="relative z-10">{content.ui.exploreMore}</span>
             <ArrowLeft size={20} className="absolute right-8 top-1/2 -translate-y-1/2 rotate-180 opacity-0 group-hover:opacity-100 transition-all" />
