@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://denisalexandrescu.com/sitemap.xml
