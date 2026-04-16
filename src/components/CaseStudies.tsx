@@ -43,6 +43,7 @@ export default function CaseStudies() {
                         alt={`${project.title} ${i + 1}`}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
                         referrerPolicy="no-referrer"
+                        loading="lazy"
                       />
                     ))}
                   </div>
@@ -52,6 +53,7 @@ export default function CaseStudies() {
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
                   />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />

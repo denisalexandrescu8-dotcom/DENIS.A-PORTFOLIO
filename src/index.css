@@ -39,7 +39,7 @@
 
 @layer utilities {
   .glass {
-    @apply bg-black/10 backdrop-blur-xl border border-white/10;
+    @apply bg-black/20 backdrop-blur-md border border-white/10;
   }
 
   .text-gradient {
