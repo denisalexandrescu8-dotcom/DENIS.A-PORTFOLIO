@@ -3,9 +3,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'motion/react';
-import { lazy, Suspense, useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { LanguageProvider } from './context/LanguageContext';
@@ -13,13 +12,12 @@ import ScrollToTop from './components/ScrollToTop';
 import BackToTop from './components/BackToTop';
 import BackButton from './components/BackButton';
 import { GradientBackground } from './components/ui/paper-design-shader-background';
-import LoadingScreen from './components/LoadingScreen';
 
-const Home = lazy(() => import('./pages/Home'));
-const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
-const TermsOfService = lazy(() => import('./pages/TermsOfService'));
-const Archive = lazy(() => import('./pages/Archive'));
-const ProjectDetail = lazy(() => import('./pages/ProjectDetail'));
+import Home from './pages/Home';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
+import Archive from './pages/Archive';
+import ProjectDetail from './pages/ProjectDetail';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -33,39 +31,22 @@ function AnimatedRoutes() {
         exit={{ opacity: 0, y: -10 }}
         transition={{ duration: 0.2 }}
       >
-        <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-black"></div>}>
-          <Routes location={location}>
-            <Route path="/" element={<Home />} />
-            <Route path="/privacy" element={<PrivacyPolicy />} />
-            <Route path="/terms" element={<TermsOfService />} />
-            <Route path="/archive" element={<Archive />} />
-            <Route path="/project/:id" element={<ProjectDetail />} />
-          </Routes>
-        </Suspense>
+        <Routes location={location}>
+          <Route path="/" element={<Home />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsOfService />} />
+          <Route path="/archive" element={<Archive />} />
+          <Route path="/project/:id" element={<ProjectDetail />} />
+        </Routes>
       </motion.div>
     </AnimatePresence>
   );
 }
 
 export default function App() {
-  const basename = (import.meta as any).env.VITE_BASE_PATH || '/';
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate initial load completion
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1800);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <LanguageProvider>
-      <BrowserRouter basename={basename}>
-        <AnimatePresence mode="wait">
-          {isLoading && <LoadingScreen key="loader" />}
-        </AnimatePresence>
-        
+      <Router>
         <ScrollToTop />
         <ConditionalBackButton />
         <BackToTop />
@@ -78,7 +59,7 @@ export default function App() {
           </div>
           <Footer />
         </main>
-      </BrowserRouter>
+      </Router>
     </LanguageProvider>
   );
 }

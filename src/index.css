@@ -12,21 +12,6 @@
   --color-dark-border: rgba(255, 255, 255, 0.1);
 }
 
-/* Performance Optimizations */
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
-.will-change-transform {
-  will-change: transform;
-}
-
-.will-change-opacity {
-  will-change: opacity;
-}
-
 @layer base {
   body {
     @apply bg-black text-white font-sans selection:bg-premium-blue/30 selection:text-white;
