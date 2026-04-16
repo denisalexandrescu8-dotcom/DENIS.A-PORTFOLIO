@@ -5,6 +5,7 @@
 
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'motion/react';
+import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { LanguageProvider } from './context/LanguageContext';
@@ -12,6 +13,7 @@ import ScrollToTop from './components/ScrollToTop';
 import BackToTop from './components/BackToTop';
 import BackButton from './components/BackButton';
 import { GradientBackground } from './components/ui/paper-design-shader-background';
+import LoadingScreen from './components/LoadingScreen';
 
 import Home from './pages/Home';
 import PrivacyPolicy from './pages/PrivacyPolicy';
@@ -44,9 +46,22 @@ function AnimatedRoutes() {
 }
 
 export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1800);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <LanguageProvider>
       <Router>
+        <AnimatePresence mode="wait">
+          {isLoading && <LoadingScreen key="loader" />}
+        </AnimatePresence>
+        
         <ScrollToTop />
         <ConditionalBackButton />
         <BackToTop />
