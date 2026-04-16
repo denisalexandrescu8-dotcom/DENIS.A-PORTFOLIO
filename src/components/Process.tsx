@@ -5,7 +5,7 @@ export default function Process() {
   const { content } = useLanguage();
 
   return (
-    <section id="process" className="section-padding bg-dark-surface/50">
+    <section id="process" className="section-padding">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
           <div className="max-w-xl">

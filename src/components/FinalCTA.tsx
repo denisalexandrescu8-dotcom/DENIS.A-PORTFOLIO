@@ -55,9 +55,11 @@ export default function FinalCTA() {
             <p className="text-xl text-white/60 font-light">
               {content.ui.messageSent}
             </p>
-            <div className="py-4 px-8 bg-white/5 rounded-2xl inline-flex items-center gap-4 font-mono text-premium-blue">
-              {content.global.email}
-              <CopyToClipboard text={content.global.email} />
+            <div className="py-4 px-6 md:px-8 bg-white/5 rounded-2xl flex flex-col sm:flex-row items-center gap-4 font-mono text-premium-blue max-w-full overflow-hidden">
+              <span className="break-all text-sm md:text-base">{content.global.email}</span>
+              <div className="shrink-0">
+                <CopyToClipboard text={content.global.email} />
+              </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <a 
@@ -105,12 +107,14 @@ export default function FinalCTA() {
                 <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-white/30 transition-all">
                   <Mail size={20} />
                 </div>
-                <div className="flex flex-col gap-2">
-                  <div>
+                <div className="flex flex-col gap-2 min-w-0 overflow-hidden">
+                  <div className="min-w-0">
                     <div className="text-[10px] font-mono uppercase tracking-widest opacity-50">{content.ui.emailMe}</div>
-                    <div className="text-lg">{content.global.email}</div>
+                    <div className="text-base md:text-lg break-all">{content.global.email}</div>
                   </div>
-                  <CopyToClipboard text={content.global.email} />
+                  <div className="w-fit">
+                    <CopyToClipboard text={content.global.email} />
+                  </div>
                 </div>
               </div>
 

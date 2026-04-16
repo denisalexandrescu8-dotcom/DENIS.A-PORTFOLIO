@@ -12,6 +12,7 @@ import { LanguageProvider } from './context/LanguageContext';
 import ScrollToTop from './components/ScrollToTop';
 import BackToTop from './components/BackToTop';
 import BackButton from './components/BackButton';
+import { GradientBackground } from './components/ui/paper-design-shader-background';
 
 const Home = lazy(() => import('./pages/Home'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
@@ -54,7 +55,9 @@ export default function App() {
         <ScrollToTop />
         <ConditionalBackButton />
         <BackToTop />
-        <main className="min-h-screen bg-black text-white selection:bg-blue-500/30 transition-colors duration-300">
+        <main className="relative min-h-screen text-white selection:bg-blue-500/30 transition-colors duration-300">
+          <GradientBackground />
+          <div className="fixed inset-0 bg-black/40 -z-10 pointer-events-none" />
           <Navbar />
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <AnimatedRoutes />
