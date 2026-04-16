@@ -1,9 +1,10 @@
 "use client"
 
 import type React from "react"
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef, memo } from "react"
 import { ArrowUpRight } from "lucide-react"
 import { Link } from "react-router-dom"
+import { motion, useSpring, useMotionValue } from "framer-motion"
 
 interface Project {
   id: string
@@ -18,43 +19,23 @@ interface ProjectShowcaseProps {
   projects: Project[]
 }
 
-export function ProjectShowcase({ projects }: ProjectShowcaseProps) {
+export const ProjectShowcase = memo(({ projects }: ProjectShowcaseProps) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  const [smoothPosition, setSmoothPosition] = useState({ x: 0, y: 0 })
   const [isVisible, setIsVisible] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
-  const animationRef = useRef<number | null>(null)
 
-  useEffect(() => {
-    const lerp = (start: number, end: number, factor: number) => {
-      return start + (end - start) * factor
-    }
+  const mouseX = useMotionValue(0)
+  const mouseY = useMotionValue(0)
 
-    const animate = () => {
-      setSmoothPosition((prev) => ({
-        x: lerp(prev.x, mousePosition.x, 0.15),
-        y: lerp(prev.y, mousePosition.y, 0.15),
-      }))
-      animationRef.current = requestAnimationFrame(animate)
-    }
-
-    animationRef.current = requestAnimationFrame(animate)
-
-    return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current)
-      }
-    }
-  }, [mousePosition])
+  const springConfig = { damping: 25, stiffness: 150 }
+  const x = useSpring(mouseX, springConfig)
+  const y = useSpring(mouseY, springConfig)
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (containerRef.current) {
       const rect = containerRef.current.getBoundingClientRect()
-      setMousePosition({
-        x: e.clientX - rect.left,
-        y: e.clientY - rect.top,
-      })
+      mouseX.set(e.clientX - rect.left)
+      mouseY.set(e.clientY - rect.top)
     }
   }
 
@@ -69,21 +50,27 @@ export function ProjectShowcase({ projects }: ProjectShowcaseProps) {
   }
 
   const isVideo = (url: string) => {
-    return url.match(/\.(mp4|webm|ogg|mov)$/i) || url.includes('drive.google.com/file/d/') && url.includes('/preview');
+    return url.match(/\.(mp4|webm|ogg|mov)$/i) || (url.includes('drive.google.com/file/d/') && url.includes('/preview'));
   };
 
   return (
     <div ref={containerRef} onMouseMove={handleMouseMove} className="relative w-full">
       {/* Floating Image/Video Preview */}
-      <div
-        className="pointer-events-none fixed z-50 overflow-hidden rounded-xl shadow-2xl hidden lg:block"
+      <motion.div
+        className="pointer-events-none fixed z-50 overflow-hidden rounded-xl shadow-2xl hidden lg:block will-change-transform"
         style={{
           left: containerRef.current?.getBoundingClientRect().left ?? 0,
           top: containerRef.current?.getBoundingClientRect().top ?? 0,
-          transform: `translate3d(${smoothPosition.x + 40}px, ${smoothPosition.y - 120}px, 0)`,
+          x: x,
+          y: y,
+          translateX: 40,
+          translateY: -120,
           opacity: isVisible ? 1 : 0,
           scale: isVisible ? 1 : 0.8,
-          transition: "opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), scale 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+        }}
+        transition={{
+          opacity: { duration: 0.3 },
+          scale: { duration: 0.3 }
         }}
       >
         <div className="relative w-[320px] h-[200px] bg-white/5 rounded-xl overflow-hidden border border-white/10">
@@ -129,7 +116,7 @@ export function ProjectShowcase({ projects }: ProjectShowcaseProps) {
           ))}
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
         </div>
-      </div>
+      </motion.div>
 
       <div className="space-y-0 border-t border-white/10">
         {projects.map((project, index) => (
@@ -216,4 +203,6 @@ export function ProjectShowcase({ projects }: ProjectShowcaseProps) {
       </div>
     </div>
   )
-}
+})
+
+ProjectShowcase.displayName = "ProjectShowcase"

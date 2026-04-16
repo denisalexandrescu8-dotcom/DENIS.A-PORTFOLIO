@@ -24,9 +24,9 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center items-center text-center pt-32 pb-20 overflow-hidden">
       {/* Background Atmosphere */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-premium-blue/20 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-premium-gold/10 rounded-full blur-[120px] animate-pulse delay-1000" />
+      <div className="absolute inset-0 -z-10 pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-premium-blue/10 rounded-full blur-[100px] will-change-[opacity]" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-premium-gold/5 rounded-full blur-[100px] will-change-[opacity]" />
       </div>
 
       <motion.div 
