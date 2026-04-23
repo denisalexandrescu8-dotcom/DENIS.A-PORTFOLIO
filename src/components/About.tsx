@@ -35,7 +35,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-xs font-mono uppercase tracking-[0.3em] text-premium-blue mb-6 block">{content.ui.theStory}</span>
+            <span className="text-xs font-mono uppercase tracking-[0.3em] text-premium-gold mb-6 block">{content.ui.theStory}</span>
             <h2 className="text-4xl md:text-6xl font-display font-bold mb-8 leading-tight">
               {content.about.headlineStart} <span className="text-white/40">{content.about.headlineHighlight1}</span>{content.about.headlineMiddle} <span className="text-white/40">{content.about.headlineHighlight2}</span>
             </h2>

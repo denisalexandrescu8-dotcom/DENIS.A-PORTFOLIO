@@ -21,7 +21,7 @@ export default function TermsOfService() {
               <p>
                 {section.content.replace('{name}', content.global.name)}
                 {index === content.termsOfServiceContent.sections.length - 1 && (
-                  <> <a href={`mailto:${content.global.email}`} className="text-premium-blue hover:underline">{content.global.email}</a></>
+                  <> <a href={`mailto:${content.global.email}`} className="text-premium-gold hover:underline">{content.global.email}</a></>
                 )}
               </p>
             </div>

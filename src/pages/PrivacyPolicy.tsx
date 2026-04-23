@@ -21,7 +21,7 @@ export default function PrivacyPolicy() {
               <p>
                 {section.content}
                 {index === content.privacyPolicyContent.sections.length - 1 && (
-                  <> <a href={`mailto:${content.global.email}`} className="text-premium-blue hover:underline">{content.global.email}</a></>
+                  <> <a href={`mailto:${content.global.email}`} className="text-premium-gold hover:underline">{content.global.email}</a></>
                 )}
               </p>
             </div>

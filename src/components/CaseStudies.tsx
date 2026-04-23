@@ -80,7 +80,7 @@ const ProjectCard: React.FC<{ project: any, index: number }> = ({ project, index
     >
       <Link 
         to={`/project/${project.id}`} 
-        className="block relative aspect-[16/9] overflow-hidden rounded-3xl bg-dark-surface border border-white/5 transition-shadow duration-500 group-hover:shadow-[0_20px_50px_rgba(0,112,243,0.1)] group-hover:border-premium-blue/20"
+        className="block relative aspect-[16/9] overflow-hidden rounded-3xl bg-dark-surface border border-white/5 transition-shadow duration-500 group-hover:shadow-[0_20px_50px_rgba(212,175,55,0.05)] group-hover:border-premium-gold/20"
       >
         {/* Zoom layer */}
         <motion.div 

@@ -19,7 +19,7 @@ export default function BackButton() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={() => navigate(-1)}
-          className="fixed bottom-8 left-8 z-50 w-12 h-12 rounded-full bg-premium-blue text-white shadow-lg shadow-premium-blue/20 flex items-center justify-center group border border-white/10"
+          className="fixed bottom-8 left-8 z-50 w-12 h-12 rounded-full bg-white text-black shadow-lg shadow-white/10 flex items-center justify-center group border border-white/10"
           aria-label="Go back"
         >
           <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />

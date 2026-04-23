@@ -65,7 +65,7 @@ export default function App() {
         <ScrollToTop />
         <ConditionalBackButton />
         <BackToTop />
-        <main className="relative min-h-screen text-white selection:bg-blue-500/30 transition-colors duration-300">
+        <main className="relative min-h-screen text-white selection:bg-premium-gold/30 transition-colors duration-300">
           <GradientBackground />
           <Navbar />
           <div className="max-w-7xl mx-auto px-4 md:px-8">

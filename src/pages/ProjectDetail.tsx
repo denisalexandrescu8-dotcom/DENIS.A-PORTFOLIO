@@ -22,8 +22,8 @@ export default function ProjectDetail() {
           animate={{ opacity: 1, x: 0 }}
           className="mb-16"
         >
-          <Link to="/archive" className="inline-flex items-center gap-3 text-white/40 hover:text-premium-blue transition-all group text-sm font-mono uppercase tracking-widest">
-            <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-premium-blue/30 group-hover:bg-premium-blue/5 transition-all">
+          <Link to="/archive" className="inline-flex items-center gap-3 text-white/40 hover:text-premium-gold transition-all group text-sm font-mono uppercase tracking-widest">
+            <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-premium-gold/30 group-hover:bg-premium-gold/5 transition-all">
               <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
             </div>
             {content.ui.backToArchive}
@@ -38,8 +38,8 @@ export default function ProjectDetail() {
             transition={{ duration: 0.8 }}
             className="lg:col-span-8"
           >
-            <div className="flex flex-wrap items-center gap-6 text-[10px] font-mono uppercase tracking-[0.2em] text-premium-blue mb-8">
-              <div className="flex items-center gap-2 px-3 py-1 rounded-full border border-premium-blue/20 bg-premium-blue/5">
+            <div className="flex flex-wrap items-center gap-6 text-[10px] font-mono uppercase tracking-[0.2em] text-premium-gold mb-8">
+              <div className="flex items-center gap-2 px-3 py-1 rounded-full border border-premium-gold/20 bg-premium-gold/5">
                 <Calendar size={12} />
                 <span>{project.year}</span>
               </div>
@@ -65,7 +65,7 @@ export default function ProjectDetail() {
             <div className="glass p-8 rounded-3xl border-white/5 space-y-8">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0 border border-white/10">
-                  <User size={18} className="text-premium-blue" />
+                  <User size={18} className="text-premium-gold" />
                 </div>
                 <div>
                   <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mb-1">{content.ui.client}</div>
@@ -74,7 +74,7 @@ export default function ProjectDetail() {
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0 border border-white/10">
-                  <Briefcase size={18} className="text-premium-blue" />
+                  <Briefcase size={18} className="text-premium-gold" />
                 </div>
                 <div>
                   <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mb-1">{content.ui.role}</div>
@@ -88,7 +88,7 @@ export default function ProjectDetail() {
         {/* Project Details Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 mb-32">
           <div className="lg:col-span-8">
-            <div className="inline-block px-4 py-1 rounded-full border border-premium-blue/20 bg-premium-blue/5 text-[10px] font-mono uppercase tracking-widest text-premium-blue mb-8">
+            <div className="inline-block px-4 py-1 rounded-full border border-premium-gold/20 bg-premium-gold/5 text-[10px] font-mono uppercase tracking-widest text-premium-gold mb-8">
               {content.ui.projectOverview}
             </div>
             <p className="text-2xl md:text-3xl text-white/90 font-light leading-snug mb-12">
@@ -123,8 +123,8 @@ export default function ProjectDetail() {
                     transition={{ delay: i * 0.1 }}
                     className="flex items-center gap-4 text-lg font-medium text-white/80"
                   >
-                    <div className="w-6 h-6 rounded-full bg-premium-blue/10 flex items-center justify-center shrink-0">
-                      <CheckCircle2 size={14} className="text-premium-blue" />
+                    <div className="w-6 h-6 rounded-full bg-premium-gold/10 flex items-center justify-center shrink-0">
+                      <CheckCircle2 size={14} className="text-premium-gold" />
                     </div>
                     {item}
                   </motion.li>
@@ -155,7 +155,7 @@ export default function ProjectDetail() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.6, delay: index * 0.05 }}
-                    className={`relative break-inside-avoid w-full rounded-3xl overflow-hidden border border-white/10 bg-dark-surface flex items-center justify-center group hover:border-premium-blue/30 transition-all duration-500 shadow-xl ${isVideo ? 'aspect-video' : ''}`}
+                    className={`relative break-inside-avoid w-full rounded-3xl overflow-hidden border border-white/10 bg-dark-surface flex items-center justify-center group hover:border-premium-gold/30 transition-all duration-500 shadow-xl ${isVideo ? 'aspect-video' : ''}`}
                   >
                     {isVideo ? (
                       <div className="w-full h-full aspect-video">
@@ -175,7 +175,7 @@ export default function ProjectDetail() {
                         referrerPolicy="no-referrer"
                       />
                     )}
-                    <div className="absolute inset-0 bg-premium-blue/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+                    <div className="absolute inset-0 bg-premium-gold/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
                   </motion.div>
                 );
               })}

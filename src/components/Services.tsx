@@ -36,7 +36,7 @@ export default function Services() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="glass p-10 rounded-[2rem] hover:border-white/20 transition-all group"
               >
-                <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-8 group-hover:bg-premium-blue/20 group-hover:text-premium-blue transition-colors">
+                <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-8 group-hover:bg-premium-gold/20 group-hover:text-premium-gold transition-colors">
                   <IconComponent size={28} />
                 </div>
                 <h3 className="text-2xl font-display font-bold mb-4">{service.title}</h3>
@@ -47,7 +47,7 @@ export default function Services() {
                 <div className="space-y-3">
                   {service.deliverables.map((item) => (
                     <div key={item} className="flex items-center gap-3 text-sm text-white/70">
-                      <CheckCircle2 size={16} className="text-premium-blue" />
+                      <CheckCircle2 size={16} className="text-premium-gold" />
                       {item}
                     </div>
                   ))}

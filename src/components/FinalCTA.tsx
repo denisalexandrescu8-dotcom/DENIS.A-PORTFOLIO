@@ -55,7 +55,7 @@ export default function FinalCTA() {
             <p className="text-xl text-white/60 font-light">
               {content.ui.messageSent}
             </p>
-            <div className="py-4 px-6 md:px-8 bg-white/5 rounded-2xl flex flex-col sm:flex-row items-center gap-4 font-mono text-white max-w-full overflow-hidden">
+            <div className="py-4 px-6 md:px-8 bg-white/5 rounded-2xl flex flex-col sm:flex-row items-center gap-4 font-mono text-premium-gold max-w-full overflow-hidden">
               <span className="break-all text-sm md:text-base">{content.global.email}</span>
               <div className="shrink-0">
                 <div className="bg-transparent scale-75 md:scale-100">

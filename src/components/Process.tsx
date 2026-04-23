@@ -28,7 +28,7 @@ export default function Process() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative group"
             >
-              <div className="text-6xl font-display font-extrabold text-white/10 mb-6 group-hover:text-premium-blue/40 transition-colors">
+              <div className="text-6xl font-display font-extrabold text-white/10 mb-6 group-hover:text-premium-gold/40 transition-colors">
                 {step.number}
               </div>
               <h3 className="text-xl font-display font-bold mb-4">{step.title}</h3>

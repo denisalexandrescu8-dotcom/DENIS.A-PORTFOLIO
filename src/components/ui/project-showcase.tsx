@@ -166,7 +166,7 @@ export const ProjectShowcase = memo(({ projects }: ProjectShowcaseProps) => {
                           {project.project}
                           <span
                             className={`
-                              absolute left-0 -bottom-1 h-[2px] bg-premium-blue
+                              absolute left-0 -bottom-1 h-[2px] bg-premium-gold
                               transition-all duration-300 ease-out
                               ${hoveredIndex === index ? "w-full" : "w-0"}
                             `}
@@ -176,7 +176,7 @@ export const ProjectShowcase = memo(({ projects }: ProjectShowcaseProps) => {
 
                       <ArrowUpRight
                         className={`
-                          w-5 h-5 text-premium-blue
+                          w-5 h-5 text-premium-gold
                           transition-all duration-300 ease-out
                           ${
                             hoveredIndex === index
@@ -189,7 +189,7 @@ export const ProjectShowcase = memo(({ projects }: ProjectShowcaseProps) => {
                   </div>
 
                   <p className="text-white/40 text-sm mt-2 font-light">
-                    {project.client} — <span className="text-premium-blue/60">{project.category}</span>
+                    {project.client} — <span className="text-premium-gold/60">{project.category}</span>
                   </p>
                 </div>
 
