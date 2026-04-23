@@ -3,6 +3,7 @@ import { ArrowRight, Mail, MessageSquare } from 'lucide-react';
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import CopyToClipboard from './CopyToClipboard';
+import { LiquidButton } from './ui/liquid-glass-button';
 
 export default function FinalCTA() {
   const { content } = useLanguage();
@@ -41,39 +42,42 @@ export default function FinalCTA() {
   if (isSubmitted) {
     return (
       <section id="contact" className="section-padding relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-premium-blue/10 rounded-full blur-[120px] -z-10" />
         <div className="max-w-3xl mx-auto glass p-12 md:p-20 rounded-[3rem] border-white/10 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             className="space-y-8"
           >
-            <div className="w-20 h-20 bg-premium-blue/20 rounded-full flex items-center justify-center mx-auto text-premium-blue">
+            <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto text-white">
               <Mail size={40} />
             </div>
             <h2 className="text-4xl font-display font-bold">{content.ui.thanks}</h2>
             <p className="text-xl text-white/60 font-light">
               {content.ui.messageSent}
             </p>
-            <div className="py-4 px-6 md:px-8 bg-white/5 rounded-2xl flex flex-col sm:flex-row items-center gap-4 font-mono text-premium-blue max-w-full overflow-hidden">
+            <div className="py-4 px-6 md:px-8 bg-white/5 rounded-2xl flex flex-col sm:flex-row items-center gap-4 font-mono text-white max-w-full overflow-hidden">
               <span className="break-all text-sm md:text-base">{content.global.email}</span>
               <div className="shrink-0">
-                <CopyToClipboard text={content.global.email} />
+                <div className="bg-transparent scale-75 md:scale-100">
+                  <CopyToClipboard text={content.global.email} />
+                </div>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <a 
-                href={`mailto:${content.global.email}?subject=New Inquiry&body=Hello!`}
-                className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-white/90 transition-all"
+              <LiquidButton 
+                onClick={() => window.location.href = `mailto:${content.global.email}?subject=New Inquiry&body=Hello!`}
+                className="text-white font-bold"
+                size="lg"
               >
                 {content.ui.openMailAgain}
-              </a>
-              <button 
+              </LiquidButton>
+              <LiquidButton 
                 onClick={() => setIsSubmitted(false)}
-                className="border border-white/10 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition-all"
+                className="text-white/60 font-bold"
+                size="lg"
               >
                 {content.ui.backToForm}
-              </button>
+              </LiquidButton>
             </div>
           </motion.div>
         </div>
@@ -83,9 +87,6 @@ export default function FinalCTA() {
 
   return (
     <section id="contact" className="section-padding relative overflow-hidden">
-      {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-premium-blue/10 rounded-full blur-[120px] -z-10" />
-
       <div className="max-w-5xl mx-auto glass p-12 md:p-20 rounded-[3rem] border-white/10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <motion.div
@@ -154,7 +155,7 @@ export default function FinalCTA() {
                   value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
                   placeholder="John Doe" 
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-premium-blue/50 transition-colors" 
+                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-white/20 transition-colors" 
                 />
               </div>
               <div className="space-y-2">
@@ -165,7 +166,7 @@ export default function FinalCTA() {
                   value={formData.email}
                   onChange={(e) => setFormData({...formData, email: e.target.value})}
                   placeholder="john@example.com" 
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-premium-blue/50 transition-colors" 
+                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-white/20 transition-colors" 
                 />
               </div>
             </div>
@@ -174,7 +175,7 @@ export default function FinalCTA() {
               <select 
                 value={formData.projectType}
                 onChange={(e) => setFormData({...formData, projectType: e.target.value})}
-                className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-premium-blue/50 transition-colors appearance-none text-white/60"
+                className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-white/20 transition-colors appearance-none text-white/60"
               >
                 <option className="bg-black" value="Branding & Identity">{content.ui.brandingAndIdentity}</option>
                 <option className="bg-black" value="Video Editing">{content.ui.videoEditing}</option>
@@ -189,22 +190,31 @@ export default function FinalCTA() {
                 value={formData.message}
                 onChange={(e) => setFormData({...formData, message: e.target.value})}
                 placeholder="..." 
-                className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-premium-blue/50 transition-colors resize-none" 
+                className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-white/20 transition-colors resize-none" 
               />
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <button type="submit" className="w-full bg-white text-black py-5 rounded-2xl font-bold uppercase tracking-wider hover:bg-white/90 transition-all flex items-center justify-center gap-2 group">
-                {content.ui.sendMessage}
-                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform -mr-1" />
-              </button>
-              <button 
+              <LiquidButton 
+                type="submit" 
+                className="w-full text-white font-bold uppercase tracking-wider group"
+                size="xl"
+              >
+                <span className="flex items-center gap-2">
+                  {content.ui.sendMessage}
+                  <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                </span>
+              </LiquidButton>
+              <LiquidButton 
                 type="button"
                 onClick={handleWhatsApp}
-                className="w-full bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/20 py-5 rounded-2xl font-bold uppercase tracking-wider hover:bg-[#25D366]/20 transition-all flex items-center justify-center gap-3 group"
+                className="w-full text-[#25D366] font-bold uppercase tracking-wider group"
+                size="xl"
               >
-                {content.ui.whatsapp}
-                <MessageSquare size={20} className="group-hover:scale-110 transition-transform -ml-1" />
-              </button>
+                <span className="flex items-center gap-3">
+                  {content.ui.whatsapp}
+                  <MessageSquare size={20} className="group-hover:scale-110 transition-transform" />
+                </span>
+              </LiquidButton>
             </div>
           </motion.form>
         </div>
@@ -212,3 +222,4 @@ export default function FinalCTA() {
     </section>
   );
 }
+

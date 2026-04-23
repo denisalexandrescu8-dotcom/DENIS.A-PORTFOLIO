@@ -1,11 +1,12 @@
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { LiquidButton } from './ui/liquid-glass-button';
 
 export default function Hero() {
   const { content } = useLanguage();
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -16,19 +17,20 @@ export default function Hero() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { 
+        duration: 0.6, 
+        ease: [0.33, 1, 0.68, 1] // Ease out
+      } 
+    },
   };
 
   return (
     <section className="relative min-h-screen flex flex-col justify-center items-center text-center pt-32 pb-20 overflow-hidden">
-      {/* Background Atmosphere */}
-      <div className="absolute inset-0 -z-10 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-premium-blue/10 rounded-full blur-[100px] will-change-[opacity]" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-premium-gold/5 rounded-full blur-[100px] will-change-[opacity]" />
-      </div>
-
       <motion.div 
         variants={containerVariants}
         initial="hidden"
@@ -58,21 +60,26 @@ export default function Hero() {
 
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row items-center justify-center gap-6"
         >
-          <button 
+          <LiquidButton 
+            size="xxl"
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="group relative bg-white text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider overflow-hidden transition-all hover:pr-12"
+            className="group text-white font-bold uppercase tracking-wider"
           >
-            <span className="relative z-10">{content.ui.workWithMe}</span>
-            <ArrowRight className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all" size={20} />
-          </button>
-          <button 
+            <span className="flex items-center gap-2">
+              {content.ui.workWithMe}
+              <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
+            </span>
+          </LiquidButton>
+          
+          <LiquidButton 
+            size="xxl"
             onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-8 py-4 rounded-full border border-white/10 hover:bg-white/5 transition-all text-white/80 font-medium"
+            className="text-white/80 font-medium"
           >
             {content.ui.viewArchive}
-          </button>
+          </LiquidButton>
         </motion.div>
       </motion.div>
     </section>

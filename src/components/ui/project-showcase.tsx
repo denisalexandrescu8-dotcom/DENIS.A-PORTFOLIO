@@ -4,7 +4,7 @@ import type React from "react"
 import { useState, useRef, memo } from "react"
 import { ArrowUpRight } from "lucide-react"
 import { Link } from "react-router-dom"
-import { motion, useSpring, useMotionValue } from "framer-motion"
+import { motion, useSpring, useMotionValue, useTransform } from "framer-motion"
 
 interface Project {
   id: string
@@ -32,6 +32,11 @@ export const ProjectShowcase = memo(({ projects }: ProjectShowcaseProps) => {
   const x = useSpring(mouseX, springConfig)
   const y = useSpring(mouseY, springConfig)
 
+  // Internal parallax shift for the images inside the preview
+  // We map the relative movement to a subtle shift
+  const internalX = useTransform(x, [0, 1200], ["-4%", "4%"])
+  const internalY = useTransform(y, [0, 800], ["-4%", "4%"])
+
   const handleMouseMove = (e: React.MouseEvent) => {
     if (containerRef.current) {
       const rect = containerRef.current.getBoundingClientRect()
@@ -52,6 +57,12 @@ export const ProjectShowcase = memo(({ projects }: ProjectShowcaseProps) => {
 
   const isVideo = (url: string) => {
     return url.match(/\.(mp4|webm|ogg|mov)$/i) || (url.includes('drive.google.com/file/d/') && url.includes('/preview'));
+  };
+
+  // Function to ensure video shows a frame instead of black
+  const formatVideoUrl = (url: string) => {
+    if (url.includes('drive.google.com')) return url;
+    return `${url}#t=0.001`; // Tells browser to jump to first frame
   };
 
   return (
@@ -75,46 +86,51 @@ export const ProjectShowcase = memo(({ projects }: ProjectShowcaseProps) => {
         }}
       >
         <div className="relative w-[320px] h-[200px] bg-white/5 rounded-xl overflow-hidden border border-white/10">
-          {projects.map((project, index) => (
-            <div
-              key={project.id}
-              className="absolute inset-0 w-full h-full transition-all duration-500 ease-out"
-              style={{
-                opacity: hoveredIndex === index ? 1 : 0,
-                scale: hoveredIndex === index ? 1 : 1.1,
-                filter: hoveredIndex === index ? "none" : "blur(10px)",
-              }}
-            >
-              {isVideo(project.image) ? (
-                <div className="w-full h-full relative">
-                  {project.image.includes('drive.google.com') ? (
-                    <iframe
-                      src={project.image.replace('/view', '/preview')}
-                      className="w-full h-full scale-[1.5] pointer-events-none"
-                      frameBorder="0"
-                      allow="autoplay"
-                    />
-                  ) : (
-                    <video
-                      src={project.image}
-                      className="w-full h-full object-cover"
-                      muted
-                      playsInline
-                      autoPlay
-                      loop
-                    />
-                  )}
-                </div>
-              ) : (
-                <img
-                  src={project.image || "/placeholder.svg"}
-                  alt={project.project}
-                  className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
-                />
-              )}
-            </div>
-          ))}
+          <motion.div 
+            style={{ x: internalX, y: internalY, scale: 1.1 }}
+            className="absolute inset-0 w-full h-full"
+          >
+            {projects.map((project, index) => (
+              <div
+                key={project.id}
+                className="absolute inset-0 w-full h-full transition-all duration-500 ease-out"
+                style={{
+                  opacity: hoveredIndex === index ? 1 : 0,
+                  scale: hoveredIndex === index ? 1 : 1.1,
+                  filter: hoveredIndex === index ? "none" : "blur(10px)",
+                }}
+              >
+                {isVideo(project.image) ? (
+                  <div className="w-full h-full relative">
+                    {project.image.includes('drive.google.com') ? (
+                      <iframe
+                        src={project.image.replace('/view', '/preview')}
+                        className="w-full h-full scale-[1.5] pointer-events-none"
+                        frameBorder="0"
+                        allow="autoplay"
+                      />
+                    ) : (
+                      <video
+                        src={formatVideoUrl(project.image)}
+                        className="w-full h-full object-cover"
+                        muted
+                        playsInline
+                        autoPlay
+                        loop
+                      />
+                    )}
+                  </div>
+                ) : (
+                  <img
+                    src={project.image || "/placeholder.svg"}
+                    alt={project.project}
+                    className="w-full h-full object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                )}
+              </div>
+            ))}
+          </motion.div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
         </div>
       </motion.div>
@@ -188,10 +204,11 @@ export const ProjectShowcase = memo(({ projects }: ProjectShowcaseProps) => {
                        />
                      ) : (
                        <video
-                         src={project.image}
+                         src={formatVideoUrl(project.image)}
                          className="w-full h-full object-cover opacity-60"
                          muted
                          playsInline
+                         preload="metadata"
                        />
                      )
                    ) : (

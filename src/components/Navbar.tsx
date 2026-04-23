@@ -3,6 +3,7 @@ import { Menu, X, Globe } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import { LiquidButton } from './ui/liquid-glass-button';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,14 +64,13 @@ export default function Navbar() {
             <span>{content.ui.languageToggle}</span>
           </button>
 
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          <LiquidButton
+            size="lg"
             onClick={() => handleScroll('contact')}
-            className="bg-white text-black px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider"
+            className="text-white h-9 px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider"
           >
             {content.ui.contact}
-          </motion.button>
+          </LiquidButton>
         </div>
 
         {/* Mobile Toggle */}
@@ -104,12 +104,15 @@ export default function Navbar() {
               {item.label}
             </button>
           ))}
-          <button 
-            onClick={() => handleScroll('contact')}
-            className="bg-white text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider mt-4"
-          >
-            {content.ui.contact}
-          </button>
+          <div className="flex justify-center mt-4">
+            <LiquidButton 
+              size="xl"
+              onClick={() => handleScroll('contact')}
+              className="bg-white text-black w-full"
+            >
+              {content.ui.contact}
+            </LiquidButton>
+          </div>
         </motion.div>
       )}
     </nav>

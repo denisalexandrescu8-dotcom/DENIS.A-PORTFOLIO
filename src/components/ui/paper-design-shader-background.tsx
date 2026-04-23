@@ -1,72 +1,33 @@
 "use client"
 
-import { memo } from "react"
-import { motion } from "framer-motion"
+import { memo, useState } from "react"
+import { MeshGradient, DotOrbit } from "@paper-design/shaders-react"
 
 export const GradientBackground = memo(() => {
+  const [speed] = useState(1.0)
+  const [intensity] = useState(1.5)
+
   return (
-    <div className="fixed inset-0 -z-10 bg-[#000000] overflow-hidden">
-      {/* High-Impact Organic CSS Gradients */}
-      <motion.div
-        animate={{
-          scale: [1, 1.2, 1],
-          x: [0, 100, -50, 0],
-          y: [0, 50, 100, 0],
-          rotate: [0, 45, -45, 0],
-        }}
-        transition={{
-          duration: 25,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-        className="absolute -top-[10%] -left-[10%] w-[80%] h-[80%] rounded-full bg-premium-blue/30 blur-[100px] mix-blend-screen will-change-transform"
-      />
+    <div className="fixed inset-0 -z-20 bg-black overflow-hidden pointer-events-none">
+      {/* 21st.dev Style Shader Background - Pure Mesh Gradient for Organic Look */}
+      <div className="w-full h-full absolute inset-0" style={{ backgroundColor: "#000000" }}>
+        <MeshGradient
+          className="w-full h-full"
+          colors={["#000000", "#111111", "#222222", "#999999"]}
+          speed={speed * 0.4}
+        />
+      </div>
+
+      {/* Subtle lighting overlay to add depth without breaking the organic flow */}
+      <div className="absolute inset-0 pointer-events-none opacity-30">
+        <div
+          className="absolute top-1/4 left-1/3 w-64 h-64 bg-white/5 rounded-full blur-[120px] animate-pulse"
+          style={{ animationDuration: `${4 / speed}s` }}
+        />
+      </div>
       
-      <motion.div
-        animate={{
-          scale: [1.2, 1, 1.3, 1.2],
-          x: [0, -120, 60, 0],
-          y: [0, 150, -50, 0],
-          rotate: [0, -90, 90, 0],
-        }}
-        transition={{
-          duration: 30,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-        className="absolute top-[20%] -right-[20%] w-[90%] h-[90%] rounded-full bg-purple-600/25 blur-[120px] mix-blend-screen animate-pulse will-change-transform"
-      />
-
-      <motion.div
-        animate={{
-          scale: [1, 1.5, 1],
-          x: [0, 200, 0],
-          y: [0, -150, 0],
-        }}
-        transition={{
-          duration: 22,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-        className="absolute -bottom-[30%] left-[10%] w-[70%] h-[70%] rounded-full bg-cyan-400/20 blur-[110px] mix-blend-plus-lighter will-change-transform"
-      />
-
-      {/* Deep Atmosphere Layer */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/60 pointer-events-none" />
-
-      {/* Animated Grain Overlay */}
-      <motion.div 
-        animate={{
-          x: [0, -5, 5, -2, 0],
-          y: [0, 5, -5, 2, 0],
-        }}
-        transition={{
-          duration: 0.2,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-        className="absolute inset-0 opacity-[0.04] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] scale-150" 
-      />
+      {/* Soft Vignette */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-black via-transparent to-transparent opacity-40" />
     </div>
   )
 })

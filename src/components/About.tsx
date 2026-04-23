@@ -24,7 +24,6 @@ export default function About() {
               />
             </div>
             {/* Decorative elements */}
-            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-premium-blue/20 rounded-full blur-3xl" />
             <div className="absolute top-1/2 -left-10 -translate-y-1/2 w-20 h-20 border border-white/10 rounded-full flex items-center justify-center text-[10px] font-mono uppercase tracking-widest rotate-90">
               {content.about.badge}
             </div>

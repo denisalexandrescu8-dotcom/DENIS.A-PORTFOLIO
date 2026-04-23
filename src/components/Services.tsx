@@ -14,9 +14,6 @@ export default function Services() {
 
   return (
     <section id="services" className="section-padding relative overflow-hidden">
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/2 right-0 w-96 h-96 bg-premium-blue/5 rounded-full blur-[120px]" />
-      </div>
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">

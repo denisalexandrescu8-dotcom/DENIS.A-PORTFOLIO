@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Tag, User, Briefcase, CheckCircle2 } from 'lucide-react';
 import { Link, useParams, Navigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import { LiquidButton } from '../components/ui/liquid-glass-button';
 
 export default function ProjectDetail() {
   const { id } = useParams();
@@ -185,12 +186,16 @@ export default function ProjectDetail() {
         {/* Footer Navigation */}
         <div className="mt-40 pt-20 border-t border-white/5 flex flex-col items-center text-center">
           <h3 className="text-xl text-white/40 mb-8 font-light italic">{content.ui.interested}</h3>
-          <Link 
-            to="/archive" 
-            className="group relative px-12 py-5 bg-white text-black rounded-full font-bold uppercase tracking-widest overflow-hidden transition-all hover:pr-16"
-          >
-            <span className="relative z-10">{content.ui.exploreMore}</span>
-            <ArrowLeft size={20} className="absolute right-8 top-1/2 -translate-y-1/2 rotate-180 opacity-0 group-hover:opacity-100 transition-all" />
+          <Link to="/archive">
+            <LiquidButton 
+              size="xxl"
+              className="group text-white font-bold uppercase tracking-widest"
+            >
+              <span className="flex items-center gap-2">
+                {content.ui.exploreMore}
+                <ArrowLeft size={20} className="rotate-180 group-hover:translate-x-1 transition-transform" />
+              </span>
+            </LiquidButton>
           </Link>
         </div>
       </div>
