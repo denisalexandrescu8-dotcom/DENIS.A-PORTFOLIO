@@ -1,0 +1,5 @@
+Contact: mailto:denisalexandrescu13@gmail.com
+Expires: 2027-01-01T00:00:00.000Z
+Preferred-Languages: es, en
+Canonical: https://ais-pre-4zp633nuqobxztcdsvqxnl-600822396874.europe-west2.run.app/.well-known/security.txt
+Policy: https://ais-pre-4zp633nuqobxztcdsvqxnl-600822396874.europe-west2.run.app/privacy

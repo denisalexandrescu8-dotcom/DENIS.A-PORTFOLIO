@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://denisalexandrescu.com/sitemap.xml
+Disallow: /api/
+Disallow: /admin/ # Even if it doesn't exist
+Sitemap: https://ais-pre-4zp633nuqobxztcdsvqxnl-600822396874.europe-west2.run.app/sitemap.xml
