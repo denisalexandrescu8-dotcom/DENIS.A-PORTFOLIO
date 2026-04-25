@@ -30,10 +30,17 @@ export default function Navbar() {
     { id: 'process', label: content.process.sectionTitleHighlight }
   ];
 
+  const handleLogoClick = (e: React.MouseEvent) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <nav className="fixed top-0 left-0 w-full z-50 px-6 py-6">
       <div className="max-w-7xl mx-auto flex justify-between items-center glass rounded-full px-6 py-3">
-        <Link to="/">
+        <Link to="/" onClick={handleLogoClick}>
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
