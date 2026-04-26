@@ -16,7 +16,7 @@
     "services": "Services",
     "about": "About",
     "contact": "Contact",
-    "viewArchive": "View Archive",
+    "viewArchive": "View Work",
     "backToArchive": "Back to Archive",
     "backToHome": "Back to Home",
     "role": "Role",
@@ -63,9 +63,9 @@
   },
   "hero": {
     "availabilityBadge": "Open for freelance projects and professional opportunities",
-    "headlineStart": "I turn ideas into visuals that",
-    "headlineHighlight": "make brands grow.",
-    "subheadline": "Specialized in high-conversion graphic design, cinematic video editing, and creative strategy for premium brands and creators."
+    "headlineStart": "I turn ideas into visual content that",
+    "headlineHighlight": "makes brands grow.",
+    "subheadline": "Design and video focused on capturing attention and driving results."
   },
   "trustBrands": [
     "CONEF 2025", "Anna Language Coaching", "Fernando Hernandez CEO", "BBT Otra", "L'HEURE D'OR", "Templum Real State", "ShangoClub", "Puerta Madriz"
