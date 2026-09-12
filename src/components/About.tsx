@@ -36,9 +36,9 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-xs font-mono uppercase tracking-[0.3em] text-premium-gold mb-6 block font-medium">{content.ui.theStory}</span>
-            <h2 className="text-4xl md:text-6xl font-display font-bold mb-8 leading-tight text-white">
-              {content.about.headlineStart} <span className="text-white/40">{content.about.headlineHighlight1}</span>{content.about.headlineMiddle} <span className="text-white/40">{content.about.headlineHighlight2}</span>
+            <span className="text-xs font-mono uppercase tracking-[0.3em] text-premium-gold mb-6 block font-medium">{content.about.badge}</span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-8 leading-tight text-white">
+              {content.about.headline}
             </h2>
             <div className="space-y-6 text-white/80 text-lg font-light leading-relaxed">
               {content.about.paragraphs.map((paragraph, index) => (

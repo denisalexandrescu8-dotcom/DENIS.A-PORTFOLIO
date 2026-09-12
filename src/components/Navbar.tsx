@@ -28,7 +28,7 @@ export default function Navbar() {
     { id: 'archive', label: language === 'es' ? 'Archivo' : 'Archive', type: 'link', path: '/archive' },
     { id: 'services', label: content.ui.services, type: 'scroll' },
     { id: 'about', label: content.ui.about, type: 'scroll' },
-    { id: 'process', label: content.process.sectionTitleHighlight, type: 'scroll' }
+    { id: 'process', label: content.process.sectionTitle, type: 'scroll' }
   ];
 
   const handleLogoClick = (e: React.MouseEvent) => {
@@ -44,8 +44,14 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 px-6 py-6">
-      <div className="max-w-7xl mx-auto flex justify-between items-center glass rounded-full px-6 py-3">
+    <nav className="fixed top-0 left-0 w-full z-50">
+      {/* Top Banner */}
+      <div className="w-full bg-black/80 backdrop-blur-md border-b border-white/10 py-2 px-4 text-center text-xs font-mono tracking-wide text-white/90">
+        {content.topBanner}
+      </div>
+
+      <div className="px-6 py-4">
+        <div className="max-w-7xl mx-auto flex justify-between items-center glass rounded-full px-6 py-3">
         <Link to="/" onClick={handleLogoClick}>
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
@@ -110,6 +116,7 @@ export default function Navbar() {
           </button>
         </div>
       </div>
+    </div>
 
       {/* Mobile Menu */}
       {isOpen && (

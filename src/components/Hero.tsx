@@ -30,38 +30,30 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center items-center text-center pt-32 pb-20 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col justify-center items-center text-center pt-36 pb-20 overflow-hidden">
       <motion.div 
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="max-w-6xl mx-auto px-6"
+        className="max-w-5xl mx-auto px-6"
       >
-        <motion.div
-          variants={itemVariants}
-          className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-premium-gold/30 bg-premium-gold/10 text-xs font-mono uppercase tracking-[0.2em] text-premium-gold mb-8"
-        >
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span>{content.hero.availabilityBadge}</span>
-        </motion.div>
-
         <motion.h1
           variants={itemVariants}
-          className="text-5xl md:text-7xl lg:text-8xl font-display font-extrabold leading-[0.9] tracking-tighter mb-8 text-white"
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-extrabold leading-[1.02] md:leading-[0.95] tracking-tight mb-8 text-white"
         >
-          {content.hero.headlineStart} <span className="text-gradient">{content.hero.headlineHighlight}</span>
+          {content.hero.h1}
         </motion.h1>
 
         <motion.p
           variants={itemVariants}
-          className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-12 font-light leading-relaxed"
+          className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-12 font-light leading-relaxed"
         >
           {content.hero.subheadline}
         </motion.p>
 
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row items-center justify-center gap-6"
+          className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8"
         >
           <LiquidButton 
             size="xxl"
@@ -69,7 +61,7 @@ export default function Hero() {
             className="group text-white font-bold uppercase tracking-wider"
           >
             <span className="flex items-center gap-2">
-              {content.ui.workWithMe}
+              {content.hero.primaryCta}
               <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
             </span>
           </LiquidButton>
@@ -79,9 +71,18 @@ export default function Hero() {
             onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}
             className="text-white/80 font-medium"
           >
-            {content.ui.viewArchive}
+            {content.hero.secondaryCta}
           </LiquidButton>
         </motion.div>
+
+        {content.hero.microcopy && (
+          <motion.p
+            variants={itemVariants}
+            className="text-xs md:text-sm font-mono text-white/60 tracking-wide"
+          >
+            {content.hero.microcopy}
+          </motion.p>
+        )}
       </motion.div>
     </section>
   );

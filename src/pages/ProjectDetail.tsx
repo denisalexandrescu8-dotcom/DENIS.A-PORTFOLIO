@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, Calendar, Tag, User, Briefcase, CheckCircle2, Award, Zap, X, Maximize2, MessageSquare } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, X, Maximize2 } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useParams, Navigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
@@ -18,9 +18,8 @@ export default function ProjectDetail() {
   }
 
   const projectAny = project as any;
-  const challengeText = projectAny.challenge || content.ui.theChallengeDescription;
-  const solutionText = projectAny.solution || content.ui.theSolutionDescription;
-  const impactText = projectAny.impact;
+  const startingPoint = projectAny.startingPoint;
+  const execution = projectAny.execution;
 
   const projectJsonLd = {
     "@context": "https://schema.org",
@@ -49,182 +48,101 @@ export default function ProjectDetail() {
         jsonLd={projectJsonLd}
       />
 
-      <section className="pt-32 pb-32 px-6 md:px-12 lg:px-24 min-h-screen">
+      <section className="pt-36 pb-32 px-6 md:px-12 lg:px-24 min-h-screen">
         <div className="max-w-7xl mx-auto">
           {/* Navigation Back */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="mb-16"
+            className="mb-14"
           >
-            <Link to="/archive" className="inline-flex items-center gap-3 text-white/70 hover:text-white transition-all group text-sm font-mono uppercase tracking-widest">
+            <Link to="/archive" className="inline-flex items-center gap-3 text-white/70 hover:text-white transition-all group text-xs font-mono uppercase tracking-widest">
               <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-premium-gold/40 group-hover:bg-premium-gold/10 transition-all">
-                <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
+                <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
               </div>
               <span>{content.ui.backToArchive}</span>
             </Link>
           </motion.div>
 
-          {/* Header Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="lg:col-span-8"
-            >
-              <div className="flex flex-wrap items-center gap-4 text-xs font-mono uppercase tracking-widest text-premium-gold mb-8">
-                <div className="flex items-center gap-2 px-3.5 py-1 rounded-full border border-premium-gold/30 bg-premium-gold/10">
-                  <Calendar size={13} />
-                  <span>{project.year}</span>
-                </div>
-                <div className="flex items-center gap-2 px-3.5 py-1 rounded-full border border-white/15 bg-white/5 text-white/80">
-                  <Tag size={13} />
-                  <span>{project.category}</span>
-                </div>
-              </div>
-
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-8 leading-[0.9] tracking-tight text-white">
-                {project.project}
-              </h1>
-              <p className="text-xl md:text-2xl text-white/80 font-light leading-relaxed max-w-3xl">
-                {project.description}
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="lg:col-span-4 flex flex-col justify-end"
-            >
-              <div className="glass p-8 rounded-3xl border border-white/10 space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0 border border-white/10">
-                    <User size={18} className="text-premium-gold" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-mono uppercase tracking-widest text-white/60 mb-1">{content.ui.client}</div>
-                    <div className="text-lg font-medium text-white">{project.client}</div>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0 border border-white/10">
-                    <Briefcase size={18} className="text-premium-gold" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-mono uppercase tracking-widest text-white/60 mb-1">{content.ui.role}</div>
-                    <div className="text-lg font-medium text-white">{project.role}</div>
-                  </div>
-                </div>
-
-                {impactText && (
-                  <div className="pt-4 border-t border-white/10 flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-premium-gold/10 flex items-center justify-center shrink-0 border border-premium-gold/20">
-                      <Zap size={18} className="text-premium-gold" />
-                    </div>
-                    <div>
-                      <div className="text-xs font-mono uppercase tracking-widest text-premium-gold mb-1">
-                        {language === 'es' ? 'Impacto Clave' : 'Key Impact'}
-                      </div>
-                      <div className="text-sm font-medium text-white/90">{impactText}</div>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </motion.div>
+          {/* Header Metadata: año · categoría */}
+          <div className="text-xs font-mono uppercase tracking-widest text-premium-gold mb-6">
+            {project.year} · {project.category}
           </div>
 
-          {/* Project Details Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-28">
+          {/* Project Title */}
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-6 leading-[0.95] tracking-tight text-white">
+            {project.project}
+          </h1>
+
+          {/* Project Subheading / Bajada */}
+          <p className="text-xl md:text-2xl text-white/80 font-light leading-relaxed max-w-3xl mb-8">
+            {project.description}
+          </p>
+
+          {/* Client & Role */}
+          <div className="text-sm md:text-base text-white/70 font-mono mb-16 pb-8 border-b border-white/10">
+            <span className="text-white font-medium">{content.ui.client}:</span> {project.client} · <span className="text-white font-medium">{content.ui.role}:</span> {project.role}
+          </div>
+
+          {/* Case Study Body: El punto de partida / Criterio y ejecución / Entregables */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24">
             <div className="lg:col-span-8 space-y-12">
-              <div className="inline-block px-4 py-1.5 rounded-full border border-premium-gold/30 bg-premium-gold/10 text-xs font-mono uppercase tracking-widest text-premium-gold">
-                {content.ui.projectOverview}
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-white/20 transition-all">
-                  <h3 className="text-xs font-mono uppercase tracking-[0.25em] text-premium-gold mb-4 flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-premium-gold" />
-                    {content.ui.theChallenge}
-                  </h3>
-                  <p className="text-white/80 leading-relaxed text-base font-light">
-                    {challengeText}
+              {startingPoint && (
+                <div className="space-y-4">
+                  <h2 className="text-xs font-mono uppercase tracking-[0.25em] text-premium-gold font-semibold">
+                    {language === 'es' ? 'EL PUNTO DE PARTIDA' : 'THE STARTING POINT'}
+                  </h2>
+                  <p className="text-white/80 leading-relaxed text-base md:text-lg font-light">
+                    {startingPoint}
                   </p>
                 </div>
+              )}
 
-                <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-white/20 transition-all">
-                  <h3 className="text-xs font-mono uppercase tracking-[0.25em] text-premium-gold mb-4 flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-premium-gold" />
-                    {content.ui.theSolution}
-                  </h3>
-                  <p className="text-white/80 leading-relaxed text-base font-light">
-                    {solutionText}
-                  </p>
-                </div>
-              </div>
-
-              {impactText && (
-                <div className="p-6 rounded-2xl bg-gradient-to-r from-premium-gold/15 via-premium-gold/5 to-transparent border border-premium-gold/30 flex items-center gap-4">
-                  <Award className="text-premium-gold shrink-0" size={28} />
-                  <div>
-                    <div className="text-xs font-mono uppercase tracking-widest text-premium-gold mb-0.5">
-                      {language === 'es' ? 'Resultado & Métrica Destacada' : 'Highlighted Metric & Result'}
-                    </div>
-                    <div className="text-base font-medium text-white">{impactText}</div>
+              {execution && (
+                <div className="space-y-4">
+                  <h2 className="text-xs font-mono uppercase tracking-[0.25em] text-premium-gold font-semibold">
+                    {language === 'es' ? 'CRITERIO Y EJECUCIÓN' : 'CRITERIA AND EXECUTION'}
+                  </h2>
+                  <div className="space-y-4 text-white/80 leading-relaxed text-base md:text-lg font-light">
+                    {Array.isArray(execution) ? (
+                      execution.map((par: string, idx: number) => (
+                        <p key={idx}>{par}</p>
+                      ))
+                    ) : (
+                      <p>{execution}</p>
+                    )}
                   </div>
                 </div>
               )}
             </div>
             
             <div className="lg:col-span-4">
-              <div className="glass p-8 rounded-3xl border border-white/10 sticky top-32 space-y-6">
-                <h3 className="text-xs font-mono uppercase tracking-[0.25em] text-white/70 font-semibold">{content.ui.deliverables}</h3>
-                <ul className="space-y-4">
-                  {project.deliverables.map((item, i) => (
-                    <motion.li 
-                      key={i}
-                      initial={{ opacity: 0, x: 10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: i * 0.08 }}
-                      className="flex items-center gap-3 text-base font-medium text-white/90"
-                    >
-                      <div className="w-5 h-5 rounded-full bg-premium-gold/10 flex items-center justify-center shrink-0">
-                        <CheckCircle2 size={13} className="text-premium-gold" />
-                      </div>
-                      <span>{item}</span>
-                    </motion.li>
-                  ))}
-                </ul>
-
-                <div className="pt-6 border-t border-white/10">
-                  <Link to="/#contact">
-                    <LiquidButton size="lg" className="w-full text-white font-bold uppercase tracking-wider text-xs">
-                      <span className="flex items-center justify-center gap-2">
-                        <MessageSquare size={14} />
-                        {language === 'es' ? 'Consultar Proyecto Similar' : 'Inquire Similar Project'}
-                      </span>
-                    </LiquidButton>
-                  </Link>
+              {project.deliverables && project.deliverables.length > 0 && (
+                <div className="glass p-8 rounded-3xl border border-white/10 sticky top-32 space-y-6">
+                  <h3 className="text-xs font-mono uppercase tracking-[0.25em] text-premium-gold font-semibold">
+                    {language === 'es' ? 'ENTREGABLES' : 'DELIVERABLES'}
+                  </h3>
+                  <ul className="space-y-3">
+                    {project.deliverables.map((item, i) => (
+                      <li 
+                        key={i}
+                        className="flex items-center gap-3 text-sm md:text-base font-medium text-white/90"
+                      >
+                        <div className="w-5 h-5 rounded-full bg-premium-gold/10 flex items-center justify-center shrink-0">
+                          <CheckCircle2 size={13} className="text-premium-gold" />
+                        </div>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
+              )}
             </div>
           </div>
 
           {/* Gallery Section */}
           {project.gallery && project.gallery.length > 0 && (
-            <div className="space-y-12">
-              <div className="flex items-center justify-between mb-12">
-                <h2 className="text-3xl md:text-5xl font-display font-bold tracking-tight text-white">
-                  {content.ui.galleryShowcase} <span className="text-white/30">{content.ui.showcase}</span>
-                </h2>
-                <div className="h-px flex-1 bg-white/10 mx-8 hidden md:block" />
-                <div className="text-xs font-mono uppercase tracking-widest text-white/60">
-                  {project.gallery.length} {project.gallery.length === 1 ? content.ui.asset : content.ui.assets}
-                </div>
-              </div>
-              
+            <div className="space-y-8 mb-24">
               <div className="columns-1 md:columns-2 gap-8 space-y-8">
                 {project.gallery.map((imgSrc, index) => {
                   const isVideo = imgSrc.includes('/preview');
@@ -253,7 +171,7 @@ export default function ProjectDetail() {
                         <>
                           <img 
                             src={imgSrc} 
-                            alt={`${project.project} - ${project.category} - visual asset ${index + 1}`}
+                            alt={`${project.project} - ${project.category} - ${index + 1}`}
                             className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
                             loading="lazy"
                             referrerPolicy="no-referrer"
@@ -302,26 +220,26 @@ export default function ProjectDetail() {
             )}
           </AnimatePresence>
 
-          {/* Footer Navigation */}
-          <div className="mt-32 pt-20 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-8">
-            <div>
-              <h3 className="text-2xl font-display font-bold text-white mb-2">
-                {language === 'es' ? '¿Listo para elevar tu proyecto?' : 'Ready to elevate your brand?'}
+          {/* Bloque de cierre, común a todas las fichas */}
+          <div className="pt-20 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
+            <div className="max-w-xl">
+              <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-2">
+                {content.projectDetailClosing.title}
               </h3>
-              <p className="text-white/70 font-light">
-                {language === 'es' ? 'Hablemos de tus objetivos y planifiquemos el siguiente paso.' : 'Let us discuss your goals and map out the next step.'}
+              <p className="text-white/70 font-light text-base">
+                {content.projectDetailClosing.subtitle}
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-4">
               <Link to="/#contact">
                 <LiquidButton size="xl" className="text-white font-bold uppercase tracking-wider">
-                  {content.ui.contact}
+                  {content.projectDetailClosing.primaryCta}
                 </LiquidButton>
               </Link>
               <Link to="/archive">
                 <LiquidButton size="xl" className="text-white/70 font-bold uppercase tracking-wider">
                   <span className="flex items-center gap-2">
-                    {content.ui.exploreMore}
+                    {content.projectDetailClosing.secondaryCta}
                     <ArrowLeft size={18} className="rotate-180" />
                   </span>
                 </LiquidButton>

@@ -150,16 +150,16 @@ export default function CaseStudies() {
     <section id="work" className="section-padding">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-          <div className="max-w-xl">
+          <div className="max-w-2xl">
             <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 text-white">
-              {content.caseStudies.sectionTitle} <span className="text-white/40 italic">{content.caseStudies.sectionTitleHighlight}</span>
+              {content.caseStudies.sectionTitle}
             </h2>
             <p className="text-white/80 text-lg font-light leading-relaxed">
               {content.caseStudies.sectionSubtitle}
             </p>
           </div>
-          <Link to="/archive" className="text-sm font-mono uppercase tracking-widest border-b border-white/20 pb-1 text-white/80 hover:text-white hover:border-white transition-all">
-            {content.ui.viewArchive} ({content.archive.projects.length}+)
+          <Link to="/archive" className="text-sm font-mono uppercase tracking-widest border-b border-white/20 pb-1 text-white/80 hover:text-white hover:border-white transition-all shrink-0">
+            {content.caseStudies.viewAllCta || content.ui.viewArchive}
           </Link>
         </div>
 

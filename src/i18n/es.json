@@ -3,120 +3,292 @@
     "name": "DENIS.A",
     "email": "denisalexandrescu8@gmail.com",
     "whatsapp": "+34666160732",
-    "location": "Basado en Europa — Trabajando a nivel mundial",
-    "socials": {
-      "instagram": "https://instagram.com",
-      "linkedin": "https://linkedin.com",
-      "twitter": "https://twitter.com",
-      "youtube": "https://youtube.com"
-    }
+    "location": "España"
   },
+  "topBanner": "Disponibilidad para nuevos proyectos · Respuesta en menos de 24 h",
+  "trustSectionHeadline": "Proyectos de identidad visual y vídeo para clientes en España y fuera de ella.",
+  "trustBrands": [
+    "CONEF 2025",
+    "Anna Language Coaching",
+    "Fernando Hernandez CEO",
+    "BBT Otra",
+    "L'HEURE D'OR",
+    "Templum Real Estate",
+    "ShangoClub",
+    "Puerta Madriz"
+  ],
   "ui": {
     "work": "Trabajo",
     "services": "Servicios",
     "about": "Sobre mí",
     "contact": "Contacto",
-    "viewArchive": "Ver Trabajos",
+    "viewArchive": "Ver trabajos seleccionados",
     "backToArchive": "Volver al Archivo",
     "backToHome": "Volver al Inicio",
     "role": "Rol",
     "deliverables": "Entregables",
-    "sendMessage": "Enviar Mensaje",
-    "allRightsReserved": "Todos los derechos reservados",
-    "backToTop": "Volver arriba",
-    "languageToggle": "EN",
-    "privacyPolicy": "Política de Privacidad",
-    "termsOfService": "Términos de Servicio",
-    "year": "Año",
-    "project": "Proyecto",
     "client": "Cliente",
-    "category": "Categoría",
-    "name": "Nombre",
-    "email": "Correo Electrónico",
-    "projectType": "Tipo de Proyecto",
-    "message": "Mensaje",
-    "brandingAndIdentity": "Branding e Identidad",
-    "videoEditing": "Edición de Video",
-    "socialContent": "Contenido de Redes Sociales",
-    "workWithMe": "Trabaja Conmigo",
-    "theStory": "Mi Historia",
-    "emailMe": "Mándame un email",
-    "whatsapp": "WhatsApp",
-    "whatsappAction": "Enviame un mensaje a whatsapp!",
+    "privacyPolicy": "Política de privacidad",
+    "termsOfService": "Términos de servicio",
+    "languageToggle": "EN",
     "thanks": "¡Gracias!",
-    "messageSent": "Si tu gestor de correo no se abrió automáticamente, puedes hacer clic en el botón de abajo o escribirme directamente a:",
-    "openMailAgain": "Abrir correo de nuevo",
     "backToForm": "Volver al formulario",
-    "projectOverview": "Resumen del Proyecto",
-    "theChallenge": "El Desafío",
-    "theSolution": "La Solución",
-    "galleryShowcase": "Galería de",
-    "showcase": "Proyectos",
-    "exploreMore": "Explorar más proyectos",
-    "interested": "¿Interesado en trabajar juntos?",
-    "theChallengeDescription": "Creación de un lenguaje visual que resuene con el público objetivo manteniendo los valores fundamentales del cliente. El objetivo era elevar la percepción de la marca a través de activos digitales de alta gama.",
-    "theSolutionDescription": "Un enfoque estratégico que combina la estética moderna con el diseño funcional, asegurando el máximo impacto en todos los puntos de contacto digitales.",
-    "asset": "Activo",
-    "assets": "Activos",
-    "copy": "Copiar",
-    "copied": "Copiado"
+    "allRightsReserved": "Todos los derechos reservados"
+  },
+  "seo": {
+    "title": "Denis Alexandrescu | Identidad visual y edición de vídeo",
+    "description": "Diseño de identidad de marca y edición de vídeo para empresas y creadores. Plazos acordados, dos rondas de revisión y trato directo. Respondo en 24 h."
   },
   "hero": {
-    "availabilityBadge": "Abierto a proyectos freelance y oportunidades profesionales",
-    "headlineStart": "Convierto ideas en contenido visual que",
-    "headlineHighlight": "hace crecer marcas.",
-    "subheadline": "Diseño y vídeo enfocados en captar atención y generar resultados."
+    "h1": "Identidad visual y edición de vídeo para marcas que se toman en serio su imagen",
+    "subheadline": "Diseño marcas desde cero y edito contenido recurrente. Trato directo, plazos acordados antes de empezar y sin intermediarios.",
+    "primaryCta": "Cuéntame tu proyecto",
+    "secondaryCta": "Ver trabajos seleccionados",
+    "microcopy": "Trato directo con quien diseña · Plazos acordados antes de empezar"
   },
-  "trustBrands": [
-    "CONEF 2025", "Anna Language Coaching", "Fernando Hernandez CEO", "BBT Otra", "L'HEURE D'OR", "Templum Real State", "ShangoClub", "Puerta Madriz"
-  ],
   "caseStudies": {
-    "sectionTitle": "Proyectos",
-    "sectionTitleHighlight": "Destacados",
-    "sectionSubtitle": "Una colección de trabajos enfocados en el impacto medible, la narrativa visual y la elevación de la marca.",
-    "projects": [
+    "sectionTitle": "Trabajos seleccionados",
+    "sectionSubtitle": "Identidades visuales y piezas de vídeo para proyectos de coaching de idiomas, compraventa de relojes e inmobiliaria. Cada encargo resuelto con criterio gráfico a medida.",
+    "viewAllCta": "Ver todos los proyectos"
+  },
+  "services": {
+    "sectionTitle": "Servicios",
+    "sectionSubtitle": "Dos áreas principales de trabajo, con alcance acordado desde el primer día y dos rondas de revisión incluidas.",
+    "list": [
       {
-        "id": "luxe-wear-launch",
-        "title": "Creación de Contenido Digital",
-        "client": "Fernando Hernandez CEO",
-        "category": "Contenido de Redes Sociales, Edición de Video",
-        "image": "https://drive.google.com/file/d/1_iMyeeN3FNL64r4N36Y6zRtPSP5Lud1p/preview?usp=sharing",
-        "thumbnailGallery": [
-          "https://lh3.googleusercontent.com/d/1NucomZBrJstuEhhc8c3-ARmsnzQKqmmo",
-          "https://lh3.googleusercontent.com/d/1gwvjIyV1_2G8vgtN0JiXPhJGqji017sK",
-          "https://lh3.googleusercontent.com/d/1MReN9Drxtf4k3Imw--cU62PiqZiRsvgz",
-          "https://lh3.googleusercontent.com/d/1N_3MCsNO4f5Ef6iiiSzI4afgSRfASRt4"
-        ],
-        "impact": "Presencia Social de Alto Rendimiento"
+        "id": "brand-identity",
+        "title": "1. Identidad visual completa",
+        "description": "Para empresas que nacen o marcas que necesitan ordenar su imagen para transmitir solidez.",
+        "icon": "Palette",
+        "deliverables": [
+          "Logotipo y variantes de uso",
+          "Paleta de color y tipografías definidas",
+          "Manual de uso de la marca",
+          "Archivos finales organizados para imprenta y digital",
+          "Entrega estimada: 3-4 semanas"
+        ]
       },
       {
-        "id": "arcade-shangoclub",
-        "title": "Identidad Visual ARCADE",
-        "client": "ShangoClub",
-        "category": "Contenido de Redes Sociales",
-        "image": "https://lh3.googleusercontent.com/d/1DSCIAqYgCFefe9PCAYw_8VscHFcAkxqh",
-        "impact": "Identidad de Marca de Alto Impacto"
+        "id": "video-editing",
+        "title": "2. Edición de vídeo recurrente",
+        "description": "Para creadores, marcas personales y empresas que publican con frecuencia y delegan el montaje para centrarse en grabar.",
+        "icon": "Video",
+        "deliverables": [
+          "Vídeo vertical para redes y formato largo para YouTube",
+          "Montaje con ritmo trabajado",
+          "Rotulación, grafismos y subtítulos",
+          "Lotes mensuales con entrega en 5 días laborables"
+        ]
       },
       {
-        "id": "conef-2025",
-        "title": "Identidad de Marca Completa",
-        "client": "CONEF 2025",
-        "category": "Branding",
-        "image": "https://lh3.googleusercontent.com/d/16qy54PX4EgqGN862uoqHTO20QGNYDzHc",
-        "impact": "+45% Interacción de Usuario"
+        "id": "graphic-pieces",
+        "title": "3. Piezas gráficas y cartelería",
+        "description": "Carteles, carruseles y piezas para campañas puntuales o lanzamientos.",
+        "icon": "Share2",
+        "deliverables": [
+          "Miniaturas para YouTube",
+          "Gráficas para anuncios",
+          "Cartelería para eventos"
+        ]
+      },
+      {
+        "id": "art-direction",
+        "title": "4. Dirección de arte puntual",
+        "description": "Supervisión del criterio visual de una campaña o revisión de piezas existentes antes de publicarlas.",
+        "icon": "Target",
+        "deliverables": [
+          "Revisión del estilo visual de la marca actual",
+          "Definición de pautas gráficas para lanzamientos",
+          "Coordinación de activos con el equipo del cliente"
+        ]
       }
     ]
+  },
+  "conditions": {
+    "sectionTitle": "Condiciones claras antes de empezar",
+    "items": [
+      {
+        "title": "Plazos acordados antes de empezar",
+        "description": "Las fechas de entrega quedan fijadas por escrito antes de iniciar el trabajo."
+      },
+      {
+        "title": "Dos rondas de revisión incluidas",
+        "description": "Margen definido para ajustar detalles con el alcance delimitado."
+      },
+      {
+        "title": "Trato directo con quien diseña",
+        "description": "La comunicación se realiza de principio a fin conmigo."
+      },
+      {
+        "title": "Condiciones de pago",
+        "description": "50 % al inicio y 50 % a la entrega final. Presupuestos con validez de 15 días."
+      }
+    ]
+  },
+  "about": {
+    "badge": "Sobre mí",
+    "headline": "Criterio visual, técnica cuidada y comunicación directa",
+    "image": "https://picsum.photos/seed/denis/800/1000",
+    "paragraphs": [
+      "Soy Denis Alexandrescu, diseñador y editor audiovisual con base en España. Graduado en Comunicación Audiovisual, trabajo con clientes de forma profesional e independiente desde 2024.",
+      "Trabajo sin intermediarios ni gestores de cuentas: hablas, revisas y decides directamente conmigo. No prometo fórmulas mágicas; garantizo rigor estético, entregas en la fecha acordada y un proceso ordenado de principio a fin.",
+      "He desarrollado proyectos en ámbitos tan distintos como el coaching de idiomas, la compraventa de relojes o el sector inmobiliario. Esa variedad me exige abordar cada encargo desde un folio en blanco, sin plantillas prefabricadas ni estilos forzados."
+    ],
+    "agencyBlock": {
+      "title": "Colaboración con agencias y estudios",
+      "description": "Además de proyectos independientes para clientes directos, colaboro puntualmente como apoyo en diseño de identidad y edición de vídeo para estudios y agencias. Si encajo en tu equipo, escríbeme a",
+      "email": "denisalexandrescu8@gmail.com"
+    }
+  },
+  "process": {
+    "sectionTitle": "Cómo trabajo",
+    "sectionSubtitle": "Plazos acordados por escrito antes de empezar y dos rondas de revisión incluidas.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Definición del encargo",
+        "description": "Analizo lo que necesitas, las referencias estéticas y el uso que tendrá cada pieza. Cierro el alcance por escrito antes de empezar."
+      },
+      {
+        "number": "02",
+        "title": "Propuesta y dirección",
+        "description": "Presento una primera dirección visual con aplicaciones de la marca o un primer corte de vídeo montado."
+      },
+      {
+        "number": "03",
+        "title": "Desarrollo y revisiones",
+        "description": "Ajusto los detalles con dos rondas de revisión incluidas para pulir tipografías, colores, ritmo de montaje o grafismos."
+      },
+      {
+        "number": "04",
+        "title": "Entrega final de archivos",
+        "description": "Recibes los archivos organizados en carpetas: vectores originales, tipografías, formatos de imprenta y web, o vídeos listos para publicar."
+      }
+    ]
+  },
+  "contact": {
+    "h2": "Hablemos de tu próximo proyecto",
+    "subtitle": "Cuéntame qué necesitas y te respondo con una primera valoración y disponibilidad de fechas.",
+    "directEmailLabel": "Correo directo (clic para copiar)",
+    "directEmail": "denisalexandrescu8@gmail.com",
+    "whatsappLabel": "WhatsApp directo",
+    "whatsappMessageText": "Hola Denis, me gustaría consultar la disponibilidad para un proyecto.",
+    "successMessage": "He recibido tu mensaje. Te responderé por correo en menos de 24 h con una primera valoración de fechas y presupuesto.",
+    "form": {
+      "nameLabel": "Nombre y apellidos",
+      "namePlaceholder": "Tu nombre o el de la empresa",
+      "emailLabel": "Correo electrónico",
+      "emailPlaceholder": "nombre@empresa.com",
+      "projectTypeLabel": "¿Qué necesitas desarrollar?",
+      "projectTypeOptions": [
+        "Identidad visual completa",
+        "Edición de vídeo recurrente",
+        "Pieza o campaña puntual",
+        "Otro"
+      ],
+      "budgetLabel": "Presupuesto orientativo",
+      "budgetOptions": [
+        "Menos de 500 €",
+        "500 € – 1.000 €",
+        "1.000 € – 2.500 €",
+        "Más de 2.500 €",
+        "Aún por definir"
+      ],
+      "messageLabel": "Cuéntame sobre el encargo",
+      "messagePlaceholder": "Breve descripción, enlaces de referencia si los tienes y fecha límite si existe.",
+      "submitButton": "Solicitar presupuesto",
+      "microcopy": "Te responderé por correo en menos de 24 h con una primera valoración de fechas y presupuesto."
+    }
+  },
+  "footer": {
+    "bio": "Diseñador gráfico y editor audiovisual con base en España. Proyectos independientes y colaboraciones con agencias.",
+    "rights": "Todos los derechos reservados."
+  },
+  "projectDetailClosing": {
+    "title": "¿Hablamos de tu proyecto?",
+    "subtitle": "Cuéntame qué necesitas y te responderé en menos de 24 h con una primera valoración.",
+    "primaryCta": "Pedir presupuesto",
+    "secondaryCta": "Ver otros proyectos"
   },
   "archive": {
     "title": "Archivo de",
     "titleHighlight": "Proyectos",
     "subtitle": "Una lista completa de proyectos pasados, experimentos y trabajos para clientes.",
     "projects": [
-      { 
+      {
+        "id": "creator-pro-assets",
+        "year": "2025",
+        "client": "Anna Language Coaching",
+        "project": "Anna Language Coaching",
+        "category": "Branding",
+        "image": "https://lh3.googleusercontent.com/d/1eI7g7zPatJG8SCswgX_6F_fmHvNqPK0T",
+        "gallery": [
+          "https://lh3.googleusercontent.com/d/1eI7g7zPatJG8SCswgX_6F_fmHvNqPK0T"
+        ],
+        "description": "Logotipo para una profesional de la enseñanza de idiomas.",
+        "role": "Diseñador gráfico",
+        "startingPoint": "Anna necesitaba un logotipo para su actividad como coach de idiomas.",
+        "execution": [
+          "El símbolo funde dos formas en una: un cerebro trazado a línea que se convierte en un bocadillo de diálogo macizo. Pensar en un idioma y hablarlo, que es justo lo que distingue a un coach de una academia.",
+          "El logotipo va en minúsculas, con una sans geométrica de trazo redondeado y terminaciones blandas: cercanía antes que autoridad académica. Las tres palabras descienden de peso —«anna» en el más contundente, «coaching» casi en filete— para que el nombre propio se lea primero, porque la marca es ella y no el servicio.",
+          "La paleta se construye sobre una gama de violetas sobre negro, con el bocadillo en el tono más claro para que sea lo primero que salta. Una decisión deliberada para alejarse del azul y el rojo institucionales que usa casi todo el sector de idiomas."
+        ],
+        "deliverables": [
+          "Logotipo"
+        ]
+      },
+      {
+        "id": "vanguard-campaign",
+        "year": "2026",
+        "client": "L'Heure d'Or",
+        "project": "L'Heure d'Or",
+        "category": "Branding",
+        "image": "https://lh3.googleusercontent.com/d/19lBy4n4pXjCuMNupI1wtuRexg_XD8d4_",
+        "gallery": [
+          "https://lh3.googleusercontent.com/d/19lBy4n4pXjCuMNupI1wtuRexg_XD8d4_",
+          "https://lh3.googleusercontent.com/d/1FLc0fzakTTp9lgWhjmhsvOf-aLg7rHgU"
+        ],
+        "description": "Identidad de marca completa para un negocio de compraventa de relojes.",
+        "role": "Director creativo",
+        "startingPoint": "L'Heure d'Or compra y vende relojes. Necesitaba una identidad completa, no solo un logotipo.",
+        "execution": [
+          "La marca se articula en dos piezas que funcionan por separado: un monograma coronado, donde la H se enlaza con una curva que cierra el conjunto, y un logotipo en serif de caja alta, de remates marcados y contraste alto entre asta gruesa y fina.",
+          "En compraventa de relojes el cliente entrega o recibe piezas de mucho valor, así que la identidad tenía que transmitir solvencia desde el primer vistazo. De ahí los códigos clásicos del lujo —corona, oro sobre negro, serif con remate— asumidos sin ironía ni relectura moderna: una marca que se lee como establecida, no como recién llegada. El propio nombre, «la hora dorada», ya jugaba a favor.",
+          "El sistema se desarrolló en cuatro combinaciones —oro sobre negro, negro sobre blanco, blanco sobre gris y oro sobre bronce— por decisión propia, no por encargo: un rótulo, una tarjeta impresa a una tinta y una foto de redes no admiten la misma versión. Ese juego de positivos y negativos es lo que convierte un logotipo en una identidad utilizable."
+        ],
+        "deliverables": [
+          "Guía de identidad de marca",
+          "Logotipo y variantes",
+          "Paleta de color"
+        ]
+      },
+      {
+        "id": "templum-social",
+        "year": "2025",
+        "client": "Templum Real Estate",
+        "project": "Templum Real Estate",
+        "category": "Contenido para redes sociales",
+        "image": "https://drive.google.com/file/d/1lt1fRkssoemrNHs4Lu-H_OkqysnO7jP1/preview",
+        "gallery": [
+          "https://drive.google.com/file/d/1lt1fRkssoemrNHs4Lu-H_OkqysnO7jP1/preview",
+          "https://drive.google.com/file/d/13R9CHfv7ie-NyZk17t7N7ATGBb7WNZst/preview",
+          "https://drive.google.com/file/d/1Vtsd2dZR-y9UpE25XjYz-1ivKFunMvK-/preview"
+        ],
+        "description": "Vídeos cortos para mostrar inmuebles en redes sociales.",
+        "role": "Editor de vídeo y creador de contenido",
+        "startingPoint": "Templum necesitaba enseñar sus pisos en redes sociales en formato vídeo.",
+        "execution": [
+          "Cada pieza se construyó con distintos planos del inmueble montados sobre una voz en off, con guion escrito y grabado para la ocasión. La música sostiene el ritmo del recorrido y los subtítulos permiten seguir la narración sin sonido, que es como se ve la mayor parte del vídeo en redes."
+        ],
+        "deliverables": [
+          "3 vídeos en formato corto"
+        ]
+      },
+      {
         "id": "arcade-shangoclub",
-        "year": "2026", 
-        "client": "ShangoClub", 
-        "project": "Arcade", 
+        "year": "2026",
+        "client": "ShangoClub",
+        "project": "Arcade",
         "category": "Contenido de Redes Sociales",
         "image": "https://lh3.googleusercontent.com/d/1DSCIAqYgCFefe9PCAYw_8VscHFcAkxqh",
         "gallery": [
@@ -133,16 +305,18 @@
         ],
         "description": "Creación de la identidad visual de ARCADE, una fiesta temática inmersiva organizada por ShangoClub con estética retro-futurista.",
         "role": "Director Creativo",
-        "deliverables": ["Diseño Gráfico", "Motion Graphics", "Cartelería Digital", "Contenido para Instagram Stories y Reels"],
-        "challenge": "Desarrollar una narrativa visual potente inspirada en el universo arcade de los 80/90, evitando clichés nostálgicos y adaptándola a las exigencias estéticas de la noche madrileña.",
-        "solution": "Sistema tipográfico high-energy con contrastes de neón sobre negro puro, animaciones cinemáticas para pantallas de discoteca y plantillas modulares para promociones y venta de entradas.",
-        "impact": "+65% de incremento en el alcance de publicaciones y aforo completo en el evento."
+        "deliverables": [
+          "Diseño Gráfico",
+          "Motion Graphics",
+          "Cartelería Digital",
+          "Contenido para Instagram Stories y Reels"
+        ]
       },
-      { 
+      {
         "id": "conef-2025",
-        "year": "2025", 
-        "client": "CONEF 2025", 
-        "project": "Identidad de Marca Completa", 
+        "year": "2025",
+        "client": "CONEF 2025",
+        "project": "Identidad de Marca Completa",
         "category": "Branding",
         "image": "https://lh3.googleusercontent.com/d/16qy54PX4EgqGN862uoqHTO20QGNYDzHc",
         "gallery": [
@@ -152,35 +326,20 @@
           "https://lh3.googleusercontent.com/d/1KDAxgqJ3HbS0s-h3Pht1kdQNWgaJLKGo",
           "https://lh3.googleusercontent.com/d/1I_Etgevx_DYOQekooGKkSfTKc1XT5dXK"
         ],
-        "description": "Creación integral de la identidad de marca de CONEF 2025 (Congreso Nacional de Economía y Finanzas) desde cero.",
+        "description": "Creación integral de la identidad de marca de CONEF 2025 desde cero.",
         "role": "Director Creativo & Diseñador de Identidad",
-        "deliverables": ["Guía Completa de Identidad de Marca", "Manual de Estilo", "Papelería Corporativa", "Aplicaciones para Escenarios y Photocalls"],
-        "challenge": "Diseñar una identidad institucional para un congreso nacional que transmitiese rigor académico, modernidad económica y legibilidad impecable tanto en acreditaciones como en proyecciones gigantes.",
-        "solution": "Desarrollo de un símbolo geométrico modular inspirado en el crecimiento financiero, manual de identidad de más de 40 páginas y directrices precisas de aplicación para ponentes y patrocinadores.",
-        "impact": "Identidad aplicada de forma 100% coherente en más de 30 soportes físicos y digitales durante las jornadas."
+        "deliverables": [
+          "Guía Completa de Identidad de Marca",
+          "Manual de Estilo",
+          "Papelería Corporativa",
+          "Aplicaciones para Escenarios y Photocalls"
+        ]
       },
-      { 
-        "id": "creator-pro-assets",
-        "year": "2025", 
-        "client": "Anna Language Coaching", 
-        "project": "Diseño de Logo & Identidad", 
-        "category": "Branding",
-        "image": "https://lh3.googleusercontent.com/d/1eI7g7zPatJG8SCswgX_6F_fmHvNqPK0T",
-        "gallery": [
-          "https://lh3.googleusercontent.com/d/1eI7g7zPatJG8SCswgX_6F_fmHvNqPK0T"
-        ],
-        "description": "Diseño de marca e isotipo creado para la consultora pedagógica Anna Language Coaching.",
-        "role": "Diseñador Gráfico & Brand Designer",
-        "deliverables": ["Diseño de Logotipo", "Variantes Tipográficas", "Paleta de Color", "Assets Digitales"],
-        "challenge": "Construir una marca personal que comunicara excelencia y preparación profesional para ejecutivos, manteniendo la cercanía humana y empatía pedagógica.",
-        "solution": "Diseño de isotipo refinado con formas orgánicas y fluidas que simbolizan la conexión entre culturas e idiomas, apoyado en una tipografía serif moderna.",
-        "impact": "Posicionamiento reforzado en el mercado de coaching lingüístico y recepción entusiasta por parte de sus clientes corporativos."
-      },
-      { 
+      {
         "id": "luxe-wear-launch",
-        "year": "2025", 
-        "client": "Fernando Hernandez CEO", 
-        "project": "Creación de Contenido Digital", 
+        "year": "2025",
+        "client": "Fernando Hernandez CEO",
+        "project": "Creación de Contenido Digital",
         "category": "Contenido de Redes Sociales, Edición de Video",
         "image": "https://drive.google.com/file/d/1_iMyeeN3FNL64r4N36Y6zRtPSP5Lud1p/preview?usp=sharing",
         "gallery": [
@@ -196,18 +355,21 @@
           "https://lh3.googleusercontent.com/d/1P07Jw1Wle6MN6dlq4Uex_9fbY6L_1CcB",
           "https://lh3.googleusercontent.com/d/1KJTb3BO5hsmOJZBR_rkN55WjzjFs8iui"
         ],
-        "description": "Estrategia audiovisual y producción de contenido de alto impacto para los canales oficiales de Fernando Hernandez CEO.",
+        "description": "Estrategia audiovisual y producción de contenido para los canales oficiales de Fernando Hernandez CEO.",
         "role": "Director Creativo, Editor de Video, Diseñador Gráfico",
-        "deliverables": ["Diseño de Sonido", "Edición de Video", "Gradación y Corrección de Color", "Diseño Gráfico", "Thumbnails"],
-        "challenge": "Aumentar la retención en los primeros segundos y profesionalizar la presencia en vídeo del CEO frente a competidores y público inversor.",
-        "solution": "Edición con ritmo dinámico, corrección de color cinematográfica, efectos de sonido inmersivos, motion graphics para conceptos clave y subtitulado de alta legibilidad.",
-        "impact": "+250k reproducciones orgánicas totales y una tasa de retención superior al 70% en vídeos de formato corto."
+        "deliverables": [
+          "Diseño de Sonido",
+          "Edición de Video",
+          "Gradación y Corrección de Color",
+          "Diseño Gráfico",
+          "Thumbnails"
+        ]
       },
-      { 
+      {
         "id": "techflow-web",
-        "year": "2025", 
-        "client": "BBT Otra", 
-        "project": "Branding de Restaurante", 
+        "year": "2025",
+        "client": "BBT Otra",
+        "project": "Branding de Restaurante",
         "category": "Branding",
         "image": "https://lh3.googleusercontent.com/d/1DFliI-IoIKv7vnZCDKimOCRV1_YxBwPj",
         "gallery": [
@@ -220,53 +382,18 @@
         ],
         "description": "Branding completo y dirección visual gastronómica para el restaurante BBT Otra.",
         "role": "Diseñador Gráfico & Brand Designer",
-        "deliverables": ["Diseño de Identidad", "Cartelería y Menús", "Rotulación", "Material Promocional"],
-        "challenge": "Crear un universo de marca memorable y desenfadado que destacara en un sector hostelero saturado de propuestas tradicionales.",
-        "solution": "Desarrollo de naming visual, tipografías condensadas contundentes, cromática cálida y llamativa, y maquetación de cartas tanto para soporte físico como QR.",
-        "impact": "Alta visibilidad de lanzamiento y reconocimiento de marca inmediato en clientela local."
+        "deliverables": [
+          "Diseño de Identidad",
+          "Cartelería y Menús",
+          "Rotulación",
+          "Material Promocional"
+        ]
       },
-      { 
-        "id": "vanguard-campaign",
-        "year": "2026", 
-        "client": "L'HEURE D'OR", 
-        "project": "Diseño de Identidad de Marca Completa", 
-        "category": "Branding",
-        "image": "https://lh3.googleusercontent.com/d/19lBy4n4pXjCuMNupI1wtuRexg_XD8d4_",
-        "gallery": [
-          "https://lh3.googleusercontent.com/d/19lBy4n4pXjCuMNupI1wtuRexg_XD8d4_",
-          "https://lh3.googleusercontent.com/d/1FLc0fzakTTp9lgWhjmhsvOf-aLg7rHgU"
-        ],
-        "description": "Diseño de kit de identidad de marca de lujo para la firma L'HEURE D'OR.",
-        "role": "Director Creativo",
-        "deliverables": ["Guía de Identidad de Marca", "Logotipo", "Paleta de Colores", "Packaging y Sellos"],
-        "challenge": "Establecer una imagen visual de alta gama que compita de igual a igual con las casas de moda y complementos de lujo internacionales.",
-        "solution": "Composición monocromática con toques dorados discretos, contrastes tipográficos de elegancia suiza y guías para estampados en relieve y packaging físico.",
-        "impact": "Lanzamiento exclusivo respaldado por un sistema de marca de gran solidez y distinción."
-      },
-      { 
-        "id": "templum-social",
-        "year": "2025", 
-        "client": "Templum Real State", 
-        "project": "Contenido de inmueble para redes sociales", 
-        "category": "Contenido de Redes Sociales",
-        "image": "https://drive.google.com/file/d/1lt1fRkssoemrNHs4Lu-H_OkqysnO7jP1/preview",
-        "gallery": [
-          "https://drive.google.com/file/d/1lt1fRkssoemrNHs4Lu-H_OkqysnO7jP1/preview",
-          "https://drive.google.com/file/d/13R9CHfv7ie-NyZk17t7N7ATGBb7WNZst/preview",
-          "https://drive.google.com/file/d/1Vtsd2dZR-y9UpE25XjYz-1ivKFunMvK-/preview"
-        ],
-        "description": "Creación integral de contenidos audiovisuales para Templum Real State, desde el montaje, edición, subtítulos, guion y locución en off.",
-        "role": "Editor de Video y Creador de Contenido",
-        "deliverables": ["Edición de videos en formato corto", "Locución", "Gradación de Color Inmobiliario", "Efectos Visuales"],
-        "challenge": "Romper con los aburridos vídeos de tours inmobiliarios convencionales y crear piezas con ritmo y emoción que atraigan compradores de propiedades exclusivas.",
-        "solution": "Grabación y montaje dinámico con música moderna sincronizada, rotulación elegante con datos clave de las propiedades y locución envolvente.",
-        "impact": "+180% de incremento en visualizaciones completas y captación de clientes interesados en las primeras 48h de publicación."
-      },
-      { 
+      {
         "id": "puerta-madriz",
-        "year": "2025", 
-        "client": "Puerta Madriz", 
-        "project": "Diseño de Contenido para Discoteca", 
+        "year": "2025",
+        "client": "Puerta Madriz",
+        "project": "Diseño de Contenido para Discoteca",
         "category": "Contenido de Redes Sociales",
         "image": "https://lh3.googleusercontent.com/d/1Ju2UBEYEM9dr4m1US5_WbHaLIxth4Sfx",
         "gallery": [
@@ -277,150 +404,64 @@
           "https://lh3.googleusercontent.com/d/1neB2_u12QV0sMtfiJJE7r1B0OfsZuDPD",
           "https://lh3.googleusercontent.com/d/1jMwGEYlRJvYJEaQJOhyUtcArdyKh0fy-"
         ],
-        "description": "Creación de publicaciones dinámicas y llamativas para las redes sociales de la discoteca Puerta Madriz, enfocadas en captar la energía de la noche madrileña.",
+        "description": "Creación de publicaciones dinámicas y llamativas para las redes sociales de la discoteca Puerta Madriz.",
         "role": "Diseñador Gráfico & Content Creator",
-        "deliverables": ["Diseño de Posts", "Estrategia Visual", "Contenido para Instagram Stories", "Carteles de Fiesta"],
-        "challenge": "Mantener una presencia constante y atractiva en Instagram con carteles de DJs y eventos semanales con tiempos de entrega muy reducidos.",
-        "solution": "Desarrollo de un sistema de plantillas dinámicas de alto contraste que permite producir piezas de calidad superior con gran rapidez sin perder impacto visual.",
-        "impact": "Crecimiento constante de la comunidad en redes sociales y llenos recurrentes en las sesiones del club."
+        "deliverables": [
+          "Diseño de Posts",
+          "Estrategia Visual",
+          "Contenido para Instagram Stories",
+          "Carteles de Fiesta"
+        ]
       }
     ]
-  },
-  "services": {
-    "sectionTitle": "Soluciones",
-    "sectionTitleHighlight": "Creativas",
-    "sectionSubtitle": "No solo diseño; construyo sistemas visuales que resuelven problemas de negocio y atraen la atención.",
-    "list": [
-      {
-        "id": "brand",
-        "title": "Diseño de Marca",
-        "description": "Identidades visuales estratégicas que posicionan a tu marca como líder.",
-        "icon": "Palette",
-        "deliverables": ["Sistemas de Logotipos", "Guías de Marca", "Lenguaje Visual"]
-      },
-      {
-        "id": "video",
-        "title": "Edición de Video",
-        "description": "Narrativa cinematográfica que mantiene a los espectadores enganchados de principio a fin.",
-        "icon": "Video",
-        "deliverables": ["Contenido de Formato Corto", "Comerciales", "Motion Graphics"]
-      },
-      {
-        "id": "social",
-        "title": "Contenido de Redes Sociales",
-        "description": "Visuales nativos para plataformas diseñados para máxima atención y crecimiento.",
-        "icon": "Share2",
-        "deliverables": ["Miniaturas de YouTube", "Creatividades de Anuncios", "Sistemas Sociales"]
-      },
-      {
-        "id": "strategy",
-        "title": "Estrategia Creativa",
-        "description": "Consultoría que alinea tu producción visual con los objetivos de negocio.",
-        "icon": "Target",
-        "deliverables": ["Dirección de Campañas", "Auditorías de Contenido", "Planificación de Crecimiento"]
-      }
-    ]
-  },
-  "about": {
-    "image": "https://picsum.photos/seed/denis/800/1000",
-    "badge": "Estratega Creativa",
-    "headlineStart": "Obsesionado con la",
-    "headlineHighlight1": "Calidad",
-    "headlineMiddle": ", Impulsado por los",
-    "headlineHighlight2": "Resultados.",
-    "paragraphs": [
-      "Soy Denis Alexandrescu, graduado en Comunicación Audiovisual con una profunda pasión por la narrativa visual. Mi viaje comenzó con una cámara y una obsesión por cómo la luz y el movimiento pueden cambiar la perspectiva de una persona.",
-      "Hoy, cierro la brecha entre la creatividad pura y la estrategia de negocio. No solo hago que las cosas se vean \"bonitas\", hago que funcionen. Ya sea una identidad de marca para una startup o miniaturas de alta conversión para un creador, mi enfoque siempre está en el resultado.",
-      "He pasado años refinando mi gusto y habilidades técnicas para ayudar a las marcas a destacar en un panorama digital saturado. Creo que cada píxel y cada fotograma deben tener un propósito."
-    ],
-    "stats": [
-      { "value": "5+", "label": "Años de Experiencia" },
-      { "value": "150+", "label": "Proyectos Entregados" }
-    ]
-  },
-  "process": {
-    "sectionTitle": "El",
-    "sectionTitleHighlight": "Proceso",
-    "sectionSubtitle": "Un enfoque estructurado hacia la creatividad que garantiza consistencia, calidad y resultados en todo momento.",
-    "steps": [
-      {
-        "number": "01",
-        "title": "Descubrimiento",
-        "description": "Profundizamos en tu marca, objetivos y audiencia objetivo para encontrar el ángulo único."
-      },
-      {
-        "number": "02",
-        "title": "Estrategia",
-        "description": "Desarrollamos una hoja de ruta visual que alinea la creatividad con tus objetivos de negocio."
-      },
-      {
-        "number": "03",
-        "title": "Creación",
-        "description": "Ocurre la magia. Diseño y edición de alta fidelidad con una atención obsesiva al detalle."
-      },
-      {
-        "number": "04",
-        "title": "Optimización",
-        "description": "Refinamos y probamos para asegurar que el resultado final ofrezca el máximo impacto."
-      }
-    ]
-  },
-  "contact": {
-    "headlineStart": "Tu marca merece visuales que",
-    "headlineHighlight": "la gente recuerde.",
-    "subheadline": "¿Listo para elevar tu presencia visual? Construyamos algo que impulse el crecimiento real de tu negocio."
   },
   "privacyPolicyContent": {
-    "lastUpdated": "Última actualización",
+    "lastUpdated": "Última actualización: 2026",
     "sections": [
       {
         "title": "1. Información que Recopilamos",
-        "content": "Recopilamos la información que nos proporciona directamente cuando completa un formulario de contacto, solicita una cotización o se comunica con nosotros por correo electrónico. Esto puede incluir su nombre, dirección de correo electrónico, nombre de la empresa y detalles del proyecto."
+        "content": "Recopilamos la información que nos proporciona directamente cuando completa el formulario de contacto o se comunica por correo electrónico. Esto incluye su nombre, dirección de correo electrónico, tipo de proyecto y detalles del encargo."
       },
       {
         "title": "2. Cómo Usamos Su Información",
-        "content": "Usamos la información que recopilamos para responder a sus consultas, proporcionar los servicios que solicita, enviarle avisos técnicos y mensajes de soporte, y comunicarnos con usted sobre productos, servicios y eventos."
+        "content": "Usamos la información exclusivamente para responder a sus consultas, elaborar valoraciones de fechas y presupuestos, y comunicarnos sobre los encargos solicitados."
       },
       {
         "title": "3. Intercambio de Información",
-        "content": "No compartimos, vendemos ni alquilamos su información personal a terceros con fines de marketing. Podemos compartir información con proveedores, consultores y otros proveedores de servicios que necesiten acceso a dicha información para llevar a cabo el trabajo en nuestro nombre."
+        "content": "No compartimos, vendemos ni alquilamos su información personal a terceros con fines comerciales ni de marketing."
       },
       {
         "title": "4. Seguridad de los Datos",
-        "content": "Tomamos medidas razonables para ayudar a proteger su información contra pérdida, robo, uso indebido, acceso no autorizado, divulgación, alteración y destrucción."
+        "content": "Tomamos medidas organizativas razonables para proteger su información frente a pérdida, uso indebido, acceso no autorizado o alteración."
       },
       {
-        "title": "5. Contáctenos",
-        "content": "Si tiene alguna pregunta sobre esta Política de Privacidad, contáctenos en:"
+        "title": "5. Contacto",
+        "content": "Si tiene alguna pregunta sobre esta Política de Privacidad, contáctenos en denisalexandrescu8@gmail.com."
       }
     ]
   },
   "termsOfServiceContent": {
-    "lastUpdated": "Última actualización",
+    "lastUpdated": "Última actualización: 2026",
     "sections": [
       {
         "title": "1. Aceptación de los Términos",
-        "content": "Al acceder y utilizar este sitio web, usted acepta y acuerda estar sujeto a los términos y disposiciones de este acuerdo."
+        "content": "Al acceder y utilizar este sitio web, usted acepta estar sujeto a los términos y condiciones aquí dispuestos."
       },
       {
         "title": "2. Servicios Prestados",
-        "content": "{name} proporciona servicios creativos que incluyen, entre otros, diseño de marca, edición de video, creación de contenido de redes sociales y estrategia creativa. Los entregables y plazos específicos se detallarán en propuestas o contratos de proyectos individuales."
+        "content": "Denis Alexandrescu proporciona servicios profesionales de diseño de identidad visual y edición audiovisual. Los alcances y plazos específicos se fijan por escrito antes de iniciar cada encargo."
       },
       {
         "title": "3. Propiedad Intelectual",
-        "content": "A menos que se acuerde lo contrario por escrito, todos los materiales producidos, incluidos, entre otros, diseños, videos y estrategias, siguen siendo propiedad intelectual de {name} hasta que se reciba el pago completo. Una vez realizado el pago completo, los derechos de uso se transfieren según lo especificado en el acuerdo del proyecto."
+        "content": "Salvo pacto en contrario por escrito, todos los entregables y derechos de uso se transfieren al cliente una vez completado el pago final estipulado."
       },
       {
-        "title": "4. Responsabilidades del Usuario",
-        "content": "Los clientes son responsables de proporcionar los materiales, comentarios y aprobaciones necesarios de manera oportuna para garantizar que se cumplan los plazos del proyecto. Los retrasos en la comunicación del cliente pueden resultar en plazos de proyecto ajustados."
+        "title": "4. Revisiones y Plazos",
+        "content": "Cada proyecto incluye dos rondas de revisión dentro del alcance acordado. Los plazos de entrega quedan fijados por escrito antes de iniciar el trabajo."
       },
       {
-        "title": "5. Limitación de Responsabilidad",
-        "content": "En ningún caso {name} será responsable de ningún daño indirecto, incidental, especial, consecuente o punitivo, que incluye, entre otros, pérdida de ganancias, datos, uso, fondo de comercio u otras pérdidas intangibles, que resulten de su acceso, uso o incapacidad para acceder o utilizar los servicios."
-      },
-      {
-        "title": "6. Contacto",
-        "content": "Para cualquier pregunta sobre estos términos, por favor contáctenos en:"
+        "title": "5. Contacto",
+        "content": "Para cualquier consulta sobre estos términos, escríbanos a denisalexandrescu8@gmail.com."
       }
     ]
   }

@@ -8,11 +8,11 @@ export default function Process() {
     <section id="process" className="section-padding">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
-          <div className="max-w-xl">
-            <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
-              {content.process.sectionTitle} <span className="text-white/40 italic">{content.process.sectionTitleHighlight}</span>
+          <div className="max-w-2xl">
+            <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 text-white">
+              {content.process.sectionTitle}
             </h2>
-            <p className="text-white/60 text-lg font-light">
+            <p className="text-white/80 text-lg font-light leading-relaxed">
               {content.process.sectionSubtitle}
             </p>
           </div>

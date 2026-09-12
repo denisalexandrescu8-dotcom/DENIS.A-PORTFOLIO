@@ -17,7 +17,7 @@ export default function Services() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 text-white">
-            {content.services.sectionTitle} <span className="text-white/40 italic">{content.services.sectionTitleHighlight}</span>
+            {content.services.sectionTitle}
           </h2>
           <p className="text-white/80 text-lg font-light leading-relaxed">
             {content.services.sectionSubtitle}

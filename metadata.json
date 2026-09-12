@@ -1,8 +1,9 @@
 {
   "name": "Denis Alexandrescu Portfolio",
-  "description": "Portfolio de alto impacto para Denis Alexandrescu, especializado en diseño gráfico, edición de video y estrategia creativa.",
+  "description": "Diseño de identidad de marca y edición de vídeo para empresas y creadores. Plazos acordados, dos rondas de revisión y trato directo. Respondo en 24 h.",
   "requestFramePermissions": [],
   "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API",
     "Portfolio",
     "Lead Generation",
     "Creative Services"

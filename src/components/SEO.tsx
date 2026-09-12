@@ -10,8 +10,8 @@ interface SEOProps {
 }
 
 export default function SEO({
-  title = "Denis Alexandrescu | Diseño Gráfico y Creación de Contenidos",
-  description = "Portfolio profesional de Denis Alexandrescu. Especializado en diseño gráfico de alta conversión, edición de video cinematográfica y estrategia creativa.",
+  title = "Denis Alexandrescu | Identidad visual y edición de vídeo",
+  description = "Denis Alexandrescu. Diseño gráfico y edición de vídeo.",
   image = "https://lh3.googleusercontent.com/d/1zi-oBDk1WAng22OjJt89mlLCt3odwkEC",
   url = "https://denisalexandrescu.com",
   type = "website",

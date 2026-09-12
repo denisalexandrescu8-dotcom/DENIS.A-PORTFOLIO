@@ -5,8 +5,13 @@ export default function TrustBar() {
   const { content } = useLanguage();
 
   return (
-    <section className="py-12 bg-transparent overflow-hidden transition-colors duration-300 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-      <div className="flex whitespace-nowrap">
+    <section className="py-12 bg-transparent overflow-hidden transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-6 mb-8 text-center">
+        <p className="text-sm md:text-base font-mono uppercase tracking-widest text-white/60 font-light">
+          {content.trustSectionHeadline}
+        </p>
+      </div>
+      <div className="flex whitespace-nowrap [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
         <motion.div 
           animate={{ x: [0, -2000] }}
           transition={{ 
