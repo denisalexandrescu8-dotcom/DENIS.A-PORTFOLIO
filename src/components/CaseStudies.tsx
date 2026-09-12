@@ -137,8 +137,14 @@ export default function CaseStudies() {
   const { content } = useLanguage();
 
   // Highlight top 3 flagship projects
+  // Selecciona 3 proyectos aleatorios al recargar la página
   const featuredProjects = useMemo(() => {
     const allProjects = [...content.archive.projects];
+    // Fisher-Yates shuffle
+    for (let i = allProjects.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [allProjects[i], allProjects[j]] = [allProjects[j], allProjects[i]];
+    }
     return allProjects.slice(0, 3).map(p => ({
       ...p,
       title: p.project,
