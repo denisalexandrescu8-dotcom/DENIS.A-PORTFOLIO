@@ -18,13 +18,14 @@ export default function About() {
             <div className="aspect-[4/5] rounded-[3rem] overflow-hidden border border-white/10">
               <img 
                 src={content.about.image} 
-                alt={content.global.name}
+                alt={`${content.global.name} - Diseñador Gráfico & Creador de Contenido Visual`}
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                loading="lazy"
                 referrerPolicy="no-referrer"
               />
             </div>
             {/* Decorative elements */}
-            <div className="absolute top-1/2 -left-10 -translate-y-1/2 w-20 h-20 border border-white/10 rounded-full flex items-center justify-center text-[10px] font-mono uppercase tracking-widest rotate-90">
+            <div className="absolute top-1/2 -left-10 -translate-y-1/2 w-20 h-20 border border-white/10 rounded-full flex items-center justify-center text-[10px] font-mono uppercase tracking-widest rotate-90 text-white/70">
               {content.about.badge}
             </div>
           </motion.div>
@@ -35,11 +36,11 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-xs font-mono uppercase tracking-[0.3em] text-premium-gold mb-6 block">{content.ui.theStory}</span>
-            <h2 className="text-4xl md:text-6xl font-display font-bold mb-8 leading-tight">
+            <span className="text-xs font-mono uppercase tracking-[0.3em] text-premium-gold mb-6 block font-medium">{content.ui.theStory}</span>
+            <h2 className="text-4xl md:text-6xl font-display font-bold mb-8 leading-tight text-white">
               {content.about.headlineStart} <span className="text-white/40">{content.about.headlineHighlight1}</span>{content.about.headlineMiddle} <span className="text-white/40">{content.about.headlineHighlight2}</span>
             </h2>
-            <div className="space-y-6 text-white/60 text-lg font-light leading-relaxed">
+            <div className="space-y-6 text-white/80 text-lg font-light leading-relaxed">
               {content.about.paragraphs.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}

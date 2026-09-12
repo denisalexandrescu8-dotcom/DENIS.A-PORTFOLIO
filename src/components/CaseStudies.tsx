@@ -43,15 +43,17 @@ const ProjectCard: React.FC<{ project: any, index: number }> = ({ project, index
         return (
           <iframe
             src={url.replace('/view', '/preview')}
-            className="w-full h-full scale-[1.5] pointer-events-none object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+            className="w-full h-full scale-[1.5] pointer-events-none object-cover opacity-85 group-hover:opacity-100 transition-opacity"
             frameBorder="0"
+            title={`${project.title || project.project} preview media ${index ? index + 1 : ''}`}
+            loading="lazy"
           />
         );
       }
       return (
         <video
           src={formatVideoUrl(url)}
-          className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+          className="w-full h-full object-cover opacity-85 group-hover:opacity-100 transition-opacity"
           muted
           playsInline
           preload="metadata"
@@ -61,8 +63,9 @@ const ProjectCard: React.FC<{ project: any, index: number }> = ({ project, index
     return (
       <img 
         src={url} 
-        alt=""
-        className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+        alt={`${project.title || project.project} - ${project.category} por Denis Alexandrescu`}
+        className="w-full h-full object-cover opacity-85 group-hover:opacity-100 transition-opacity"
+        loading="lazy"
         referrerPolicy="no-referrer"
       />
     );
@@ -114,10 +117,10 @@ const ProjectCard: React.FC<{ project: any, index: number }> = ({ project, index
         {/* Content Overlay */}
         <div className="absolute bottom-8 left-8 right-8 flex justify-between items-end">
           <div>
-            <span className="text-xs font-mono uppercase tracking-widest text-white/60 mb-2 block">
+            <span className="text-xs font-mono uppercase tracking-widest text-white/80 mb-2 block font-medium">
               {project.category} — {project.client}
             </span>
-            <h3 className="text-2xl md:text-3xl font-display font-bold">
+            <h3 className="text-2xl md:text-3xl font-display font-bold text-white">
               {project.title}
             </h3>
           </div>
@@ -133,21 +136,12 @@ const ProjectCard: React.FC<{ project: any, index: number }> = ({ project, index
 export default function CaseStudies() {
   const { content } = useLanguage();
 
-  // Randomly select 3 projects from the archive to keep the home page fresh
+  // Highlight top 3 flagship projects
   const featuredProjects = useMemo(() => {
     const allProjects = [...content.archive.projects];
-    
-    // Simple shuffle
-    for (let i = allProjects.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [allProjects[i], allProjects[j]] = [allProjects[j], allProjects[i]];
-    }
-    
     return allProjects.slice(0, 3).map(p => ({
       ...p,
-      // Map 'project' from archive to 'title' used in home page components
       title: p.project,
-      // Use first few images from gallery as thumbnailGallery if not present
       thumbnailGallery: p.gallery ? p.gallery.slice(0, 4) : null
     }));
   }, [content.archive.projects]);
@@ -157,14 +151,14 @@ export default function CaseStudies() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-xl">
-            <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
+            <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 text-white">
               {content.caseStudies.sectionTitle} <span className="text-white/40 italic">{content.caseStudies.sectionTitleHighlight}</span>
             </h2>
-            <p className="text-white/60 text-lg font-light">
+            <p className="text-white/80 text-lg font-light leading-relaxed">
               {content.caseStudies.sectionSubtitle}
             </p>
           </div>
-          <Link to="/archive" className="text-sm font-mono uppercase tracking-widest border-b border-white/20 pb-1 hover:border-white transition-all">
+          <Link to="/archive" className="text-sm font-mono uppercase tracking-widest border-b border-white/20 pb-1 text-white/80 hover:text-white hover:border-white transition-all">
             {content.ui.viewArchive} ({content.archive.projects.length}+)
           </Link>
         </div>

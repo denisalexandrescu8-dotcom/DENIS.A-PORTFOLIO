@@ -51,6 +51,33 @@ async function startServer() {
     res.json({ status: "ok", message: "System secure" });
   });
 
+  app.post("/api/contact", (req, res) => {
+    const { name, email, projectType, message } = req.body || {};
+
+    if (!name || !email || !message) {
+      return res.status(400).json({
+        success: false,
+        error: "Por favor, completa todos los campos obligatorios."
+      });
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(String(email).trim())) {
+      return res.status(400).json({
+        success: false,
+        error: "El correo electrónico introducido no tiene un formato válido."
+      });
+    }
+
+    // Log contact inquiry safely on server
+    console.log(`[CONTACT INQUIRY] from ${name} <${email}> [${projectType}]: ${message.substring(0, 100)}...`);
+
+    return res.status(200).json({
+      success: true,
+      message: "Mensaje recibido correctamente. Te responderé en menos de 24 horas."
+    });
+  });
+
   // 4. Vite middleware for development
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({

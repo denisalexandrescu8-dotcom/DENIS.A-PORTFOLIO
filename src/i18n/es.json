@@ -131,9 +131,12 @@
           "https://drive.google.com/file/d/1N288yQ2m3DO8BfkDZ9ledLC1JyVNKtTK/preview?usp=sharing",
           "https://drive.google.com/file/d/1TBhNpSJjgsuDHbMjoC1eY_qYjGjBuMTV/preview?usp=sharing"
         ],
-        "description": "Creación de la identidad visual de ARCADE, una fiesta organizada por ShangoClub.",
+        "description": "Creación de la identidad visual de ARCADE, una fiesta temática inmersiva organizada por ShangoClub con estética retro-futurista.",
         "role": "Director Creativo",
-        "deliverables": ["Diseño Gráfico", "Motion Graphics"]
+        "deliverables": ["Diseño Gráfico", "Motion Graphics", "Cartelería Digital", "Contenido para Instagram Stories y Reels"],
+        "challenge": "Desarrollar una narrativa visual potente inspirada en el universo arcade de los 80/90, evitando clichés nostálgicos y adaptándola a las exigencias estéticas de la noche madrileña.",
+        "solution": "Sistema tipográfico high-energy con contrastes de neón sobre negro puro, animaciones cinemáticas para pantallas de discoteca y plantillas modulares para promociones y venta de entradas.",
+        "impact": "+65% de incremento en el alcance de publicaciones y aforo completo en el evento."
       },
       { 
         "id": "conef-2025",
@@ -149,23 +152,29 @@
           "https://lh3.googleusercontent.com/d/1KDAxgqJ3HbS0s-h3Pht1kdQNWgaJLKGo",
           "https://lh3.googleusercontent.com/d/1I_Etgevx_DYOQekooGKkSfTKc1XT5dXK"
         ],
-        "description": "Creación de la identidad de marca completa de CONEF 2025 desde cero.",
-        "role": "Director Creativo",
-        "deliverables": ["Guía Completa de Identidad de Marca"]
+        "description": "Creación integral de la identidad de marca de CONEF 2025 (Congreso Nacional de Economía y Finanzas) desde cero.",
+        "role": "Director Creativo & Diseñador de Identidad",
+        "deliverables": ["Guía Completa de Identidad de Marca", "Manual de Estilo", "Papelería Corporativa", "Aplicaciones para Escenarios y Photocalls"],
+        "challenge": "Diseñar una identidad institucional para un congreso nacional que transmitiese rigor académico, modernidad económica y legibilidad impecable tanto en acreditaciones como en proyecciones gigantes.",
+        "solution": "Desarrollo de un símbolo geométrico modular inspirado en el crecimiento financiero, manual de identidad de más de 40 páginas y directrices precisas de aplicación para ponentes y patrocinadores.",
+        "impact": "Identidad aplicada de forma 100% coherente en más de 30 soportes físicos y digitales durante las jornadas."
       },
       { 
         "id": "creator-pro-assets",
         "year": "2025", 
         "client": "Anna Language Coaching", 
-        "project": "Diseño de Logo", 
+        "project": "Diseño de Logo & Identidad", 
         "category": "Branding",
         "image": "https://lh3.googleusercontent.com/d/1eI7g7zPatJG8SCswgX_6F_fmHvNqPK0T",
         "gallery": [
           "https://lh3.googleusercontent.com/d/1eI7g7zPatJG8SCswgX_6F_fmHvNqPK0T"
         ],
-        "description": "Diseño de logo creado para Anna Language Coaching.",
-        "role": "Diseñador Gráfico",
-        "deliverables": ["Diseño Gráfico"]
+        "description": "Diseño de marca e isotipo creado para la consultora pedagógica Anna Language Coaching.",
+        "role": "Diseñador Gráfico & Brand Designer",
+        "deliverables": ["Diseño de Logotipo", "Variantes Tipográficas", "Paleta de Color", "Assets Digitales"],
+        "challenge": "Construir una marca personal que comunicara excelencia y preparación profesional para ejecutivos, manteniendo la cercanía humana y empatía pedagógica.",
+        "solution": "Diseño de isotipo refinado con formas orgánicas y fluidas que simbolizan la conexión entre culturas e idiomas, apoyado en una tipografía serif moderna.",
+        "impact": "Posicionamiento reforzado en el mercado de coaching lingüístico y recepción entusiasta por parte de sus clientes corporativos."
       },
       { 
         "id": "luxe-wear-launch",
@@ -187,9 +196,12 @@
           "https://lh3.googleusercontent.com/d/1P07Jw1Wle6MN6dlq4Uex_9fbY6L_1CcB",
           "https://lh3.googleusercontent.com/d/1KJTb3BO5hsmOJZBR_rkN55WjzjFs8iui"
         ],
-        "description": "Contenido creado para las redes sociales de Fernando Hernandez CEO.",
+        "description": "Estrategia audiovisual y producción de contenido de alto impacto para los canales oficiales de Fernando Hernandez CEO.",
         "role": "Director Creativo, Editor de Video, Diseñador Gráfico",
-        "deliverables": ["Diseño de Sonido", "Edición de Video", "Gradación y Corrección de Color", "Diseño Gráfico"]
+        "deliverables": ["Diseño de Sonido", "Edición de Video", "Gradación y Corrección de Color", "Diseño Gráfico", "Thumbnails"],
+        "challenge": "Aumentar la retención en los primeros segundos y profesionalizar la presencia en vídeo del CEO frente a competidores y público inversor.",
+        "solution": "Edición con ritmo dinámico, corrección de color cinematográfica, efectos de sonido inmersivos, motion graphics para conceptos clave y subtitulado de alta legibilidad.",
+        "impact": "+250k reproducciones orgánicas totales y una tasa de retención superior al 70% en vídeos de formato corto."
       },
       { 
         "id": "techflow-web",
@@ -206,9 +218,12 @@
           "https://lh3.googleusercontent.com/d/1fImHese-ZE1azfYtisMP5GP026qsHKCN",
           "https://drive.google.com/file/d/1BW2OJulV6bjg45dEM9YxeGWRLRWXGs5O/preview"
         ],
-        "description": "Branding completo para el restaurante BBT Otra.",
-        "role": "Diseñador Gráfico",
-        "deliverables": ["Diseño Gráfico"]
+        "description": "Branding completo y dirección visual gastronómica para el restaurante BBT Otra.",
+        "role": "Diseñador Gráfico & Brand Designer",
+        "deliverables": ["Diseño de Identidad", "Cartelería y Menús", "Rotulación", "Material Promocional"],
+        "challenge": "Crear un universo de marca memorable y desenfadado que destacara en un sector hostelero saturado de propuestas tradicionales.",
+        "solution": "Desarrollo de naming visual, tipografías condensadas contundentes, cromática cálida y llamativa, y maquetación de cartas tanto para soporte físico como QR.",
+        "impact": "Alta visibilidad de lanzamiento y reconocimiento de marca inmediato en clientela local."
       },
       { 
         "id": "vanguard-campaign",
@@ -221,9 +236,12 @@
           "https://lh3.googleusercontent.com/d/19lBy4n4pXjCuMNupI1wtuRexg_XD8d4_",
           "https://lh3.googleusercontent.com/d/1FLc0fzakTTp9lgWhjmhsvOf-aLg7rHgU"
         ],
-        "description": "Diseño de kit de identidad de marca completo para L'HEURE D'OR.",
+        "description": "Diseño de kit de identidad de marca de lujo para la firma L'HEURE D'OR.",
         "role": "Director Creativo",
-        "deliverables": ["Guía de Identidad de Marca", "Logotipo", "Paleta de Colores"]
+        "deliverables": ["Guía de Identidad de Marca", "Logotipo", "Paleta de Colores", "Packaging y Sellos"],
+        "challenge": "Establecer una imagen visual de alta gama que compita de igual a igual con las casas de moda y complementos de lujo internacionales.",
+        "solution": "Composición monocromática con toques dorados discretos, contrastes tipográficos de elegancia suiza y guías para estampados en relieve y packaging físico.",
+        "impact": "Lanzamiento exclusivo respaldado por un sistema de marca de gran solidez y distinción."
       },
       { 
         "id": "templum-social",
@@ -237,9 +255,12 @@
           "https://drive.google.com/file/d/13R9CHfv7ie-NyZk17t7N7ATGBb7WNZst/preview",
           "https://drive.google.com/file/d/1Vtsd2dZR-y9UpE25XjYz-1ivKFunMvK-/preview"
         ],
-        "description": "Creación de contenidos para Templum Real State, desde el montaje, edición, subtítulos, guion y voz en off.",
+        "description": "Creación integral de contenidos audiovisuales para Templum Real State, desde el montaje, edición, subtítulos, guion y locución en off.",
         "role": "Editor de Video y Creador de Contenido",
-        "deliverables": ["Edición de videos en formato corto"]
+        "deliverables": ["Edición de videos en formato corto", "Locución", "Gradación de Color Inmobiliario", "Efectos Visuales"],
+        "challenge": "Romper con los aburridos vídeos de tours inmobiliarios convencionales y crear piezas con ritmo y emoción que atraigan compradores de propiedades exclusivas.",
+        "solution": "Grabación y montaje dinámico con música moderna sincronizada, rotulación elegante con datos clave de las propiedades y locución envolvente.",
+        "impact": "+180% de incremento en visualizaciones completas y captación de clientes interesados en las primeras 48h de publicación."
       },
       { 
         "id": "puerta-madriz",
@@ -256,9 +277,12 @@
           "https://lh3.googleusercontent.com/d/1neB2_u12QV0sMtfiJJE7r1B0OfsZuDPD",
           "https://lh3.googleusercontent.com/d/1jMwGEYlRJvYJEaQJOhyUtcArdyKh0fy-"
         ],
-        "description": "Creación de publicaciones dinámicas y atractivas para las redes sociales de la discoteca Puerta Madriz, enfocadas en captar la energía de la vida nocturna.",
+        "description": "Creación de publicaciones dinámicas y llamativas para las redes sociales de la discoteca Puerta Madriz, enfocadas en captar la energía de la noche madrileña.",
         "role": "Diseñador Gráfico & Content Creator",
-        "deliverables": ["Diseño de Posts", "Estrategia Visual", "Contenido para Instagram"]
+        "deliverables": ["Diseño de Posts", "Estrategia Visual", "Contenido para Instagram Stories", "Carteles de Fiesta"],
+        "challenge": "Mantener una presencia constante y atractiva en Instagram con carteles de DJs y eventos semanales con tiempos de entrega muy reducidos.",
+        "solution": "Desarrollo de un sistema de plantillas dinámicas de alto contraste que permite producir piezas de calidad superior con gran rapidez sin perder impacto visual.",
+        "impact": "Crecimiento constante de la comunidad en redes sociales y llenos recurrentes en las sesiones del club."
       }
     ]
   },

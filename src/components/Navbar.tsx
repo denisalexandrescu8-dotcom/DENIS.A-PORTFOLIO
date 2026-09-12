@@ -24,16 +24,22 @@ export default function Navbar() {
   };
 
   const navItems = [
-    { id: 'work', label: content.ui.work },
-    { id: 'services', label: content.ui.services },
-    { id: 'about', label: content.ui.about },
-    { id: 'process', label: content.process.sectionTitleHighlight }
+    { id: 'work', label: content.ui.work, type: 'scroll' },
+    { id: 'archive', label: language === 'es' ? 'Archivo' : 'Archive', type: 'link', path: '/archive' },
+    { id: 'services', label: content.ui.services, type: 'scroll' },
+    { id: 'about', label: content.ui.about, type: 'scroll' },
+    { id: 'process', label: content.process.sectionTitleHighlight, type: 'scroll' }
   ];
 
   const handleLogoClick = (e: React.MouseEvent) => {
     if (location.pathname === '/') {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 50);
     }
   };
 
@@ -44,22 +50,32 @@ export default function Navbar() {
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-xl font-display font-bold tracking-tighter"
+            className="text-xl font-display font-bold tracking-tighter text-white"
           >
             {content.global.name.split('.')[0]}<span className="text-gray-400">.{content.global.name.split('.')[1] || ''}</span>
           </motion.div>
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-200">
           {navItems.map((item) => (
-            <button 
-              key={item.id} 
-              onClick={() => handleScroll(item.id)}
-              className="hover:text-white transition-colors cursor-pointer"
-            >
-              {item.label}
-            </button>
+            item.type === 'link' ? (
+              <Link
+                key={item.id}
+                to={item.path!}
+                className="hover:text-white transition-colors"
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <button 
+                key={item.id} 
+                onClick={() => handleScroll(item.id)}
+                className="hover:text-white transition-colors cursor-pointer"
+              >
+                {item.label}
+              </button>
+            )
           ))}
           
           <button 
@@ -103,13 +119,24 @@ export default function Navbar() {
           className="absolute top-24 left-6 right-6 glass rounded-3xl p-8 md:hidden flex flex-col gap-6 text-center"
         >
           {navItems.map((item) => (
-            <button 
-              key={item.id} 
-              className="text-2xl font-display font-medium"
-              onClick={() => handleScroll(item.id)}
-            >
-              {item.label}
-            </button>
+            item.type === 'link' ? (
+              <Link
+                key={item.id}
+                to={item.path!}
+                onClick={() => setIsOpen(false)}
+                className="text-2xl font-display font-medium text-white hover:text-premium-gold transition-colors"
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <button 
+                key={item.id} 
+                className="text-2xl font-display font-medium text-white hover:text-premium-gold transition-colors cursor-pointer"
+                onClick={() => handleScroll(item.id)}
+              >
+                {item.label}
+              </button>
+            )
           ))}
           <div className="flex justify-center mt-4">
             <LiquidButton 

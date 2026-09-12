@@ -39,21 +39,22 @@ export default function Hero() {
       >
         <motion.div
           variants={itemVariants}
-          className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs font-mono uppercase tracking-[0.2em] mb-8"
+          className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-premium-gold/30 bg-premium-gold/10 text-xs font-mono uppercase tracking-[0.2em] text-premium-gold mb-8"
         >
-          {content.hero.availabilityBadge}
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+          <span>{content.hero.availabilityBadge}</span>
         </motion.div>
 
         <motion.h1
           variants={itemVariants}
-          className="text-5xl md:text-7xl lg:text-8xl font-display font-extrabold leading-[0.9] tracking-tighter mb-8"
+          className="text-5xl md:text-7xl lg:text-8xl font-display font-extrabold leading-[0.9] tracking-tighter mb-8 text-white"
         >
           {content.hero.headlineStart} <span className="text-gradient">{content.hero.headlineHighlight}</span>
         </motion.h1>
 
         <motion.p
           variants={itemVariants}
-          className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-12 font-light leading-relaxed"
+          className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-12 font-light leading-relaxed"
         >
           {content.hero.subheadline}
         </motion.p>

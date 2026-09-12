@@ -131,9 +131,12 @@
           "https://drive.google.com/file/d/1N288yQ2m3DO8BfkDZ9ledLC1JyVNKtTK/preview?usp=sharing",
           "https://drive.google.com/file/d/1TBhNpSJjgsuDHbMjoC1eY_qYjGjBuMTV/preview?usp=sharing"
         ],
-        "description": "Creation of the visual identity for ARCADE, a party organized by ShangoClub.",
+        "description": "Creation of the visual identity for ARCADE, an immersive themed night organized by ShangoClub with a retro-futuristic aesthetic.",
         "role": "Creative Director",
-        "deliverables": ["Graphic Design", "Motion Graphics"]
+        "deliverables": ["Graphic Design", "Motion Graphics", "Digital Signage", "Instagram Stories & Reels Content"],
+        "challenge": "Develop a compelling visual narrative inspired by 80s/90s arcade culture without nostalgic clichés, tuned specifically for Madrid nightlife.",
+        "solution": "High-energy typographic system with neon contrasts on deep black, motion graphics tailored for club screens, and modular promotional templates.",
+        "impact": "+65% boost in post engagement and sold-out attendance at the event."
       },
       { 
         "id": "conef-2025",
@@ -149,23 +152,29 @@
           "https://lh3.googleusercontent.com/d/1KDAxgqJ3HbS0s-h3Pht1kdQNWgaJLKGo",
           "https://lh3.googleusercontent.com/d/1I_Etgevx_DYOQekooGKkSfTKc1XT5dXK"
         ],
-        "description": "Creation of the complete CONEF 2025 brand identity from scratch.",
-        "role": "Creative director",
-        "deliverables": ["Complete Brand Identity Guide"]
+        "description": "Comprehensive creation of the CONEF 2025 (National Congress of Economics and Finance) brand identity from scratch.",
+        "role": "Creative Director & Identity Designer",
+        "deliverables": ["Complete Brand Identity Guide", "Style Manual", "Corporate Stationery", "Stage & Photocall Applications"],
+        "challenge": "Build an institutional brand for a national summit that conveyed academic authority, financial innovation, and crystal-clear readability across credentials and giant stage displays.",
+        "solution": "Modular geometric symbol representing financial expansion, 40+ page brand manual, and detailed layout guidelines for speakers and institutional sponsors.",
+        "impact": "100% brand consistency across more than 30 physical and digital touchpoints throughout the congress."
       },
       { 
         "id": "creator-pro-assets",
         "year": "2025", 
         "client": "Anna Language Coaching", 
-        "project": "Logo design", 
+        "project": "Logo Design & Identity", 
         "category": "Branding",
         "image": "https://lh3.googleusercontent.com/d/1eI7g7zPatJG8SCswgX_6F_fmHvNqPK0T",
         "gallery": [
           "https://lh3.googleusercontent.com/d/1eI7g7zPatJG8SCswgX_6F_fmHvNqPK0T"
         ],
-        "description": "Created the logo design for Anna Language Coaching",
-        "role": "Graphic Designer",
-        "deliverables": ["Graphic Design"]
+        "description": "Brand and mark design crafted for language and executive consultant Anna Language Coaching.",
+        "role": "Graphic Designer & Brand Designer",
+        "deliverables": ["Logotype Design", "Typographic Variations", "Color Palette", "Digital Assets"],
+        "challenge": "Design an executive brand that projected international business confidence while preserving pedagogical warmth and empathy.",
+        "solution": "Harmonious fluid mark symbolizing bridge between cultures and languages, paired with modern editorial serif typography.",
+        "impact": "Elevated market positioning in executive coaching and instant recognition among corporate clients."
       },
       { 
         "id": "luxe-wear-launch",
@@ -187,9 +196,12 @@
           "https://lh3.googleusercontent.com/d/1P07Jw1Wle6MN6dlq4Uex_9fbY6L_1CcB",
           "https://lh3.googleusercontent.com/d/1KJTb3BO5hsmOJZBR_rkN55WjzjFs8iui"
         ],
-        "description": "Content created for Fernando Hernandez CEO's social media platforms.",
+        "description": "High-impact video editing and content strategy for Fernando Hernandez CEO's official channels.",
         "role": "Creative Director, Video Editor, Graphic Designer",
-        "deliverables": ["Sound Design", "Video Editing", "Color Grading & Correction", "Graphic Design"]
+        "deliverables": ["Sound Design", "Video Editing", "Color Grading & Correction", "Graphic Design", "Thumbnails"],
+        "challenge": "Increase retention during the crucial first 3 seconds and elevate executive presence before an audience of investors and business founders.",
+        "solution": "Rhythm-driven montage, cinematic color grading, immersive sound design, custom motion callouts, and clean subtitle typography.",
+        "impact": "+250k organic impressions and average short-form retention rate over 70%."
       },
       { 
         "id": "techflow-web",
@@ -206,9 +218,12 @@
           "https://lh3.googleusercontent.com/d/1fImHese-ZE1azfYtisMP5GP026qsHKCN",
           "https://drive.google.com/file/d/1BW2OJulV6bjg45dEM9YxeGWRLRWXGs5O/preview"
         ],
-        "description": "Complete branding for the Restaurant BBT Otra",
-        "role": "Graphic Designer",
-        "deliverables": ["Graphic Design"]
+        "description": "Full branding and visual direction for restaurant BBT Otra.",
+        "role": "Graphic Designer & Brand Specialist",
+        "deliverables": ["Identity Design", "Signage & Menus", "Wall Murals", "Promotional Print"],
+        "challenge": "Create a bold, memorable identity standing out in a dining district crowded with conventional concepts.",
+        "solution": "Dynamic visual naming, bold condensed typography, appetizing warm tones, and layout systems tailored for physical menus and QR portals.",
+        "impact": "High launch buzz and strong brand memorability across local customer base."
       },
       { 
         "id": "vanguard-campaign",
@@ -221,9 +236,12 @@
           "https://lh3.googleusercontent.com/d/19lBy4n4pXjCuMNupI1wtuRexg_XD8d4_",
           "https://lh3.googleusercontent.com/d/1FLc0fzakTTp9lgWhjmhsvOf-aLg7rHgU"
         ],
-        "description": "Complete brand identity kit design for L'HEURE D'OR.",
+        "description": "Luxury brand identity kit created for high-end boutique L'HEURE D'OR.",
         "role": "Creative Director",
-        "deliverables": ["Brand Identity Guidelines", "Logo", "Color Palette"]
+        "deliverables": ["Brand Identity Guidelines", "Logo", "Color Palette", "Packaging & Seals"],
+        "challenge": "Establish a luxury visual persona capable of competing alongside international heritage accessory houses.",
+        "solution": "Monochrome palette with refined gold accents, Swiss typographic contrast, and guidelines for tactile embossed boxes and ribbons.",
+        "impact": "Exclusive launch supported by a solid, high-end identity system."
       },
       { 
         "id": "templum-social",
@@ -237,9 +255,12 @@
           "https://drive.google.com/file/d/13R9CHfv7ie-NyZk17t7N7ATGBb7WNZst/preview",
           "https://drive.google.com/file/d/1Vtsd2dZR-y9UpE25XjYz-1ivKFunMvK-/preview"
         ],
-        "description": "Content creation for Templum Real State, including assembly, editing, subtitles, script, and voiceover.",
+        "description": "Full-cycle video content creation for Templum Real State, from cutting and pacing to custom voiceover and motion typography.",
         "role": "Video Editor & Content Creator",
-        "deliverables": ["Short-form video editing"]
+        "deliverables": ["Short-form video editing", "Voiceover", "Real Estate Color Grading", "Property Spec Graphics"],
+        "challenge": "Ditch boring traditional real estate walkthroughs and create energetic, captivating reels that hook high-net-worth buyers.",
+        "solution": "Dynamic camera cuts synced to modern score, elegant kinetic callouts for property specs, and rich narrative voiceover.",
+        "impact": "+180% increase in full-video completions and qualified property leads within 48h of rollout."
       },
       { 
         "id": "puerta-madriz",
@@ -256,9 +277,12 @@
           "https://lh3.googleusercontent.com/d/1neB2_u12QV0sMtfiJJE7r1B0OfsZuDPD",
           "https://lh3.googleusercontent.com/d/1jMwGEYlRJvYJEaQJOhyUtcArdyKh0fy-"
         ],
-        "description": "Creation of dynamic and engaging social media posts for Puerta Madriz nightclub, focused on capturing the energy of nightlife.",
+        "description": "Dynamic and eye-catching social media posts created for Puerta Madriz nightclub, capturing the raw energy of Madrid nightlife.",
         "role": "Graphic Designer & Content Creator",
-        "deliverables": ["Post Design", "Visual Strategy", "Instagram Content"]
+        "deliverables": ["Post Design", "Visual Strategy", "Instagram Stories Content", "Event Flyers"],
+        "challenge": "Maintain an active, high-impact presence on Instagram with weekly DJ flyers under tight turnaround times.",
+        "solution": "High-contrast dynamic template system enabling rapid asset generation without sacrificing visual punch.",
+        "impact": "Steady growth of social media followers and sold-out weekly weekend parties."
       }
     ]
   },

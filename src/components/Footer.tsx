@@ -15,7 +15,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-mono uppercase tracking-[0.2em] text-white/20">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-mono uppercase tracking-[0.2em] text-white/60">
           <div>© {currentYear} {content.global.name}. {content.ui.allRightsReserved}.</div>
           <div className="flex gap-8">
             <Link to="/privacy" className="hover:text-white transition-colors">{content.ui.privacyPolicy}</Link>

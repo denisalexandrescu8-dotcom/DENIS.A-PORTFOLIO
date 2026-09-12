@@ -16,10 +16,10 @@ export default function Services() {
     <section id="services" className="section-padding relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
+          <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 text-white">
             {content.services.sectionTitle} <span className="text-white/40 italic">{content.services.sectionTitleHighlight}</span>
           </h2>
-          <p className="text-white/60 text-lg font-light">
+          <p className="text-white/80 text-lg font-light leading-relaxed">
             {content.services.sectionSubtitle}
           </p>
         </div>
@@ -39,16 +39,16 @@ export default function Services() {
                 <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-8 group-hover:bg-premium-gold/20 group-hover:text-premium-gold transition-colors">
                   <IconComponent size={28} />
                 </div>
-                <h3 className="text-2xl font-display font-bold mb-4">{service.title}</h3>
-                <p className="text-white/50 mb-8 font-light leading-relaxed">
+                <h3 className="text-2xl font-display font-bold mb-4 text-white">{service.title}</h3>
+                <p className="text-white/80 mb-8 font-light leading-relaxed">
                   {service.description}
                 </p>
                 
                 <div className="space-y-3">
                   {service.deliverables.map((item) => (
-                    <div key={item} className="flex items-center gap-3 text-sm text-white/70">
-                      <CheckCircle2 size={16} className="text-premium-gold" />
-                      {item}
+                    <div key={item} className="flex items-center gap-3 text-sm text-white/90 font-medium">
+                      <CheckCircle2 size={16} className="text-premium-gold shrink-0" />
+                      <span>{item}</span>
                     </div>
                   ))}
                 </div>

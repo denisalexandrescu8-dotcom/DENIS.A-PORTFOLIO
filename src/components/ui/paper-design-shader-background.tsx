@@ -9,14 +9,17 @@ export const GradientBackground = memo(() => {
 
   return (
     <div className="fixed inset-0 -z-20 bg-black overflow-hidden pointer-events-none">
-      {/* 21st.dev Style Shader Background - Pure Mesh Gradient for Organic Look */}
-      <div className="w-full h-full absolute inset-0" style={{ backgroundColor: "#000000" }}>
+      {/* 21st.dev Style Shader Background - Pure Mesh Gradient on Desktop/Tablet, Lightweight CSS on Mobile */}
+      <div className="w-full h-full absolute inset-0 hidden md:block" style={{ backgroundColor: "#000000" }}>
         <MeshGradient
           className="w-full h-full"
           colors={["#000000", "#111111", "#222222", "#999999"]}
           speed={speed * 0.4}
         />
       </div>
+
+      {/* Lightweight mobile fallback gradient */}
+      <div className="w-full h-full absolute inset-0 md:hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-black to-black" />
 
       {/* Subtle lighting overlay to add depth without breaking the organic flow */}
       <div className="absolute inset-0 pointer-events-none opacity-30">

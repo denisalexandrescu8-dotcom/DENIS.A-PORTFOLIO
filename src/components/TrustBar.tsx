@@ -17,12 +17,13 @@ export default function TrustBar() {
           className="flex items-center gap-16 pr-16"
         >
           {[...content.trustBrands, ...content.trustBrands, ...content.trustBrands, ...content.trustBrands].map((brand, i) => (
-            <span 
+            <div 
               key={i} 
-              className="text-2xl md:text-3xl font-display font-bold text-white/20 hover:text-white/40 transition-colors cursor-default"
+              className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full border border-white/10 bg-white/[0.02] text-xl md:text-2xl font-display font-semibold tracking-wider text-white/60 hover:text-white hover:border-premium-gold/40 hover:bg-white/[0.05] transition-all duration-300 cursor-default"
             >
-              {brand}
-            </span>
+              <span className="w-1.5 h-1.5 rounded-full bg-premium-gold/60" />
+              <span>{brand}</span>
+            </div>
           ))}
         </motion.div>
       </div>

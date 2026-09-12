@@ -157,7 +157,7 @@ export const ProjectShowcase = memo(({ projects }: ProjectShowcaseProps) => {
               <div className="relative flex items-center justify-between gap-4">
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-4">
-                    <span className="text-xs font-mono text-white/30 tabular-nums">
+                    <span className="text-xs font-mono text-white/60 tabular-nums">
                       {project.year}
                     </span>
                     <div className="inline-flex items-center gap-2">
@@ -188,8 +188,8 @@ export const ProjectShowcase = memo(({ projects }: ProjectShowcaseProps) => {
                     </div>
                   </div>
 
-                  <p className="text-white/40 text-sm mt-2 font-light">
-                    {project.client} — <span className="text-premium-gold/60">{project.category}</span>
+                  <p className="text-white/70 text-sm mt-2 font-light">
+                    {project.client} — <span className="text-premium-gold/90 font-medium">{project.category}</span>
                   </p>
                 </div>
 

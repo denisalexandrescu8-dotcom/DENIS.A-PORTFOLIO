@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'motion/react';
 import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
@@ -46,14 +46,26 @@ function AnimatedRoutes() {
 }
 
 export default function App() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const hasLoaded = sessionStorage.getItem('portfolio_has_loaded');
+      return !hasLoaded;
+    }
+    return false;
+  });
 
   useEffect(() => {
+    if (!isLoading) return;
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1800);
+      try {
+        sessionStorage.setItem('portfolio_has_loaded', 'true');
+      } catch (e) {
+        // ignore storage error
+      }
+    }, 450);
     return () => clearTimeout(timer);
-  }, []);
+  }, [isLoading]);
 
   return (
     <LanguageProvider>
